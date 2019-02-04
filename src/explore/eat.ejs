@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../_include/meta', {title:'食',page:'eat'}) %>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <%- include('../_include/analytics') %>
+</head>
+<body class="p-explore p-lower">
+
+<%- include('../_include/header',{lower:1}) %>
+
+<div id="main">
+
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>食</h2>
+            <a href="/" class="back"></a>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">レストラン</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/eat/image-1-1.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>割烹 浮世亭</dt>
+                    <dt>2F 食い倒れ横町</dt>
+                    <dd>信長の料理番を務めた伝説の料理人の和食料理店「坪内石斎」がキャラクター。日本独特の食文化を感じる、ここでしか味わえない創作料理をお楽しみください。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>縄のれん いづみや / <br>つのくにや / かわちや</dt>
+                    <dt>2F 食い倒れ横町</dt>
+                    <dd>大坂城築城の職人向けに始まった大衆食堂をモデルとした料理や大阪のソウルフードを3つのお店からご提供します。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">バー・カフェ</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/eat/image-1-2.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>角打ち 山善亭<br><span>（かくうち やまぜんてい）</span></dt>
+                    <dt>2F 食い倒れ横町</dt>
+                    <dd>日本酒を全国に広めたとされる「鴻池善右衛門」がキャラクター。安土桃山時代の銘酒を復活させた「再現酒」や女性に人気のお酒など、様々な日本酒がラインナップ。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>茶店 小町茶屋</dt>
+                    <dt>2F 熱風横町</dt>
+                    <dd>脂肪を燃焼させる準備を整えたり体温の維持で発汗作用が期待できるドリンクやヘルシーな素材を使った健康的なメニューを提供いたします。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>茶店 殿下茶屋</dt>
+                    <dt>5F 滝上町</dt>
+                    <dd>かつての携帯保存食である変わりおむすびの兵糧丸の他、白玉や和クレープやおかきなど日本の食文化が感じられるおいしさが揃います。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+    <section class="explore">
+        <div class="sec-title">ショップ</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>SAKE 鴻池山中屋</dt>
+                    <dt>2F 買いもん横町</dt>
+                    <dd>関西の銘酒をはじめ、日本各地の銘酒や女性にもおすすめのお酒など、空庭温泉こだわりのセレクトです。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>銘菓 空庭菓匠</dt>
+                    <dt>2F</dt>
+                    <dd>和素材を活かしたお菓子や大阪らしいおもしろさなど、オリジナリティあふれるお菓子をはおみやげにもおすすめ。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+
+    <%- include('./_category', {category:"eat"}) %>
+
+    <%- include('../_include/magazine') %>
+    <%- include('../_include/footer', {lower:1}) %>
+    <%- include('../_include/navFix') %>
+
+</div>
+
+<%- include('../_include/script') %>
+
+</body>
+</html>

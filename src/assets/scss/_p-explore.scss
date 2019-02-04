@@ -1,0 +1,324 @@
+@import "../../../node_modules/compass-mixins/lib/compass";
+@import "settings";
+
+@include media-pc {
+    #main {
+        background-position: center px(40);
+    }
+}
+
+.explore {
+    &:nth-of-type(odd) {
+        background: url("../images/cmn/lower-bg-2.png") center 0 repeat-x $color-background2;
+    }
+    &:nth-of-type(even) {
+        background: url("../images/cmn/lower-bg.png") center 0 repeat-x $color-background;
+    }
+
+    &-lead {
+        margin: auto;
+        line-height: 1.5;
+        text-align: justify;
+        text-justify: inter-ideograph;
+    }
+    &-list {
+        margin: auto;
+    }
+    &-item {
+        picture {
+            display: inline-block;
+            img {
+                width: 100%;
+            }
+        }
+        dl {
+            background: #3f3a39;
+            color: white;
+            dt {
+                text-align: center;
+                line-height: 1.2;
+                &:nth-of-type(1) {
+                    font-weight: 400;
+                }
+                &:nth-of-type(2) {
+                    font-weight: 200;
+                }
+                span {
+                  font-size: 0.8em;
+                }
+            }
+            dd {
+                line-height: 1.4;
+                text-align: justify;
+                text-justify: inter-ideograph;
+                font-weight: 200;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    margin: auto;
+                    left: 0; right: 0;
+                    top: 0;
+                    border-top: solid 1px white;
+                }
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @include media-pc {
+        padding-top: px(50);
+        padding-bottom: px(90);
+        background-size: px(46) !important;
+
+        .sec-title {
+            margin-bottom: px(42);
+        }
+        &-lead {
+            width: px(720);
+            margin-bottom: px(75);
+        }
+        &-list {
+            width: 96%;
+            max-width: px(840);
+            @include clearfix;
+            > div {
+                &:nth-of-type(3n + 2) {
+                    margin: 0 px(60);
+                }
+                //&:nth-of-type(3n + 1) {
+                //    clear: both;
+                //}
+                &:nth-of-type(n + 4) {
+                    margin-top: px(30);
+                }
+            }
+        }
+        &-item {
+            float: left;
+            width: px(240);
+            dl {
+                height: px(210);
+                padding: px(20) px(16) 0;
+                dt {
+                    &:nth-of-type(2) {
+                        margin-top: px(12);
+                        font-size: px(13);
+                    }
+                }
+                dd {
+                    margin-top: px(14);
+                    padding-top: px(14);
+                    font-size: px(12);
+                    &:before {
+                        width: px(22);
+                    }
+                    span {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            dl.-fees {
+                padding-bottom: 1em;
+                height: auto;
+                dd {
+                    text-align: center;
+                    p {
+                        &:nth-of-type(n + 2) {
+                            margin-top: 1em;
+                        }
+                        font-size: px(11);
+                        strong {
+                            font-size: px(12);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include media($BP-PC, 900px) {
+        &-item {
+            width: 32%;
+            dl {
+                dt {
+                    &:nth-of-type(2) {
+                        font-size: 0.875em;
+                    }
+                }
+                dd {
+                    font-size: 1rem;
+                    &:before {
+                        width: px(22);
+                    }
+                    span {
+                        font-size: 0.875em;
+                    }
+                }
+            }
+        }
+        &-list {
+            width: 90%;
+            > div {
+                &:nth-of-type(3n + 2) {
+                    margin: 0 2%;
+                }
+                &:nth-of-type(n + 4) {
+                    margin-top: 2vw;
+                }
+            }
+        }
+    }
+    @include media-sp {
+        padding-top: vw(72);
+        padding-bottom: vw(120);
+        background-size: vw(92) auto !important;
+
+        .sec-title {
+            margin-bottom: vw(35);
+        }
+        &-lead {
+            width: vw(630);
+            margin-bottom: vw(72);
+            font-size: vw(26);
+        }
+        &-list {
+            width: vw(710);
+            > div {
+                &:nth-of-type(n + 2) {
+                    margin-top: vw(46);
+                }
+            }
+        }
+        &-item {
+            dl {
+                padding: vw(40) vw(90);
+                dt {
+                    &:nth-of-type(1) {
+                        margin-bottom: vw(18);
+                        font-size: vw(30);
+                    }
+                }
+                dd {
+                    margin-top: vw(30);
+                    padding-top: vw(30);
+                    &:before {
+                        width: vw(30);
+                    }
+                }
+            }
+
+            dl.-fees {
+                padding-bottom: 1.5em;
+                dd {
+                    text-align: center;
+                    p {
+                        &:nth-of-type(n + 2) {
+                            margin-top: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.explore-category {
+    .sec-title {
+        font-weight: 400;
+    }
+    &_list {
+        margin: auto;
+        @include clearfix;
+    }
+    .explore-item {
+        display: block;
+        outline: none;
+        text-align: center;
+        text-decoration: none;
+        img {
+            width: 100%;
+        }
+        &_image {
+            text-align: center;
+            img {
+                display: inline-block;
+            }
+        }
+        &_label {
+            display: block;
+        }
+    }
+
+    @include media-pc {
+        padding: px(130) 0 px(70);
+        &:nth-of-type(odd) {
+            background: url("../images/explore/bg-1.png") center 0 no-repeat $color-background2;
+        }
+        &:nth-of-type(even) {
+            background: url("../images/explore/bg-2.png") center 0 no-repeat $color-background;
+        }
+        .sec-title {
+            margin-bottom: px(40);
+        }
+        &_list {
+            width: px(720);
+            @include clearfix;
+            > * {
+                &:nth-of-type(n + 4) {
+                    margin-top: px(20);
+                }
+            }
+        }
+        .explore-item {
+            float: left;
+            width: px(220);
+            margin: 0 px(10);
+            padding-bottom: px(20);
+            background: transparent;
+            @include transition(background-color 400ms $easeOutCubic);
+            &:hover {
+                background: #fdfbf7;
+            }
+            &_image {
+                padding: px(20) px(60);
+            }
+            &_label {
+                font-size: px(18);
+            }
+        }
+    }
+    @include media-sp {
+        padding: vw(160) 0 vw(80);
+        &:nth-of-type(odd) {
+            background: url("../images/explore/bg-1-sp.png") center 0 no-repeat $color-background2;
+            background-size: 100% auto;
+        }
+        &:nth-of-type(even) {
+            background: url("../images/explore/bg-2-sp.png") center 0 no-repeat $color-background;
+            background-size: 100% auto;
+        }
+        .sec-title {
+            margin-bottom: vw(20);
+        }
+        &_list {
+            width: vw(690);
+            @include clearfix;
+        }
+        .explore-item {
+            float: left;
+            width: vw(210);
+            margin: 0 vw(10);
+            padding-bottom: vw(20);
+            background: transparent;
+            &_image {
+                padding: vw(20) vw(30);
+            }
+            &_label {
+                font-size: vw(28);
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<section class="explore-category">
+    <div class="sec-title">空庭温泉をもっと知る</div>
+    <div class="explore-category_list">
+        <% if (category != 'onsen') { %>
+        <a href="/explore/onsen.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-onsen.png" alt="温泉"></p>
+            <span class="explore-item_label">温泉</span>
+        </a>
+        <% } if (category != 'health') { %>
+        <a href="/explore/health.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-health.png" alt="健康"></p>
+            <span class="explore-item_label">健康</span>
+        </a>
+        <% } if (category != 'beauty') { %>
+        <a href="/explore/beauty.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-beauty.png" alt="美"></p>
+            <span class="explore-item_label">美</span>
+        </a>
+        <% } if (category != 'relax') { %>
+        <a href="/explore/relax.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-relax.png" alt="癒し"></p>
+            <span class="explore-item_label">癒し</span>
+        </a>
+        <% } if (category != 'eat') { %>
+        <a href="/explore/eat.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-eat.png" alt="食"></p>
+            <span class="explore-item_label">食</span>
+        </a>
+        <% } if (category != 'fun') { %>
+        <a href="/explore/fun.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-fun.png" alt="楽"></p>
+            <span class="explore-item_label">楽</span>
+        </a>
+        <% } %>
+    </div>
+</section>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../_include/meta', {title:'営業案内・入館料'}) %>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <%- include('../_include/analytics') %>
+</head>
+<body class="p-fees p-lower">
+
+<%- include('../_include/header',{lower:1}) %>
+
+<div id="main">
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>営業案内・入館料</h2>
+            <a href="/" class="back"></a>
+        </div>
+    </section>
+
+    <section class="time">
+        <div class="sec-title">営業時間</div>
+        <div class="time-summary">
+            11:00～翌9:00<br>
+            <span class="f-small">※16歳未満のみのグループのご利用は19時まで、18歳未満のご利用は22時までです。</span>
+        </div>
+    </section>
+
+    <section class="fees">
+        <div class="sec-title">ご利用料金</div>
+        <div class="fee-list">
+            <div class="fee-item">
+                <table class="fee-table -entry">
+                    <caption>入館料</caption>
+                    <tr>
+                        <th> </th><th>平日</th><th>土日祝</th><th>特定日</th>
+                    </tr>
+                    <tr>
+                        <td>大人</td><td>¥2,400</td><td>¥2,600</td><td>¥2,800</td>
+                    </tr>
+                    <tr>
+                        <td>小人</td><td>¥1,200</td><td>¥1,300</td><td>¥1,400</td>
+                    </tr>
+                </table>
+                <div class="fee-item_note">
+                    ※小人料金対象は4～12歳。4歳未満無料。<br>
+                    ※バスタオル・館内着込み
+                </div>
+            </div>
+            <div class="fee-item">
+                <table class="fee-table -bath">
+                    <caption>朝風呂<br>
+                        <span class="f-small">6:00～9:00<br>（最終入場 8:00 / 大浴場利用 8:30まで）</span>
+                    </caption>
+                    <tr>
+                        <th> </th><th>平日</th><th>土日祝</th><th>特定日</th>
+                    </tr>
+                    <tr>
+                        <td>大人</td><td>¥1,200</td><td>¥1,300</td><td>¥1,400</td>
+                    </tr>
+                    <tr>
+                        <td>小人</td><td>¥600</td><td>¥650</td><td>¥700</td>
+                    </tr>
+                </table>
+                <div class="fee-item_note">
+                    朝6時から朝9時のみのご利用の場合の入館料です。<br>
+                    ※バスタオル ・ 館内着込み。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="option">
+        <div class="sec-title">オプション</div>
+        <div class="fee-list">
+            <div class="fee-item">
+                <table class="fee-table -night">
+                    <caption>深夜料金<br>
+                        <span class="f-small">1:00～6:00</span>
+                    </caption>
+                    <tr>
+                        <th> </th><th>平日</th><th>土日祝</th><th>特定日</th>
+                    </tr>
+                    <tr>
+                        <td>大人 <span class="f-xxsmall"><br>(小人も同じ)</span></td><td>¥2,000</td><td>¥2,200</td><td>¥2,200</td>
+                    </tr>
+                </table>
+                <div class="fee-item_note">
+                    夜1時以降在館の場合の追加料金です。
+                </div>
+            </div>
+            <div class="fee-item">
+                <table class="fee-table -family">
+                    <caption>家族風呂<br>
+                        <span class="f-small">11:00～23:00（受付終了 21:00）</span>
+                    </caption>
+                    <tr>
+                        <td>最初の2時間　　<strong class="f-large">7,000円</strong> / 1部屋<br>
+                            <span class="f-smaller">※延長は1時間3,500円にて承ります。</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="fee-item">
+                <table class="fee-table -ganbanyoku">
+                    <caption>岩盤浴<br>
+                        <span class="f-small">11:00～23:00（受付終了 22:00）</span>
+                    </caption>
+                    <tr>
+                        <th> </th><th>平日</th><th>土日祝</th><th>特定日</th>
+                    </tr>
+                    <tr>
+                        <td>大人</td><td>¥1,000</td><td>¥1,200</td><td>¥1,200</td>
+                    </tr>
+                </table>
+                <div class="fee-item_note">
+                    ※岩盤浴は大人のみのご利用となります。
+                </div>
+            </div>
+            <div class="fee-item">
+                <table class="fee-table -health">
+                    <caption>セルフエステコーナー<br>
+                        <span class="f-small">（女性専用パウダールーム お粧し処内）<br>11:00～23:00（受付終了 22:30）</span>
+                    </caption>
+                    <tr>
+                        <td><strong class="f-large">300円</strong> / 1席30分</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="attention">
+        <ul>
+            <li>※消費税 ・ 入湯税別</li>
+            <li>※入湯税は入館料1,500円以上、小学生以上の利用者に適用（朝風呂料金は課税対象外）</li>
+            <li>※表示の価格 ・ 時間 ・ 名称はすべて予定です。内容はオープンまでに予告なく変更する場合がございますのでご了承願います。</li>
+        </ul>
+    </section>
+
+    <%- include('../_include/magazine') %>
+    <%- include('../_include/footer', {lower:1}) %>
+    <%- include('../_include/navFix') %>
+</div>
+
+<%- include('../_include/script') %>
+
+</body>
+</html>

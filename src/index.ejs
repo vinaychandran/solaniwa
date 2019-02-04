@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('./_include/meta', {title:''}) %>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <%- include('./_include/analytics') %>
+</head>
+<body class="p-top">
+
+<div class="welcome">
+    <div class="welcome-msg">
+        <p>からだの</p>
+        <p>芯から</p>
+        <p>しあわせに</p>
+    </div>
+    <div class="welcome-logo">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/assets/images/cmn/welcome-logo-sp.png">
+            <img src="/assets/images/cmn/welcome-logo.png" srcset="/assets/images/cmn/welcome-logo@2x.png 2x" alt="空庭温泉">
+        </picture>
+    </div>
+</div>
+
+<%- include('./_include/header',{lower:0}) %>
+
+<div id="main">
+
+    <section class="kv">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/assets/images/top/kv-sp.jpg">
+            <img src="/assets/images/top/kv.jpg" alt="空庭温泉">
+        </picture>
+        <div class="kv-btn">
+            <a href="/tickets/" class="btn -center">チケットの購入</a>
+        </div>
+        <div class="kv-grandopen">
+            <span>2019年2月26日（火）</span><br>
+            <strong>グランドオープン</strong>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">空庭温泉へようこそ</div>
+        <div class="explore-message">
+            からだの芯から<br>しあわせに
+        </div>
+        <div class="explore-list js-slick">
+            <a href="/explore/onsen.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-onsen.png" alt="温泉"></p>
+                <span class="explore-item_label">温泉</span>
+            </a>
+            <a href="/explore/health.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-health.png" alt="健康"></p>
+                <span class="explore-item_label">健康</span>
+            </a>
+            <a href="/explore/beauty.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-beauty.png" alt="美"></p>
+                <span class="explore-item_label">美</span>
+            </a>
+            <a href="/explore/relax.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-relax.png" alt="癒し"></p>
+                <span class="explore-item_label">癒し</span>
+            </a>
+            <a href="/explore/eat.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-eat.png" alt="食"></p>
+                <span class="explore-item_label">食</span>
+            </a>
+            <a href="/explore/fun.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-fun.png" alt="楽"></p>
+                <span class="explore-item_label">楽</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="news -bg">
+        <div class="news-list">
+            <div class="news-item -wide">
+                <a href="./news/momoyama.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-momoyama-sp.jpg">
+                        <img src="/assets/images/top/news-momoyama.jpg" alt="こころ踊る安土桃山時代">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./_include/magazine') %>
+
+    <section class="floor">
+        <div class="sec-title">フロアマップ</div>
+        <div class="floor-btn_block">
+            <a href="" class="floor-btn -active" data-floor="2">2F</a>
+            <a href="" class="floor-btn" data-floor="3">3F</a>
+            <a href="" class="floor-btn" data-floor="4">4F・5F</a>
+        </div>
+        <div class="floor-map_list">
+            <div class="floor-map floor-2F" data-floor-id="2">
+                <picture>
+                    <img src="/assets/images/top/map-2f.png" srcset="/assets/images/top/map-2f@2x.png 2x" alt="空庭ヒーローズ">
+                </picture>
+                <div class="floor-map_points">
+                    <p class="point" data-map-point="1"></p>
+                    <p class="point" data-map-point="2"></p>
+                    <p class="point" data-map-point="3"></p>
+                    <p class="point" data-map-point="4"></p>
+                    <p class="point" data-map-point="5"></p>
+                    <p class="point" data-map-point="6"></p>
+                    <p class="point" data-map-point="7"></p>
+                    <p class="point" data-map-point="8"></p>
+                    <p class="point" data-map-point="9"></p>
+                    <p class="point" data-map-point="10"></p>
+                    <p class="point" data-map-point="11"></p>
+                    <p class="point" data-map-point="12"></p>
+                    <p class="point" data-map-point="13"></p>
+                    <p class="point" data-map-point="14"></p>
+                    <p class="point" data-map-point="15"></p>
+                    <p class="point" data-map-point="16"></p>
+                    <p class="point" data-map-point="17"></p>
+                    <p class="point" data-map-point="18"></p>
+                </div>
+            </div>
+            <div class="floor-map floor-3F" data-floor-id="3">
+                <picture>
+                    <img src="/assets/images/top/map-3f.png" srcset="/assets/images/top/map-3f@2x.png 2x" alt="空庭ヒーローズ">
+                </picture>
+                <div class="floor-map_points">
+                    <p class="point" data-map-point="19"></p>
+                </div>
+            </div>
+            <div class="floor-map floor-4F5F" data-floor-id="4">
+                <picture>
+                    <img src="/assets/images/top/map-4f5f.png" srcset="/assets/images/top/map-4f5f@2x.png 2x" alt="空庭ヒーローズ">
+                </picture>
+                <div class="floor-map_points">
+                    <p class="point" data-map-point="20"></p>
+                    <p class="point" data-map-point="21"></p>
+                    <p class="point" data-map-point="22"></p>
+                    <p class="point" data-map-point="23"></p>
+                </div>
+            </div>
+
+            <div class="floor-map_nav" data-floor-nav="2,4">
+                <p class="floor-map-btn -prev"></p>
+                <p class="floor-map-btn -next"></p>
+            </div>
+            <div class="floor-map_modal">
+                <div class="floor-map_modal-block">
+                    <a href="" class="close"></a>
+                    <%- include('./_index_floor') %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="news-list">
+            <div class="news-item">
+                <a href="./news/heroes.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-heroes-sp.jpg">
+                        <img src="/assets/images/top/news-heroes.jpg" alt="空庭ヒーローズ">
+                    </picture>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="./news/onsen.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-onsen-sp.jpg">
+                        <img src="/assets/images/top/news-onsen.jpg" alt="空庭温泉で美味しく、愉しく、美しく">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="guide">
+        <div class="sec-title">営業案内</div>
+        <div class="guide-list">
+            <div class="guide-item -time">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-time.svg" alt="Time"></p>
+                <dl class="guide-item_info">
+                    <dt>11:00～翌9:00</dt>
+                    <dd>16歳未満のみのご利用は夜19時まで、<br class="pc">18歳未満のみのご利用は夜22時までです。</dd>
+                </dl>
+            </div>
+            <div class="guide-item -location">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-location.svg" alt="Location"></p>
+                <dl class="guide-item_info">
+                    <dt><a href="https://goo.gl/maps/bK8VPYoAMh62" target="_blank">大阪府大阪市港区弁天1丁目2-3</a></dt>
+                </dl>
+            </div>
+            <div class="guide-item -station">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-station.svg" alt="Station"></p>
+                <dl class="guide-item_info">
+                    <dt>弁天町駅: JR大阪環状線<span>・大阪メトロ中央線</span></dt>
+                    <dd>連絡通路直結<br>
+                        大阪駅（梅田）から10分 / 関西国際空港から約60分
+                    </dd>
+                </dl>
+            </div>
+            <div class="guide-item -parking">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-parking.svg" alt="Parking"></p>
+                <dl class="guide-item_info">
+                    <dt><a href="http://baytower.jp/parking/" target="_blank">近隣の駐車場</a></dt>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./_include/footer',{lower:0}) %>
+
+    <%- include('./_include/navFix',{isTop:1}) %>
+</div>
+
+<%- include('./_include/script') %>
+<script src="/assets/js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../_include/meta', {title:'癒し',page:'relax'}) %>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <%- include('../_include/analytics') %>
+</head>
+<body class="p-explore p-lower">
+
+<%- include('../_include/header',{lower:1}) %>
+
+<div id="main">
+
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>癒し</h2>
+            <a href="/" class="back"></a>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/relax/image-1-1.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>天空庭園</dt>
+                    <dt>4F</dt>
+                    <dd>屋上に広がる約1,000坪の巨大な日本庭園には滝や大池、四季折々の花木が広がり、庭園中央の大池をステージとしたイベントや水洗弁天像への願かけなど、思い思いの過ごし方ができます。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">休憩所 / リクライナーエリア</div>
+        <div class="explore-lead">館内のさまざまな場所に、ゆったりくつろげるスペースやリクライナーエリアをご用意しています。</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/relax/image-1-2.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>憩いの間</dt>
+                    <dt>2F すぱ之町</dt>
+                    <dd>リラックスした時間が過ごせるカウチソファーエリア。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>高札場</dt>
+                    <dt>2F 空庭本町</dt>
+                    <dd>壁一面に広がる洛中洛外図を見ながら空庭温泉の過ごし方を考えるひとときを。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>すぱの間</dt>
+                    <dt>2F 空庭本町</dt>
+                    <dd>ゆったりくつろぐことができる畳エリア。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>お休み処</dt>
+                    <dt>3F 居眠町</dt>
+                    <dd>TV付きリクライナーや女性専用ルームなど、利用シーンに合わせてくつろげる広々とした空間。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>空庭書房</dt>
+                    <dt>3F 居眠町</dt>
+                    <dd>約15,000冊の漫画・雑誌など各種の本を揃える大容量のブックエリア。リクライナーエリアなどで読書の時間をゆっくりとお楽しみください。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>足つぼ耳つぼ 夢や</dt>
+                    <dt>2F 買いもん横丁</dt>
+                    <dd>自律神経を活性化し血流やリンパの流れを良くする耳つぼや、血行を改善により老化予防やデトックス効果がある人気のカッピング（吸い玉）などを体験。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./_category', {category:"relax"}) %>
+
+    <%- include('../_include/magazine') %>
+    <%- include('../_include/footer', {lower:1}) %>
+    <%- include('../_include/navFix') %>
+
+</div>
+
+<%- include('../_include/script') %>
+
+</body>
+</html>

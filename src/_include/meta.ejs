@@ -1,0 +1,34 @@
+<%
+var page;
+var description = {
+    'onsen':'地下1,000mから湧き出す弱アルカリ性、源泉かけ流しの天然温泉「美肌の湯」。源泉かけ流しの露天風呂、広大な庭を見下ろす庭見風呂、炭酸泉や替り風呂などさまざまなお風呂とサウナ、あかすりをご用意。',
+    'health':'ロウリュウ等のイベントを実施する神宮房、クールルーム、低温部屋の坪庭や川床タイプなど多種多彩な岩盤浴でデトックス。',
+    'beauty':'関西最大級のリラクゼーション施設で、体に負担のかからない和式ボディケアから本格エステまで50種類近いサービスをご用意しており、トータルビューティーを叶えることができます。',
+    'relax':'空庭温泉でくつろぎのひとときをお過ごしください。',
+    'eat':'割烹、居酒屋、角打ち、スイーツ、など様々なグルメをお楽しみください。',
+    'fun':'プロジェクションマッピング、フードショー、館内着、フォトサービスなど様々なエンターテイメントをお楽しみください。',
+    'default':'空庭温泉は安土桃山時代をコンセプトとした関西最大級の温泉型テーマパーク。約5,000坪超の大型施設で大阪環状線・地下鉄中央線「弁天町」駅直結です。'
+};
+var path;
+var url = 'https://www.solaniwa.com/' + (path || '');
+%>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title><%= (title ? title + '｜［公式］空庭温泉' : '［公式］空庭温泉 | 関西最大級の温泉型テーマパーク') %></title>
+<meta name="description" content="<%= description[page] || description['default'] %>">
+<meta name="keywords" content="空庭,そらにわ,ソラニワ,温泉,弁天町">
+
+<meta property="og:site_name" content="<%= (title ? title + '｜［公式］空庭温泉' : '［公式］空庭温泉 | 関西最大級の温泉型テーマパーク') %>">
+<meta property="og:title" content="<%= (title ? title + '｜［公式］空庭温泉' : '［公式］空庭温泉 | 関西最大級の温泉型テーマパーク') %>">
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%= url %>">
+<meta property="og:image" content="https://www.solaniwa.com/assets/images/ogp.jpg">
+<meta property="og:description" content="<%= description[page] || description['default'] %>">
+
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="1">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="">

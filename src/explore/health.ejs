@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../_include/meta', {title:'健康',page:'health'}) %>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <%- include('../_include/analytics') %>
+</head>
+<body class="p-explore p-lower">
+
+<%- include('../_include/header',{lower:1}) %>
+
+<div id="main">
+
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>健康</h2>
+            <a href="/" class="back"></a>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">岩盤浴</div>
+        <div class="explore-lead">ロウリュウ等のイベントを実施する神宮房、クールルーム、低温部屋の坪庭や川床タイプなど多種多彩な岩盤浴でデトックス。</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/health/image-1-1.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>南蛮房</dt>
+                    <dt>2F 熱風横町</dt>
+                    <dd>京都の南蛮寺をテーマにしたステンドグラスとミストによる西洋的デザインを施した房です。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/health/image-1-2.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>神宮房</dt>
+                    <dt>2F 熱風横町</dt>
+                    <dd>祭りのような熱気を感じるロウリュウが体験できます。プロジェクションマッピングを駆使したお笑いロウリュウショーで身も心もデトックス。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/health/image-1-3.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>川床房</dt>
+                    <dt>2F 熱風横町</dt>
+                    <dd>川床のような長い房。床暖房であたたかく。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>坪庭房</dt>
+                    <dt>2F 熱風横町</dt>
+                    <dd>自然の光を感じられる、座って楽しめる房です。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>清流房</dt>
+                    <dt>2F 熱風横町</dt>
+                    <dd>滝の横に位置し清々しさを感じられるクールルーム。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>座敷房</dt>
+                    <dt>2F 熱風横町</dt>
+                    <dd>座敷をイメージした和テイストの岩盤浴。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>岩盤ドリンク</dt>
+                    <dt>2F 熱風横町</dt>
+                    <dd>大量の海水から水分を蒸発させて塩を取り出す塩田をイメージした岩盤浴。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">サウナ</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>高熱房</dt>
+                    <dt>5F 弁天湯町</dt>
+                    <dd>一気に発汗することで血行促進、免疫力向上、疲労物質を排出するための高温サウナ。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>霧之湯房</dt>
+                    <dt>5F 弁天湯町</dt>
+                    <dd>中温でじっくり体を温め、ゆったりとした美肌効果が体験できる女性専用のミストサウナ。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">サービス</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>塩田房</dt>
+                    <dt>2F 熱風横町<span class="f-small">（茶店 小町茶屋）</span></dt>
+                    <dd>汗と日頃のストレスを流すため、デトックス効果があり脂肪燃焼を促進するドリンクを提供。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./_category', {category:"health"}) %>
+
+    <%- include('../_include/magazine') %>
+    <%- include('../_include/footer', {lower:1}) %>
+    <%- include('../_include/navFix') %>
+
+</div>
+
+<%- include('../_include/script') %>
+
+</body>
+</html>
