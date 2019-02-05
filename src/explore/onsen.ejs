@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../_include/meta', {title:'温泉',page:'onsen'}) %>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <%- include('../_include/analytics') %>
+</head>
+<body class="p-explore p-lower">
+
+<%- include('../_include/header',{lower:1}) %>
+
+<div id="main">
+
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>温泉</h2>
+            <a href="/" class="back"></a>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">空庭温泉の湯</div>
+        <div class="explore-lead">
+            地下1,000mから湧き出す弱アルカリ性、源泉かけ流しの天然温泉「美肌の湯」。源泉かけ流しの露天風呂、広大な庭を見下ろす庭見風呂、炭酸泉や替り風呂などさまざまなお風呂とサウナ、あかすりをご用意。<br>
+            また、2～5人用の貸切風呂も完備しておりプライベートな空間をお楽しみいただけます。日頃の疲れを癒して明日への活力を補給できる場所。それが空庭温泉の湯です。
+        </div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/onsen/image-1-1.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>絹湯風呂</dt>
+                    <dt>5F 弁天湯町（べんてんゆまち）</dt>
+                    <dd>ミクロの泡によるシルクのような乳白色のお湯が、毛穴に溜まった老廃物を排出します。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/onsen/image-1-2.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>炭酸風呂</dt>
+                    <dt>5F 弁天湯町（べんてんゆまち）</dt>
+                    <dd>皮膚から吸収される炭酸ガスが血流を促進し、新陳代謝を活性化させます。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/onsen/image-1-3.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>替り風呂</dt>
+                    <dt>5F 弁天湯町（べんてんゆまち）</dt>
+                    <dd>触覚・嗅覚・視覚にこだわり、時々によって替わる四季折々の湯です。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/onsen/image-1-4.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>庭見風呂</dt>
+                    <dt>5F 弁天湯町（べんてんゆまち）</dt>
+                    <dd>都会の喧騒を忘れ、約1,000坪の日本庭園を眺めながら贅沢なひとときが過ごせます。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/onsen/image-1-5.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>源泉風呂</dt>
+                    <dt>5F 弁天湯町（べんてんゆまち）</dt>
+                    <dd>源泉かけ流しの「美肌の湯」とされる天然温泉ならではの泉質、肌触りをご堪能ください。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/onsen/image-1-6.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>露天風呂</dt>
+                    <dt>5F 弁天湯町（べんてんゆまち）</dt>
+                    <dd>四季折々の自然を体全体で感じながら天然温泉でリフレッシュできます。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/onsen/image-1-7.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>水風呂</dt>
+                    <dt>5F 弁天湯町（べんてんゆまち）</dt>
+                    <dd>体を冷やすことで自律神経を活性化し、皮膚を引き締めることで湯冷めを防止します。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/onsen/image-1-8.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>個室家族風呂</dt>
+                    <dt>5F 弁天湯町（べんてんゆまち）</dt>
+                    <dd>坪庭に露天風呂があるプライベート空間。大部屋3室と小部屋7室があり、カラオケをしていただける部屋もあります。車いすに対応したお部屋もご用意しています。</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/onsen/image-1-9.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>足湯</dt>
+                    <dt>5F 弁天湯町（べんてんゆまち）</dt>
+                    <dd>館内着の浴衣のままで気軽にお楽しみいただけます。</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./_category', {category:"onsen"}) %>
+
+    <%- include('../_include/magazine') %>
+    <%- include('../_include/footer', {lower:1}) %>
+    <%- include('../_include/navFix') %>
+
+</div>
+
+<%- include('../_include/script') %>
+
+</body>
+</html>

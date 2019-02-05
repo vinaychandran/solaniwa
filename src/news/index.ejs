@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../_include/meta', {title:'ソラニワあれこれ'}) %>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <%- include('../_include/analytics') %>
+</head>
+<body class="p-news p-lower">
+
+<%- include('../_include/header',{lower:1}) %>
+
+<div id="main">
+
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>ソラニワあれこれ</h2>
+            <a href="/" class="back"></a>
+        </div>
+        <div class="news-header_category">
+            <a href="" class="-active">すべて</a>
+            <a href="">コラム</a>
+            <a href="">イベント</a>
+            <a href="">キャンペーン</a>
+        </div>
+    </section>
+
+    <section class="news-index">
+        <div class="news-list">
+            <div class="news-list_item">
+                <a href="momoyama.html">
+                    <picture><img src="/assets/images/news/top/top-img-1.jpg" alt=""></picture>
+                    <p class="date">2019.1.15</p>
+                    <p class="desc">こころ踊る安土桃山時代</p>
+                </a>
+            </div>
+            <div class="news-list_item">
+                <a href="heroes.html">
+                    <picture><img src="/assets/images/news/top/top-img-2.jpg" alt=""></picture>
+                    <p class="date">2019.1.15</p>
+                    <p class="desc">空庭ヒーローズ</p>
+                </a>
+            </div>
+            <div class="news-list_item">
+                <a href="onsen.html">
+                    <picture><img src="/assets/images/news/top/top-img-3.jpg" alt=""></picture>
+                    <p class="date">2019.1.15</p>
+                    <p class="desc">空庭温泉で美味しく、愉しく、美しく</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <%- include('../_include/magazine') %>
+    <%- include('../_include/footer', {lower:1}) %>
+    <%- include('../_include/navFix') %>
+
+</div>
+
+<%- include('../_include/script') %>
+
+</body>
+</html>

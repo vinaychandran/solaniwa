@@ -1,0 +1,27 @@
+<% var isTop;var page; %>
+<nav class="fixed-nav"><!--
+    --><% if (isTop) {%><a href="" class="nv-explore js-nv-explore"><% } else {%><a href="/#explore" class="nv-explore"><% } %>
+        <p><img src="/assets/images/cmn/icn-fnav-explore-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-explore-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-explore-white.svg" alt=""></p>
+        <span>館内の紹介</span>
+    </a><!--
+    --><% if (isTop) {%><a href="" class="nv-floor js-nv-floor"><% } else {%><a href="/#floor" class="nv-floor"><% } %>
+        <p><img src="/assets/images/cmn/icn-fnav-map-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-map-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-map-white.svg" alt=""></p>
+        <span>フロアマップ</span>
+    </a><!--
+    --><a href="javascript:void(0);" class="nv-plan">
+        <p><img src="/assets/images/cmn/icn-fnav-plan-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-plan-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-plan-white.svg" alt=""></p>
+        <span>プラン</span>
+    </a><!--
+    --><a href="/tickets/" class="nv-tickets <%= page=='tickets' ? '-active' : ''%>">
+        <p><img src="/assets/images/cmn/icn-fnav-tickets-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-tickets-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-tickets-white.svg" alt=""></p>
+        <span>チケット</span>
+    </a><!--
+    --><a href="" class="nv-follow js-nv-follow">
+        <p><img src="/assets/images/cmn/icn-fnav-follow-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-follow-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-follow-white.svg" alt=""></p>
+        <span>フォロー</span>
+    </a><!--
+    --><% if (isTop) {%><a href="" class="nv-guide js-nv-guide"><% } else {%><a href="/#guide" class="nv-guide"><% } %>
+        <p><img src="/assets/images/cmn/icn-fnav-point-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-point-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-point-white.svg" alt=""></p>
+        <span>交通案内</span>
+    </a><!--
+--></nav>

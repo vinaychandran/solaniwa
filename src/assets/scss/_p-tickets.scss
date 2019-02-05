@@ -1,0 +1,19 @@
+@import "../../../node_modules/compass-mixins/lib/compass";
+@import "settings";
+
+.tickets-header {
+
+    @include media-pc {
+        padding-top:px(48);
+        .sec-title {
+            margin-bottom: px(48);
+        }
+    }
+    @include media-sp {
+        padding-top:vw(70);
+        .sec-title {
+            margin-bottom: vw(38);
+        }
+    }
+
+}

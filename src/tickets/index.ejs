@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../_include/meta', {title:'前売りチケット'}) %>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <%- include('../_include/analytics') %>
+</head>
+<body class="p-tickets p-lower">
+
+<%- include('../_include/header',{lower:1}) %>
+
+<div id="main">
+
+    <section class="tickets-header">
+        <div class="sec-title">coming soon</div>
+        <div style="height: 30vw;"> </div>
+    </section>
+
+    <%- include('../_include/magazine') %>
+    <%- include('../_include/footer', {lower:1}) %>
+    <%- include('../_include/navFix', {page:'tickets'}) %>
+
+</div>
+
+<%- include('../_include/script') %>
+
+</body>
+</html>
