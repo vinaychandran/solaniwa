@@ -1,0 +1,155 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'Information ‧ Admission fee'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-fees p-lower">
+
+<%- include('../../_include/header_' + lang, {lower:1}) %>
+
+<div id="main">
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>Information ‧ Admission fee</h2>
+            <a href="<%- topDir %>" class="back"></a>
+        </div>
+    </section>
+
+    <section class="time">
+        <div class="sec-title">Opening Hours</div>
+        <div class="time-summary">
+            11:00～ 9:00 (next day)<br>
+            <span class="f-small">※ Unaccompanied children under 16 years old must check out<br class="sp"> by 19:00, and those under 18 years old by 22:00.</span>
+        </div>
+    </section>
+
+    <section class="fees">
+        <div class="sec-title">Fees</div>
+        <div class="fee-list">
+            <div class="fee-item">
+                <table class="fee-table -entry">
+                    <caption>Admission fee</caption>
+                    <tr>
+                        <th> </th><th>Weekday</th><th>Weekend / Holidays </th><th>Special Days</th>
+                    </tr>
+                    <tr>
+                        <td>Adult</td><td>2,400 yen</td><td>2,600 yen</td><td>2,800 yen</td>
+                    </tr>
+                    <tr>
+                        <td>Child</td><td>1,200 yen</td><td>1,300 yen</td><td>1,400 yen</td>
+                    </tr>
+                </table>
+                <div class="fee-item_note">
+                    ※ Child price applies to children from 4 to 12 years old. <br>　 Children under 4 years old entrance is free of charge.<br>
+                    ※ A yukata is required to access to the Onsen.
+                </div>
+            </div>
+            <div class="fee-item">
+                <table class="fee-table -bath">
+                    <caption>Morning bath<br>
+                        <span class="f-small">6:00～9:00<br>(Last entry: 8:00 / Main baths can be used until 8:30)</span>
+                    </caption>
+                    <tr>
+                        <th> </th><th>Weekday</th><th>Weekend / Holidays </th><th>Special Days</th>
+                    </tr>
+                    <tr>
+                        <td>Adult</td><td>1,200 yen</td><td>1,300 yen</td><td>1,400 yen</td>
+                    </tr>
+                    <tr>
+                        <td>Child</td><td>600 yen</td><td>650 yen</td><td>700 yen</td>
+                    </tr>
+                </table>
+                <div class="fee-item_note">
+                    Admission fee from 6:00 to 9:00<br>
+                    ※ A yukata is required to access to the Onsen.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="option">
+        <div class="sec-title">Choice</div>
+        <div class="fee-list">
+            <div class="fee-item">
+                <table class="fee-table -night">
+                    <caption>Night admission<br>
+                        <span class="f-small">1:00～6:00</span>
+                    </caption>
+                    <tr>
+                        <th> </th><th>Weekday</th><th>Weekend / Holidays </th><th>Special Days</th>
+                    </tr>
+                    <tr>
+                        <td>Adult, Child<span class="f-xxsmall"><br>(Same fee)</span></td><td>2,000 yen</td><td>2,200 yen</td><td>2,200 yen</td>
+                    </tr>
+                </table>
+                <div class="fee-item_note">
+                    Extra fee will be charged for usage after 1am.
+                </div>
+            </div>
+            <div class="fee-item">
+                <table class="fee-table -family">
+                    <caption>Family Bath<br>
+                        <span class="f-small">11:00～23:00 (Last admission 21:00)</span>
+                    </caption>
+                    <tr>
+                        <td>First two hours <strong class="f-large">7,000 yen</strong> / 1 room<br>
+                            <span class="f-smaller">※ The extended time will be charged 3,500yen per hour.</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="fee-list">
+            <div class="fee-item">
+                <table class="fee-table -ganbanyoku">
+                    <caption>Bedrock sauna<br>
+                        <span class="f-small">11:00～23:00 (Last admission 22:00)</span>
+                    </caption>
+                    <tr>
+                        <th> </th><th>Weekday</th><th>Weekend / Holidays </th><th>Special Days</th>
+                    </tr>
+                    <tr>
+                        <td>Adult</td><td>1,000 yen</td><td>1,200 yen</td><td>1,200 yen</td>
+                    </tr>
+                </table>
+                <div class="fee-item_note">
+                    ※ The Bedrock bath is available for adults only.
+                </div>
+            </div>
+            <div class="fee-item">
+                <table class="fee-table -health">
+                    <caption>Individual powder room<br>
+                        <span class="f-small">(For ladies only)<br>13:00～22:00 (Last admission 21:30)</span>
+                    </caption>
+                    <tr>
+                        <td><strong class="f-large">500 yen</strong> / per seat for 30 minutes</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="attention">
+        <ul>
+            <li>※ consumption tax  </li>
+            <li>※ Bathing tax applies to admission fee over 1,500yen and customers older than elementary school age (the morning bath is excluded from taxation).</li>
+            <li>※ Information such as prices, time and names may be subject to changes. We apologize in advance for any inconvenience that could happen if these information are changed without prior notice. </li>
+        </ul>
+    </section>
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+</div>
+
+<%- include('../../_include/script') %>
+
+</body>
+</html>

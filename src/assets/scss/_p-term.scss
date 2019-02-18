@@ -1,0 +1,80 @@
+@import "../../../node_modules/compass-mixins/lib/compass";
+@import "settings";
+
+.term {
+
+  margin: auto;
+  line-height: 1.6;
+
+  &-header {
+    strong {
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+  }
+  &-list {
+    dt {
+      margin-bottom: 0.5em;
+      font-weight: 700;
+      &:nth-of-type(n + 2) {
+        margin-top: 2em;
+      }
+    }
+    dd {
+      line-height: 1.8;
+      div {
+        padding: 0 2em;
+      }
+    }
+  }
+
+  @include media-pc {
+    padding: px(50) 0 px(80);
+    max-width: px(960);
+    width: 90%;
+    .sec-title {
+      margin-bottom: px(20);
+    }
+    &-header {
+      margin-bottom: px(45);
+      strong {
+        font-size: px(16);
+      }
+      p {
+        font-size: px(14);
+      }
+    }
+    &-list {
+      dt {
+        font-size: px(14);
+      }
+      dd {
+        font-size: px(12);
+      }
+    }
+  }
+  @include media-sp {
+    padding: vw(50) 0 vw(80);
+    width: vw(690);
+    .sec-title {
+      margin-bottom: vw(40);
+    }
+    &-header {
+      margin-bottom: vw(45);
+      strong {
+        font-size: vw(26);
+      }
+      p {
+        font-size: vw(20);
+      }
+    }
+    &-list {
+      dt {
+        font-size: vw(22);
+      }
+      dd {
+        font-size: vw(18);
+      }
+    }
+  }
+}

@@ -3,12 +3,10 @@
 <svg version="1.1" id="レイヤー_11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" width="500px" height="500px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#C30D23;stroke-width:18;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#C30D23;stroke-width:18;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#bc3142;stroke-width:18;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#bc3142;stroke-width:18;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
-<g>
-	<path class="st0" d="M98.5,413.8h304.2c34.8,0,63-28.3,63-63V149.1c0-34.8-28.3-63-63-63H98.5c-34.8,0-63,28.3-63,63v201.7
-		C35.5,385.6,63.8,413.8,98.5,413.8z"/>
-	<path class="st1" d="M212.8,208.4l75.2,41.8l-75.2,43.2V208.4z"/>
-</g>
+<path class="st0" d="M98.5,414.9h304.2c34.8,0,63-28.3,63-63V150.2c0-34.8-28.3-63-63-63H98.5c-34.8,0-63,28.3-63,63v201.7
+	C35.5,386.6,63.8,414.9,98.5,414.9z"/>
+<path class="st1" d="M212.8,209.4l75.2,41.8l-75.2,43.2V209.4z"/>
 </svg>

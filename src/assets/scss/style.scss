@@ -1,7 +1,6 @@
 @import "../../../node_modules/compass-mixins/lib/compass";
 @import "settings";
 
-
 // reset
 @import "reset";
 
@@ -36,4 +35,13 @@
 // tickets
 .p-tickets {
     @import "p-tickets";
+}
+// gallery
+.p-gallery {
+    @import "p-gallery";
+}
+
+// term
+.p-term {
+    @import "p-term";
 }

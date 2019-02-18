@@ -1,0 +1,160 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'Entertainment',page:'fun'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-explore p-lower">
+
+<%- include('../../_include/header_' + lang,{lower:1}) %>
+
+<div id="main">
+
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>Entertainment</h2>
+            <a href="<%- topDir %>" class="back"></a>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/fun/image-1-2.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Benten Street</dt>
+                    <dt>2F Soraniwa honmachi</dt>
+                    <dd>The main street in the food/store area. If you walk by there, why not stop and pray to our symbol “Soraniwa-Tenjin” after crossing the arched bridge, good things might happen if you do.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Event square</dt>
+                    <dt>2F Soraniwa honmachi</dt>
+                    <dd>This is an entertainment space that hosts a variety of events following the seasons and occasions. Do not forget to check our upcoming events on the map located at the front of the facility. </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">Show</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/fun/image-1-1.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Show Kaku-uchi</dt>
+                    <dt>2F Kuidaore place</dt>
+                    <dd>One of iconic characters, Zen-emon Kohnoike will give multiple shows. Come listen to his talks about his passion for Japanese sake. You will of course be offered to join our sake tasting of carefully selected varieties.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/fun/image-1-3.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Roryu Show by Dosan Manase</dt>
+                    <dt>2F Bedrock sauna place <span>(Jingu-bo area)</span></dt>
+                    <dd>Another of our characters Dosan Manase was one of the greatest doctors of the past. In this show, he and his pupils Den-nen and Man-nen will entertain you with a detox fire show.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Atmosphere show</dt>
+                    <dt>館内各地</dt>
+                    <dd>This show could take place in any area of our facility. The audience is so immersed in the  that it feels so real, alive and thrilling! Not like any other show you might have seen before! You will witness and feel the very atmosphere of Azuchi-momoyama era.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Food show</dt>
+                    <dt>2F Kuidaore place</dt>
+                    <dd>Shows that combine food and entertainment. From making hand-made soba to so much more.</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">Clothing / Transforming</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Clothing line-up for rental</dt>
+                    <dt>2F Spa machi <span class="f-small">(Kimono rental KYONISHIKI)</span></dt>
+                    <dd>We have variety of Japanese clothing such as jinbei and koikuchi-shirts (festival clothing) and so much more. We have matching sets that you can wear with your partner. </dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/fun/image-1-5.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Transforming</dt>
+                    <dt>2F Spa machi <span class="f-small">(Kimono rental KYONISHIKI)</span></dt>
+                    <dd> Take breathtaking Instagram pictures and have fun dressing in our rental costumes. Become a Ninja, a Samurai, Machi-musume or any character back from the Azuchi-momoyama era. If you dream it, we can also plan and organize the historical photo shooting of your life time.</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">Store / Photo service </div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>General store Benten-do</dt>
+                    <dt>2F Kaimon place</dt>
+                    <dd>We have so many exciting items from our original goods to Japanese traditional crafts. Discover specialities of Azuchi-Momoyama time and so much more.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Photo house OSAKAYA</dt>
+                    <dt>2F Kaimon place</dt>
+                    <dd>Pick up area for all the pictures you might take at the photobooths available around the facility. </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./_category', {category:"fun"}) %>
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+
+</div>
+
+<%- include('../../_include/script') %>
+
+</body>
+</html>

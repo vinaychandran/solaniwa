@@ -1,0 +1,225 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%><!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../_include/meta_' + lang, {title:''}) %>
+    <%- include('../_include/style', {lang:lang}) %>
+
+    <%- include('../_include/analytics') %>
+
+</head>
+<body class="p-top">
+
+<div class="welcome">
+    <div class="welcome-msg">
+        <p>Relaxation and happiness</p>
+        <p>in body and mind</p>
+        <p>Solaniwa Onsen</p>
+    </div>
+    <div class="welcome-logo">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/assets/images/cmn/welcome-logo-sp.png">
+            <img src="/assets/images/cmn/welcome-logo.png" srcset="/assets/images/cmn/welcome-logo@2x.png 2x" alt="Solaniwa Onsen">
+        </picture>
+    </div>
+</div>
+
+<%- include('../_include/header_' + lang,{lower:0}) %>
+
+<div id="main">
+
+    <section class="kv">
+        <picture>
+            <source media="(max-width: 768px)" srcset="/assets/images/top/kv-sp.jpg">
+            <img src="/assets/images/top/kv.jpg" alt="Solaniwa Onsen">
+        </picture>
+        <div class="kv-btn">
+            <a href="/tickets/" class="btn -center">Buy a ticket</a>
+        </div>
+        <div class="kv-grandopen">
+            <span>Official opening on</span><br>
+            <strong>February 26, 2019.</strong>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">Welcome to Solaniwa Onsen</div>
+        <div class="explore-message">
+            Relaxation and happiness<br>in body and mind
+        </div>
+        <div class="explore-list js-slick">
+            <a href="explore/onsen.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-onsen.png" alt="Onsen"></p>
+                <span class="explore-item_label">Onsen</span>
+            </a>
+            <a href="explore/health.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-health.png" alt="Health"></p>
+                <span class="explore-item_label">Health</span>
+            </a>
+            <a href="explore/beauty.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-beauty.png" alt="Beauty"></p>
+                <span class="explore-item_label">Beauty</span>
+            </a>
+            <a href="explore/relax.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-relax.png" alt="Relax"></p>
+                <span class="explore-item_label">Relax</span>
+            </a>
+            <a href="explore/eat.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-eat.png" alt="Food"></p>
+                <span class="explore-item_label">Food</span>
+            </a>
+            <a href="explore/fun.html" class="explore-item">
+                <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-fun.png" alt="Fun"></p>
+                <span class="explore-item_label">Fun</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="news -bg">
+        <div class="news-list">
+            <div class="news-item -wide">
+                <a href="./news/momoyama.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-momoyama-sp.jpg">
+                        <img src="/assets/images/top/news-momoyama.jpg" alt="Peaceful and  prosperous Azuchi-Momoyama era">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <%- include('../_include/magazine_' + lang) %>
+
+    <section class="floor">
+        <div class="sec-title">Floor map</div>
+        <div class="floor-btn_block">
+            <a href="" class="floor-btn js-switch-tab-btn -active" data-tab-btn="2">2F</a>
+            <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="3">3F</a>
+            <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="4">4F・5F</a>
+        </div>
+        <div class="floor-map_list">
+            <div class="floor-map floor-2F js-switch-tab" data-tab-id="2">
+                <picture>
+                    <img src="/assets/images/top/map-2f.png" srcset="/assets/images/top/map-2f@2x.png 2x" alt="2F">
+                </picture>
+                <div class="floor-map_points">
+                    <p class="point" data-map-point="1"></p>
+                    <p class="point" data-map-point="2"></p>
+                    <p class="point" data-map-point="3"></p>
+                    <p class="point" data-map-point="4"></p>
+                    <p class="point" data-map-point="5"></p>
+                    <p class="point" data-map-point="6"></p>
+                    <p class="point" data-map-point="7"></p>
+                    <p class="point" data-map-point="8"></p>
+                    <p class="point" data-map-point="9"></p>
+                    <p class="point" data-map-point="10"></p>
+                    <p class="point" data-map-point="11"></p>
+                    <p class="point" data-map-point="12"></p>
+                    <p class="point" data-map-point="13"></p>
+                    <p class="point" data-map-point="14"></p>
+                    <p class="point" data-map-point="15"></p>
+                    <p class="point" data-map-point="16"></p>
+                    <p class="point" data-map-point="17"></p>
+                    <p class="point" data-map-point="18"></p>
+                </div>
+            </div>
+            <div class="floor-map floor-3F js-switch-tab" data-tab-id="3">
+                <picture>
+                    <img src="/assets/images/top/map-3f.png" srcset="/assets/images/top/map-3f@2x.png 2x" alt="3F">
+                </picture>
+                <div class="floor-map_points">
+                    <p class="point" data-map-point="19"></p>
+                </div>
+            </div>
+            <div class="floor-map floor-4F5F js-switch-tab" data-tab-id="4">
+                <picture>
+                    <img src="/assets/images/top/map-4f5f.png" srcset="/assets/images/top/map-4f5f@2x.png 2x" alt="4F,5F">
+                </picture>
+                <div class="floor-map_points">
+                    <p class="point" data-map-point="20"></p>
+                    <p class="point" data-map-point="21"></p>
+                    <p class="point" data-map-point="22"></p>
+                    <p class="point" data-map-point="23"></p>
+                </div>
+            </div>
+
+            <div class="floor-map_nav" data-floor-nav="2,4">
+                <p class="floor-map-btn -prev"></p>
+                <p class="floor-map-btn -next"></p>
+            </div>
+            <div class="floor-map_modal">
+                <div class="floor-map_modal-block">
+                    <a href="" class="close"></a>
+                    <%- include('../_include/index_floor_' + lang) %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="news-list">
+            <div class="news-item">
+                <a href="./news/heroes.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-heroes-sp.jpg">
+                        <img src="/assets/images/top/news-heroes.jpg" alt="Solaniwa ancient heroes and heroines">
+                    </picture>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="./news/onsen.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-onsen-sp.jpg">
+                        <img src="/assets/images/top/news-onsen.jpg" alt="Enjoying delicious food and relaxing yourself in the Solaniwa Onsen, you will find everything become better.">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="guide">
+        <div class="sec-title">Bsiness hours</div>
+        <div class="guide-list">
+            <div class="guide-item -time">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-time.svg" alt="Time"></p>
+                <dl class="guide-item_info">
+                    <dt>11:00～9:00 next day</dt>
+                    <dd>※Unaccompanied child under 16 years old must check-out <br>by 19:00, and under 18 years old must check-out by 22:00</dd>
+                </dl>
+            </div>
+            <div class="guide-item -location">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-location.svg" alt="Location"></p>
+                <dl class="guide-item_info">
+                    <dt><a href="https://goo.gl/maps/bK8VPYoAMh62" target="_blank">Address: Road 2-3, Benten 1,<br> Osaka Port, Ōsaka-fu</a></dt>
+                </dl>
+            </div>
+            <div class="guide-item -station">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-station.svg" alt="Station"></p>
+                <dl class="guide-item_info">
+                    <dt>Benten Railway station   JR Osaka Loop Line, <span>Osaka Metro Central Line.</span></dt>
+                    <dd>Direct Access<br>
+                        15 minutes from Osaka Station (Umeda )/<br>60 minutes from Kansai International Airport
+                    </dd>
+                </dl>
+            </div>
+            <div class="guide-item -parking">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-parking.svg" alt="Parking"></p>
+                <dl class="guide-item_info">
+                    <dt><a href="http://baytower.jp/parking/" target="_blank">Surrounding parking lot</a></dt>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <%- include('../_include/footer_' + lang,{lower:0}) %>
+
+    <%- include('../_include/navFix_' + lang,{isTop:1}) %>
+</div>
+
+<%- include('../_include/script') %>
+<script src="/assets/js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'Food',page:'eat'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-explore p-lower">
+
+<%- include('../../_include/header_' + lang,{lower:1}) %>
+
+<div id="main">
+
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>Food</h2>
+            <a href="<%- topDir %>" class="back"></a>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">Restaurants</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/eat/image-1-1.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Kappo Ukase-Tei</dt>
+                    <dt>2F Kuidaore place</dt>
+                    <dd>Do you know about the legend chef Sekisai Tsubonai who serve meals to Nobunaga Oda back in 1570s in Kyoto? We created a restaurant imagining what it would be like if he had a restaurant. We offer you Japanese uniqueness and culture with our creative cuisine.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Okino-Ren Izumi-Ya/<br> Tsunokuni-Ya/ Kawachi-Ya</dt>
+                    <dt>2F Kuidaore place</dt>
+                    <dd>These 3 restaurants were inspired by inexpensive restaurants for people building Osaka castle back in 1580s. We serve traditional and comfort food.</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">Bar, Café </div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/eat/image-1-2.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Yama-Zentei</dt>
+                    <dt>2F Kuidaore place</dt>
+                    <dd>Inspired by Zen-emon Kohnoike who introduced Sake to the entire country. We not only bring back the highest quality sake from Azuchi-Momoyama to our “Revival sake” but we also offer a variety of other Japanese sake and cocktails.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Café Komachi-Chaya</dt>
+                    <dt>2F Bedrock sauna place</dt>
+                    <dd>We serve here a variety of drinks that will help you burn fat and elevate your body temperature at a certain level which in turn will help improve your blood circulation and induce perspiration. Of course, we not only offer choosen drinks but also plenty of succulent healthy dishes.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Café Tenga-Chaya</dt>
+                    <dt>5F 滝上町</dt>
+                    <dd>Taste the Hyorogan, a famed rice-ball used to be ration and preserved food back in 1850s. On the side, you can also enjoy our Japanese deserts such as “Shira-tama”, crepes, rice snacks, and many more. All of our menu is inspired by the most traditional Japanese food culture.</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+    <section class="explore">
+        <div class="sec-title">Store</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Liquor store Kohnoike-yamanakaya</dt>
+                    <dt>2F Kaimon place</dt>
+                    <dd>We specialize in offering carefully selected, high-quality Sake and liquors from Kansai. For the more adventurous we also offer selection of alcohol from all over the country. </dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>MEIKA (Candy and Snacks)<br>Soraniwa confectionery</dt>
+                    <dt>2F</dt>
+                    <dd> Try out our snacks and candy selection. They are all made with typical Japanese ingredients sourced locally in the Osaka region. Nothing better than sweet delights to bring back home as gifts or to indulge in small guilty pleasures.</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+
+    <%- include('./_category', {category:"eat"}) %>
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+
+</div>
+
+<%- include('../../_include/script') %>
+
+</body>
+</html>

@@ -1,10 +1,58 @@
 @import "../../../node_modules/compass-mixins/lib/compass";
 @import "settings";
 
+section {
+    z-index: 1;
+}
+
+.sec-title {
+    &:after {
+        content: none;
+    }
+    @include media-pc {
+        font-size: px(26);
+    }
+    @include media-sp {
+
+    }
+}
+
+#main {
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+    @include media-pc {
+        &:before {
+            padding-top: 58.4%;
+        }
+    }
+    @include media-sp {
+        &:before {
+            padding-top: 147%;
+        }
+    }
+}
+
 /* ---------------------------------------------------------------
 KV
 --------------------------------------------------------------- */
 .kv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+
+    &.none {
+        display: none;
+    }
+
     &-grandopen {
         position: absolute;
         margin: auto;
@@ -19,6 +67,15 @@ KV
         strong {
             font-weight: 400;
         }
+        img {
+            width: 100%;
+        }
+    }
+
+    picture {
+        position: relative;
+        display: inline-block;
+        width: 100%;
     }
 
     @include media-pc {
@@ -28,23 +85,18 @@ KV
         &-btn {
             position: absolute;
             width: 100%;
-            bottom: per(120, 900);
+            top: vw(310, 1440);
             a {
-                width: px(300);
+                width: px(290);
             }
         }
         &-grandopen {
             position: absolute;
             margin: auto;
             left: 0; right: 0;
-            bottom: per(196, 760);
-            width: px(560);
+            top: vw(90, 1440);
+            width: vw(310, 1440);
             font-size: px(30);
-        }
-    }
-    @include media($BP-SP, 1000px) {
-        &-grandopen {
-            //font-size: px(42);
         }
     }
     @include media-sp {
@@ -56,19 +108,27 @@ KV
         &-btn {
             position: absolute;
             width: 100%;
-            top: vw(840);
+            top: vw(420);
+            a {
+                width: 50vw;
+            }
         }
         &-grandopen {
             position: absolute;
             margin: auto;
             left: 0; right: 0;
-            padding: vw(40) 0;
-            top: vw(600);
-            width: vw(700);
+            top: vw(120);
+            width: vw(400);
             font-size: vw(55);
         }
     }
 }
+// en -----
+@at-root html[lang='en'] .kv {
+
+}
+
+
 /* ---------------------------------------------------------------
 explore
 --------------------------------------------------------------- */
@@ -121,8 +181,14 @@ explore
         padding-top: px(80);
         background-size: px(48) auto;
         &-message {
-            margin: px(26) 0 px(72);
-            font-size: px(55);
+            margin: px(26) 0 px(42);
+            p:nth-of-type(1) {
+                margin-bottom: px(15);
+                font-size: px(24);
+            }
+            p:nth-of-type(2) {
+                font-size: px(48);
+            }
         }
         &-list {
             width: 90%;
@@ -165,7 +231,15 @@ explore
         background-size: vw(92) auto;
         &-message {
             margin: vw(26) 0 vw(72);
-            font-size: vw(80);
+            p {
+                &:nth-of-type(1) {
+                    margin-bottom: vw(30);
+                    font-size: vw(40);
+                }
+                &:nth-of-type(2) {
+                    font-size: vw(80);
+                }
+            }
         }
         &-list {
             .slick-dots {
@@ -216,6 +290,14 @@ explore
         }
     }
 }
+@at-root html[lang='en'] .explore {
+    @include media-sp {
+        &-message {
+            font-size: vw(60);
+        }
+    }
+}
+
 
 /* ---------------------------------------------------------------
 floor フロアマップ
@@ -231,33 +313,20 @@ floor フロアマップ
     &-btn {
         display: inline-block;
         background-color: $color-background;
-        border: solid 1px $color-main;
+        border-bottom: solid 2px #d7cdbf;
         text-decoration: none;
+        color: #d7cdbf;
         font-size: 1rem;
         font-weight: 400;
         @include transition(all 300ms $easeOutCubic);
 
         &.-active {
-            background-color: $color-red;
             border-color: $color-red;
-            color: white;
+            color: $color-red;
         }
     }
     &-map_list {
-        background: white;
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            margin: auto;
-            top: -0.8em;
-            left: 0; right: 0;
-            width: 1.5rem;
-            height: 1.5rem;
-            background: $color-background;
-            z-index: 5;
-            @include rotate(45deg);
-        }
+        background: $color-background;
     }
     &-map {
         display: none;
@@ -388,20 +457,25 @@ floor フロアマップ
 
                 &[data-map-point="20"] {
                     left: per(394, $MAP-W);
-                    top: per(274, $MAP-H);
+                    top: per(288, $MAP-H);
                 }
                 &[data-map-point="21"] {
                     left: per(394, $MAP-W);
-                    top: per(344, $MAP-H);
+                    top: per(364, $MAP-H);
                 }
                 &[data-map-point="22"] {
-                    left: per(970, $MAP-W);
+                    left: per(960, $MAP-W);
                     top: per(164, $MAP-H);
                 }
                 &[data-map-point="23"] {
                     left: per(520, $MAP-W);
                     top: per(160, $MAP-H);
                 }
+                &[data-map-point="24"] {
+                    left: per(663, $MAP-W);
+                    top: per(135, $MAP-H);
+                }
+
             }
         }
         &_modal {
@@ -468,16 +542,15 @@ floor フロアマップ
     @include media-pc {
         padding-top: px(40);
         &-btn_block {
-            margin: px(40) 0 px(70);
+            margin: px(40) 0 px(20);
         }
         &-btn {
-            width: px(100);
+            width: px(200);
             padding: px(18) 0;
             margin: 0 px(20);
             &:hover {
-                background-color: $color-red;
                 border-color: $color-red;
-                color: white;
+                color: $color-red;
             }
         }
 
@@ -544,7 +617,7 @@ floor フロアマップ
             left:0;bottom:0;
             width: 100vw;
             height: 20px;
-            background: white;
+            background: $color-background;
         }
         &-btn_block {
             margin: vw(60) 0 vw(100);
@@ -642,9 +715,9 @@ news
     }
 
     @include media-pc {
-        padding: px(64) 0;
+        padding: px(100) 0;
         &.-bg {
-            background: url("../images/top/news-bg.jpg") center 0 repeat-x;
+            background: url("../images/top/news-bg.jpg") center bottom repeat-x $color-background;
             background-size: px(55) auto;
         }
         &-list {
@@ -696,6 +769,10 @@ news
 guide 営業案内
 --------------------------------------------------------------- */
 .guide {
+    background-color: $color-background;
+    .sec-title {
+        margin-bottom: 0.7em;
+    }
 
     &:before {
         content: '';
@@ -712,66 +789,106 @@ guide 営業案内
         }
     }
 
-
     &-list {
         margin: auto;
     }
     &-item {
+        background: linear-gradient(to bottom, #f8f1e7, $color-background);
         &_info {
             dt {
+                line-height: 1.4;
                 font-weight: 400;
-                a {
-                    display: inline-block;
-                    padding-bottom: 0.2em;
-                    border-bottom: solid 1px $color-main;
-                    text-decoration: none;
-                }
             }
             dd {
                 line-height: 1.4;
             }
+            a {
+                display: inline-block;
+                padding-bottom: 0.2em;
+                border: solid 1px $color-main;
+                text-decoration: none;
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    margin: auto;
+                    top: 0; bottom: 0;
+                    right: 5%;
+                    border-top: solid 1px $color-main;
+                    border-right: solid 1px $color-main;
+                    width: 0.5em;
+                    height: 0.5em;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        &.-time {
+            background: $color-background;
         }
     }
 
     @include media-pc {
         padding-top: px(150);
-        padding-bottom: px(36);
         &:before {
             background: {
                 image: url("../images/top/guide-cloud.png");
             }
         }
         .sec-title {
-            margin-bottom: px(60);
+            margin-bottom: px(30);
         }
         &-list {
-            @include pie-clearfix;
-            width: px(720);
+            width: 98%;
+            max-width: px(1300);
+            display: flex;
+            flex-flow: row wrap;
+            align-content: stretch;
+            justify-content: space-between;
         }
         &-item {
-            float: left;
-            width: px(360);
-            height: px(165);
+            width: 33%;
+            height: px(280);
+            padding-top: px(50);
             text-align: center;
             &_icon {
                 margin-bottom: px(16);
                 img {
-                    width: px(32);
+                    width: px(40);
                 }
             }
             &_info {
                 dt {
-                    height: px(32);
+                    width: 100%;
+                    height: px(56);
+                    margin-bottom: px(14);
                     font-size: px(18);
-                    a {
-                        @include transition(opacity 300ms $easeOutCubic);
-                        &:hover {
-                            opacity: 0.5;
-                        }
-                    }
                 }
                 dd {
                     font-size: px(12);
+                    a {
+                        padding: px(14);
+                        width: px(176);
+                        font-size: px(12);
+                        transition: background-color 200ms;
+                        &:hover {
+                            background-color: $color-background3;
+                        }
+                    }
+                }
+            }
+
+            &.-time {
+                width: 100%;
+                height: auto;
+                padding: 0;
+                margin-bottom: px(50);
+                dt {
+                    height: auto;
+                }
+            }
+            &.-parking {
+                dt {
+                    padding-top: 0.7em;
                 }
             }
         }
@@ -786,36 +903,46 @@ guide 営業案内
         }
 
         &-list {
-            padding: 0 vw(60);
+            padding: 0 vw(20);
+            > div:nth-of-type(n + 2) {
+                padding-top: vw(40);
+            }
         }
         &-item {
             margin-bottom: vw(60);
-            @include pie-clearfix;
+            text-align: center;
             &_icon {
-                float: left;
-                width: vw(120);
+                margin-bottom: vw(40);
                 text-align: center;
                 img {
-                    width: vw(52);
+                    width: vw(80);
                 }
             }
             &_info {
-                float: left;
-                width: vw(510);
                 dt {
-                    min-height: vw(60);
                     padding-top: vw(6);
+                    margin-bottom: vw(20);
                     font-size: vw(30);
                     line-height: 1.4;
                 }
                 dd {
                     font-size: vw(22);
+                    a {
+
+                        padding: vw(20);
+                        width: vw(350);
+                        font-size: vw(24);
+                    }
                 }
             }
         }
+    }
+}
+
+@at-root html[lang='ja'] .guide {
+    @include media-sp {
         .-station {
             dt {
-                margin-bottom: 0.4em;
                 span {
                     display: block;
                     overflow: hidden;

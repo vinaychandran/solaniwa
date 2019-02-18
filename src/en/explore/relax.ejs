@@ -1,0 +1,124 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'Healing',page:'relax'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-explore p-lower">
+
+<%- include('../../_include/header_' + lang,{lower:1}) %>
+
+<div id="main">
+
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>Healing</h2>
+            <a href="<%- topDir %>" class="back"></a>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/relax/image-1-1.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Rooftop Garden</dt>
+                    <dt>4F</dt>
+                    <dd>There is a grand Japanese garden of about 3300 square metres on the rooftop, adorned with a waterfall, a big pond and colourful seasonal blossoms. Events take place near the big pond at the center of the garden where you will also find the stage. Additionally, we will regularly hold there buddhist worship activities. This is the best place to enjoy yourself in a relaxing environment.</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="sec-title">Rest Area / Recliner Lounge</div>
+        <div class="explore-lead">We have put in place rest areas and recliner lounges in various spots inside the venue.</div>
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/relax/image-1-2.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Relaxing Room</dt>
+                    <dt>2F SPA machi</dt>
+                    <dd>Couch sofa area for you to relax and unwind.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Waiting Square</dt>
+                    <dt>2F Soraniwa honmachi</dt>
+                    <dd>Appreciate here the Raku Nakakura painting on the wall while thinking about how you'd like to spend your time here.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>SPA Room</dt>
+                    <dt>2F Soraniwa honmachi</dt>
+                    <dd>Sit in our tatami area where you can unwind comfortably and stretch as you like.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Rest Room</dt>
+                    <dt>3F Inemuri Town</dt>
+                    <dd> Find a spacious relaxation area which suits different purposes, including recliners with TV and private rooms for ladies only. </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="explore-list">
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Book Free Rental</dt>
+                    <dt>3F Inemuri Town</dt>
+                    <dd>There are about 15,000 copies of comic books and magazines and many books of other kinds. You can peacefully enjoy your reading time in the recliner area.</dd>
+                </dl>
+            </div>
+            <div class="explore-item">
+                <picture>
+                    <img src="/assets/images/explore/image-none.jpg" alt="">
+                </picture>
+                <dl>
+                    <dt>Foot and Ear Massage</dt>
+                    <dt>2F Kaimon Place</dt>
+                    <dd>Experience our therapeutic ear massage which activates the autonomic nervous system, improves the blood flow and lymph circulation. In the other hand, our Cupping Therapy will improve your blood circulation bringing anti-aging and detoxicating benefits. </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./_category', {category:"relax"}) %>
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+
+</div>
+
+<%- include('../../_include/script') %>
+
+</body>
+</html>

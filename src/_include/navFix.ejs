@@ -8,10 +8,10 @@
         <p><img src="/assets/images/cmn/icn-fnav-map-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-map-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-map-white.svg" alt=""></p>
         <span>フロアマップ</span>
     </a><!--
-    --><a href="javascript:void(0);" class="nv-plan">
+    <% if (false) {%>--><a href="javascript:void(0);" class="nv-plan">
         <p><img src="/assets/images/cmn/icn-fnav-plan-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-plan-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-plan-white.svg" alt=""></p>
         <span>プラン</span>
-    </a><!--
+    </a><!--<% } %>
     --><a href="/tickets/" class="nv-tickets <%= page=='tickets' ? '-active' : ''%>">
         <p><img src="/assets/images/cmn/icn-fnav-tickets-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-tickets-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-tickets-white.svg" alt=""></p>
         <span>チケット</span>
@@ -20,8 +20,16 @@
         <p><img src="/assets/images/cmn/icn-fnav-follow-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-follow-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-follow-white.svg" alt=""></p>
         <span>フォロー</span>
     </a><!--
+    --><a href="https://www.osaka-baytower.com/" target="_blank" class="nv-hotel pc">
+        <p><img src="/assets/images/cmn/icn-fnav-hotel-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-hotel-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-hotel-white.svg" alt=""></p>
+        <span>施設内ホテル</span>
+    </a><!--
     --><% if (isTop) {%><a href="" class="nv-guide js-nv-guide"><% } else {%><a href="/#guide" class="nv-guide"><% } %>
         <p><img src="/assets/images/cmn/icn-fnav-point-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-point-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-point-white.svg" alt=""></p>
         <span>交通案内</span>
+    </a><!--
+    --><a href="tel:0676705126" class="nv-call js-contact-tell">
+        <p><img src="/assets/images/cmn/icn-fnav-call-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-call-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-call-white.svg" alt=""></p>
+        <span class="pc">06-7670-5126</span><span class="sp">電話</span>
     </a><!--
 --></nav>

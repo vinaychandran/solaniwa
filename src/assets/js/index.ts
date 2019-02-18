@@ -3,6 +3,36 @@ import * as _ from 'underscore';
 import * as utils from './utils';
 import 'slick-carousel';
 
+declare var anime:any;
+
+class Pararax
+{
+    static $win:any = $(window);
+    static _randomInt = function(a?:number, b?:number):number {
+        if (a === undefined) {
+            return (Math.random() * 99999999) | 0;
+        }
+        if (b === undefined) {
+            return (Math.random() * a) | 0;
+        }
+        return (Math.random() * (b - a) + a) | 0;
+    };
+    public static queue($target:JQuery, param:any = null):void {
+        param = param || {};
+        let ratio = param.ratio || 0.6;
+        let eventName = 'scroll._animation' + Pararax._randomInt();
+        param.setup && param.setup();
+        Pararax.$win.on(eventName, _.throttle(()=>{
+            let st = Pararax.$win.scrollTop();
+            let pos = $target.offset().top - window.innerHeight * ratio;
+            if (st > pos) {
+                param.fire && param.fire();
+                Pararax.$win.off(eventName);
+            }
+        },10));
+    }
+}
+
 $(()=>{
     $('.js-slick').slick({
         dots: false,
@@ -45,8 +75,9 @@ $(()=>{
     let $close:any = $floorModal.find('.close');
     let $point:any = $('.floor-map_points .point');
     let $fbtn:any = $('.floor-btn');
-    let $fmap:any = $('.floor-map');
     let $welcome:any = $('.welcome');
+    let lang:string = $('html').attr('lang');
+    let referrer:string = document.referrer;
 
     function scrollTo(selector:any, margin?:any) {
         margin = margin || 0;
@@ -76,35 +107,231 @@ $(()=>{
             scrollTo('section.guide', -40);
         }, 300);
     }
-    else if (document.referrer.indexOf(location.host) != -1) {
-        $welcome.hide();
+    else if (lang == 'ja' && referrer.indexOf(location.host) != -1) {
+        startAnimation();
+    }
+    else if (lang != 'ja' && referrer.indexOf(location.host) != -1 && referrer.indexOf('/'+lang+'/') != -1 ) {
+        startAnimation();
     }
     else {
         let $msg = $welcome.find('.welcome-msg');
         let $logo = $welcome.find('.welcome-logo');
-        let $p = $msg.find('p').each((i:any, o:any)=>{
-            let $p = $(o);
-            let html = '';
-            $p.text().split('').forEach((c:any)=>{
-                html += '<span>'+c+'</span>';
+        let $p = $msg.find('p');
+        if (lang == 'ja') {
+            $p.each((i:any, o:any)=>{
+                let $p = $(o);
+                let html = '';
+                $p.text().split('').forEach((c:any)=>{
+                    html += '<span>'+c+'</span>';
+                });
+                $p.empty().html(html);
             });
-            $p.empty().html(html);
-        });
+        }
         $p.each((i:any, o:any)=>{
             setTimeout(()=>{
                 $(o).addClass('-show');
-            },i * 300);
+            },i * 300 + 100);
         });
         setTimeout(()=>{
             $msg.fadeOut(600,'linear');
-        }, 2500);
+        }, 2600);
         setTimeout(()=>{
             $logo.addClass('-show').delay(800).promise().done(()=>{
                 window.scrollTo(0, 0);
                 $logo.fadeOut(800,'linear');
-                $welcome.delay(1000).fadeOut(800,'linear');
+                setTimeout(()=>{
+                    startAnimation();
+                }, 1000);
             });
-        }, 3500);
+        }, 3600);
+    }
+
+    function startAnimation() {
+        setTimeout(()=>{
+            window.scrollTo(0, 0);
+            kvAnimation();
+            exploreAnimation();
+            newsAnimation();
+            mapAnimation();
+            guideAnimation();
+            followAnimation();
+            contactAnimation();
+            $welcome.stop(true).fadeOut(500);
+        }, 100);
+    }
+
+    function kvAnimation() {
+        let $kv:any = $('.kv');
+        let pic:any = $kv.find('> picture')[0];
+        let logo:any = $kv.find('.kv-grandopen')[0];
+        let btn:any = $kv.find('.kv-btn')[0];
+
+        let animation = anime.timeline();
+        animation
+            .set(pic, {opacity:0,scale:1.1})
+            .set([logo,btn], {opacity:0,translateY:10})
+            .add({
+                targets: pic,
+                opacity:1,
+                scale: 1,
+                duration: 1600,
+                easing: 'easeOutCubic'
+            })
+            .add({
+                targets:[logo,btn],
+                opacity:1,
+                duration: 1000,
+                translateY:0,
+                delay: anime.stagger(100),
+                easing: 'easeOutCubic'
+            })
+            .finished.then(()=>{
+
+            })
+    }
+
+    function exploreAnimation() {
+        let msg:any = document.querySelectorAll('.explore-message p');
+        let list:any = document.querySelector('.explore-list');
+
+        Pararax.queue($('section.explore'),{
+            setup:()=>{
+                anime.set(msg, {opacity:0,translateY:10});
+                anime.set(list, {opacity:0});
+            },
+            fire:()=>{
+                anime({
+                    targets:msg,
+                    opacity:1, translateY:0,
+                    duration: 2000, delay: anime.stagger(100), easing: 'easeOutCubic'
+                });
+                anime({
+                    targets:list,
+                    opacity:1,
+                    duration: 2000, delay:300, easing: 'easeOutCubic'
+                });
+            }
+        });
+    }
+
+    function newsAnimation() {
+        let news:any[] = [].slice.call(document.querySelectorAll('section.news'));
+        news.forEach((el:any)=>{
+            let $news:any = $(el);
+            let list:any = [].slice.call($news.find('.news-item'));
+            Pararax.queue($news,{
+                setup:()=>{
+                    let scale:number = list.length > 1 ? 1.02 : 1.03;
+                    scale = utils.isSP ? 1.02 : scale;
+                    anime.set(list, {opacity:0,scale:scale});
+                },
+                fire:()=>{
+                    anime({
+                        targets:list,
+                        opacity:1, scale:1.001,
+                        duration: 800, easing: 'easeOutCubic'
+                    });
+                }
+            });
+        });
+    }
+
+    function mapAnimation() {
+        let floor:any = document.querySelector('section.floor');
+        let magazine:any = document.querySelector('section.magazine');
+        [floor,magazine].forEach((el:any)=>{
+            Pararax.queue($(el),{
+                setup:()=>{
+                    anime.set(el, {opacity:0});
+                },
+                fire:()=>{
+                    anime({
+                        targets:el,
+                        opacity:1,
+                        duration: 2000, easing: 'easeOutCubic'
+                    });
+                }
+            });
+        });
+    }
+
+    function guideAnimation() {
+        let title:any = document.querySelector('section.guide .sec-title');
+        let item:any = document.querySelectorAll('.guide-item');
+
+        Pararax.queue($(title),{
+            setup:()=>{
+                anime.set(title, {opacity:0,translateY:10});
+                anime.set(item, {opacity:0});
+            },
+            fire:()=> {
+                anime({
+                    targets: title,
+                    opacity: 1, translateY: 0,
+                    duration: 1600, easing: 'easeOutCubic'
+                });
+                setTimeout(()=>{
+                    anime({
+                        targets: item,
+                        opacity: 1,
+                        duration: 1600, delay: anime.stagger(100), easing: 'easeOutCubic'
+                    });
+                }, 300);
+            }
+        });
+    }
+
+    function followAnimation() {
+        let title:any = document.querySelector('.f_follow .sec-title');
+        let item:any = document.querySelectorAll('.f_follow-sns li');
+
+        Pararax.queue($(title),{
+            setup:()=>{
+                anime.set(title, {opacity:0,translateY:10});
+                anime.set(item, {opacity:0});
+            },
+            fire:()=> {
+                anime({
+                    targets: title,
+                    opacity: 1, translateY: 0,
+                    duration: 1600, easing: 'easeOutCubic'
+                });
+                setTimeout(()=>{
+                    anime({
+                        targets: item,
+                        opacity: 1,
+                        duration: 1600, delay: anime.stagger(100), easing: 'easeOutCubic'
+                    });
+                }, 400);
+            }
+        });
+    }
+
+    function contactAnimation() {
+        let title:any = document.querySelector('.f_contact .sec-title');
+        let item:any = document.querySelectorAll('.f_contact-link a');
+        let hotel:any = document.querySelectorAll('.f_hotel');
+
+        Pararax.queue($(title),{
+            setup:()=>{
+                anime.set(title, {opacity:0,translateY:10});
+                anime.set([item,hotel], {opacity:0});
+            },
+            fire:()=> {
+                anime({
+                    targets: title,
+                    opacity: 1, translateY: 0,
+                    duration: 1600, easing: 'easeOutCubic'
+                });
+                setTimeout(()=>{
+                    anime({
+                        targets: [item,hotel],
+                        opacity: 1,
+                        duration: 1600, delay: anime.stagger(100), easing: 'easeOutCubic'
+                    });
+                }, 400);
+            }
+        });
     }
 
     function openFloorModal(num:any) {
@@ -116,18 +343,10 @@ $(()=>{
         $floorModal.fadeOut(300);
     }
 
-    $fmap.eq(0).addClass('-active');
     $fbtn.on('click', (e:any)=>{
         let $btn = $(e.currentTarget);
-        let fid = $btn.attr('data-floor');
-        let $map = $fmap.filter('[data-floor-id="'+fid+'"]');
-        if (!$map.hasClass('-active')) {
-            $fbtn.removeClass('-active');
-            $btn.addClass('-active');
-            $fmap.removeClass('-active');
-            $map.addClass('-active').css('opacity',0).animate({opacity:1},400);
-            closeFloorModal();
-        }
+        let fid = $btn.attr('data-tab-btn');
+        closeFloorModal();
         if ($floorNav.attr('data-floor-nav').indexOf(fid) != -1) {
             $floorNav.fadeIn(100);
         } else {
@@ -154,17 +373,27 @@ $(()=>{
     });
 
     let top = true;
-    $win.on('scroll', ()=>{
+    let $vk:any = $('.kv');
+    let kvH:any = $vk.height();
+    $win.on('scroll', _.throttle(()=>{
         let st = $win.scrollTop();
-        if (top && st > 120) {
+        let border:any = window.innerHeight * 0.9;
+        if (top && st > border) {
             top = false;
             $header.removeClass('white');
         }
-        else if (!top && st <= 120) {
+        else if (!top && st <= border) {
             top = true;
             $header.addClass('white');
         }
-    });
+
+        border = kvH * 1.3;
+        if (st > border) {
+            $vk.addClass('none');
+        } else {
+            $vk.removeClass('none');
+        }
+    },10));
 
     (()=>{
         const $nav:JQuery = $('.fixed-nav a');

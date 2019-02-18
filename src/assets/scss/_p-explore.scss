@@ -25,6 +25,7 @@
         margin: auto;
     }
     &-item {
+        background: #3f3a39;
         picture {
             display: inline-block;
             img {
@@ -32,7 +33,6 @@
             }
         }
         dl {
-            background: #3f3a39;
             color: white;
             dt {
                 text-align: center;
@@ -41,7 +41,7 @@
                     font-weight: 400;
                 }
                 &:nth-of-type(2) {
-                    font-weight: 200;
+                    font-weight: 100;
                 }
                 span {
                   font-size: 0.8em;
@@ -49,9 +49,7 @@
             }
             dd {
                 line-height: 1.4;
-                text-align: justify;
-                text-justify: inter-ideograph;
-                font-weight: 200;
+                font-weight: 100;
                 &:before {
                     content: '';
                     display: block;
@@ -63,6 +61,7 @@
                 }
                 span {
                     display: block;
+                    margin-top: 0.4em;
                 }
             }
         }
@@ -81,12 +80,17 @@
             margin-bottom: px(75);
         }
         &-list {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: stretch;
+            justify-content: flex-start;
             width: 96%;
-            max-width: px(840);
-            @include clearfix;
+            max-width: px(1020);
+            //@include clearfix;
+
             > div {
                 &:nth-of-type(3n + 2) {
-                    margin: 0 px(60);
+                    margin: 0 5.75%;
                 }
                 //&:nth-of-type(3n + 1) {
                 //    clear: both;
@@ -97,20 +101,19 @@
             }
         }
         &-item {
-            float: left;
-            width: px(240);
+            width: 29.5%;
             dl {
-                height: px(210);
-                padding: px(20) px(16) 0;
+                //min-height: px(160);
+                padding: px(20) px(16) 1.5em;
                 dt {
                     &:nth-of-type(2) {
-                        margin-top: px(12);
+                        margin-top: px(10);
                         font-size: px(13);
                     }
                 }
                 dd {
-                    margin-top: px(14);
-                    padding-top: px(14);
+                    margin-top: px(13);
+                    padding-top: px(12);
                     font-size: px(12);
                     &:before {
                         width: px(22);
@@ -221,6 +224,21 @@
                     }
                 }
             }
+        }
+    }
+}
+@at-root html[lang='ja'] .explore {
+    &-item {
+        dd {
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+    }
+}
+@at-root html[lang='en'] .explore {
+    &-item {
+        dd {
+            letter-spacing: 0.04em;
         }
     }
 }

@@ -48,7 +48,6 @@ $(()=>{
     }
 
 
-
     function scrollTo(selector:any, margin?:any) {
         margin = margin || 0;
         let $target = $(selector);
@@ -57,6 +56,37 @@ $(()=>{
         pos = Math.min(pos, height);
         $('html,body').animate({scrollTop:pos}, 500);
         return false;
+    }
+
+    let $tabBtn:any = $('.js-switch-tab-btn');
+    let $tabs:any = $('.js-switch-tab');
+
+    $tabs.css('display','none').eq(0).css('display','block').addClass('-active');
+    $tabBtn.eq(0).css('-active');
+    $tabBtn.on('click', (e:any)=>{
+        let $btn:any = $(e.currentTarget);
+        let id:any = $btn.attr('data-tab-btn');
+        let $tab:any = $tabs.filter('[data-tab-id="'+id+'"]');
+        if (!$tab.hasClass('-active')) {
+            $tabBtn.removeClass('-active');
+            $btn.addClass('-active');
+            $tabs.removeClass('-active').css('display','none');
+            $tab.addClass('-active').fadeIn(400);
+        }
+        return false;
+    });
+
+    let $lang:any = $('.nv-lang');
+    let $langOthers:any = $lang.find('.nv-lang-others');
+    if (utils.isPC) {
+        $lang.find('.current-lang').on({
+            mouseenter: ()=>{
+                $langOthers.stop(true).slideDown(200);
+            },
+            mouseleave: ()=>{
+                $langOthers.stop(true).slideUp(200);
+            }
+        });
     }
 
     $('.js-about-toggle').on({
@@ -80,13 +110,11 @@ $(()=>{
                 return '-disabled';
             }
         })
-        .attr('href','tel:0665679016').on({
-        'click':()=>{
+        .on('click', ()=>{
             if (!utils.isSP) {
                 return false;
             }
-        }
-    });
+        });
 
     $('.js-nv-follow').on({
         'click':()=>{
@@ -122,6 +150,9 @@ $(()=>{
         }
     });
 
+    $('.modal-window').each((i, e:any)=>{
+        $(e).prepend($('<div class="modal-bg js-modal-close"></div>'));
+    });
     $('.js-modal-open').on({
         'click':(e:any)=>{
             let sel = '.' + $(e.currentTarget).attr('data-modal-target');

@@ -1,0 +1,150 @@
+@import "../../../node_modules/compass-mixins/lib/compass";
+@import "settings";
+
+#main {
+  @include media-pc {
+    background-position: center px(40);
+  }
+}
+
+.gallery {
+  &-list {
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: stretch;
+    justify-content: flex-start;
+  }
+  &-item {
+    opacity: 0;
+    a {
+      display: block;
+      background-color: black;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  @include media-pc {
+    &-list {
+      width: 96%;
+      max-width: px(1020);
+      padding-top: px(100);
+      padding-bottom: px(150);
+      > div {
+        &:nth-of-type(3n + 2) {
+          margin: 0 1%;
+        }
+        &:nth-of-type(n + 4) {
+          margin-top: px(10);
+        }
+      }
+    }
+    &-item {
+      width: 32.666666%;
+      a {
+        img {
+          transition: opacity 300ms;
+        }
+        &:hover img {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  @include media-sp {
+    &-list {
+      margin-top: vw(18);
+      justify-content: space-between;
+      > div {
+        &:nth-of-type(3n + 1) {
+          width: 100%;
+        }
+      }
+    }
+    &-item {
+      width: vw(365);
+      margin-bottom: vw(18);
+    }
+  }
+}
+
+.modal-gallery {
+
+  .modal-close {
+    right: 0;
+    top: 0;
+    transform: translateY(-118%);
+    &:before, &:after {
+      background-color: white;
+    }
+  }
+  &-in {
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0;
+    top: 50%;
+    width: 80%;
+    transform: translateY(-50%);
+    img {
+      width: 100%;
+    }
+  }
+  &-nav {
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0;
+    top: 46%;
+    width: 90%;
+    .nav-btn {
+      position: absolute;
+      color: white;
+      border-radius: 50%;
+      background: center center no-repeat $color-red;
+      background-size: 40% auto;
+      cursor: pointer;
+      &.-prev {
+        left: 0;
+        background-image: url("../images/cmn/arr-left-white.svg");
+      }
+      &.-next {
+        right: 0;
+        background-image: url("../images/cmn/arr-right-white.svg");
+      }
+    }
+  }
+
+  @include media-pc {
+    &-in {
+      max-width: px(1150);
+    }
+    &-nav {
+      max-width: px(1320);
+      .nav-btn {
+        width: px(40);
+        height: px(40);
+      }
+    }
+  }
+  @include media-sp {
+    &-in {
+      width: 96%;
+    }
+    &-nav {
+      top: 70%;
+      width: 55%;
+      .nav-btn {
+        width: vw(60);
+        height: vw(60);
+      }
+    }
+  }
+}
+
+@include media-pc {
+
+}
+@include media-sp {
+
+}

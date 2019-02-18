@@ -20,10 +20,16 @@ textarea {
 
 a {
     color: $color-main;
+    &.link {
+        text-decoration: underline;
+    }
     &.text-link {
         text-decoration: none;
     }
     @include media-pc {
+        &.link:hover {
+            text-decoration: none;
+        }
         &.text-link:hover {
             text-decoration: underline;
         }
@@ -63,14 +69,23 @@ strong {
 
 a.btn {
     display: inline-block;
-    background: $color-red;
+    background-color: $color-red;
     color: white;
     text-align: center;
     text-decoration: none;
+    line-height: 1;
 
     &.-center {
         display: block;
         margin: auto;
+    }
+    &.-arr {
+        background: {
+            image: url("../images/cmn/arr-right-white.svg");
+            repeat: no-repeat;
+            position: 96% center;
+            size: 0.8em auto;
+        };
     }
 
     @include media-pc {

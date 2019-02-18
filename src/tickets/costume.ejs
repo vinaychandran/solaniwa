@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <%- include('../_include/meta', {title:'前売りチケット'}) %>
+    <%- include('../_include/style', {lang:'ja'}) %>
+
+    <%- include('../_include/analytics') %>
+</head>
+<body class="p-tickets p-lower">
+
+<%- include('../_include/header',{lower:1}) %>
+
+<div id="main">
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>変身 / 衣装</h2>
+            <a href="./" class="back"></a>
+        </div>
+    </section>
+
+    <%- include('./_campaign') %>
+
+    <div class="tickets">
+        <div class="sec-title">前売りチケット</div>
+        <div class="tickets-list">
+            <iframe id="regiondo" src="" data-location="all" data-order="tag_position" data-src="https://solaniwa.regiondo.jp/categories?tag=costume-jp&frame=1" width="100%" height="400" frameborder="0" scrolling="auto"></iframe>
+            <script type="text/javascript" src="https://cdn.regiondo.net/media/resellers/js/20284/20284_28.js"></script>
+        </div>
+        <div class="btn-area">
+            <a href="./" class="btn-back">一覧に戻る</a>
+        </div>
+    </div>
+
+    <%- include('../_include/magazine') %>
+    <%- include('../_include/footer', {lower:1}) %>
+    <%- include('../_include/navFix') %>
+</div>
+
+<%- include('../_include/script') %>
+<script src="/assets/js/tickets.js"></script>
+
+</body>
+</html>

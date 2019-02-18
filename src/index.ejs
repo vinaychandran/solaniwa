@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
     <%- include('./_include/meta', {title:''}) %>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <%- include('./_include/style', {lang:'ja'}) %>
 
     <%- include('./_include/analytics') %>
 </head>
@@ -35,15 +35,14 @@
             <a href="/tickets/" class="btn -center">チケットの購入</a>
         </div>
         <div class="kv-grandopen">
-            <span>2019年2月26日</span><br>
-            <strong>グランドオープン</strong>
+            <img src="/assets/images/top/grandopen.png" srcset="/assets/images/top/grandopen@2x.png 2x" alt="グランドオープン">
         </div>
     </section>
 
     <section class="explore">
-        <div class="sec-title">空庭温泉へようこそ</div>
         <div class="explore-message">
-            からだの芯から<br>しあわせに
+            <p>空庭温泉へようこそ</p>
+            <p>からだの芯から<br class="sp">しあわせに</p>
         </div>
         <div class="explore-list js-slick">
             <a href="/explore/onsen.html" class="explore-item">
@@ -88,15 +87,36 @@
 
     <%- include('./_include/magazine') %>
 
+    <section class="news">
+        <div class="news-list">
+            <div class="news-item">
+                <a href="./gallery/">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-gallery-sp.jpg">
+                        <img src="/assets/images/top/news-gallery.jpg" alt="フォトギャラリー">
+                    </picture>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="./news/beginner.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-beginner-sp.jpg">
+                        <img src="/assets/images/top/news-beginner.jpg" alt="初めての方へ">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="floor">
         <div class="sec-title">フロアマップ</div>
         <div class="floor-btn_block">
-            <a href="" class="floor-btn -active" data-floor="2">2F</a>
-            <a href="" class="floor-btn" data-floor="3">3F</a>
-            <a href="" class="floor-btn" data-floor="4">4F・5F</a>
+            <a href="" class="floor-btn js-switch-tab-btn -active" data-tab-btn="2">2F</a>
+            <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="3">3F</a>
+            <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="4">4F・5F</a>
         </div>
         <div class="floor-map_list">
-            <div class="floor-map floor-2F" data-floor-id="2">
+            <div class="floor-map floor-2F js-switch-tab" data-tab-id="2">
                 <picture>
                     <img src="/assets/images/top/map-2f.png" srcset="/assets/images/top/map-2f@2x.png 2x" alt="空庭ヒーローズ">
                 </picture>
@@ -121,7 +141,7 @@
                     <p class="point" data-map-point="18"></p>
                 </div>
             </div>
-            <div class="floor-map floor-3F" data-floor-id="3">
+            <div class="floor-map floor-3F js-switch-tab" data-tab-id="3">
                 <picture>
                     <img src="/assets/images/top/map-3f.png" srcset="/assets/images/top/map-3f@2x.png 2x" alt="空庭ヒーローズ">
                 </picture>
@@ -129,7 +149,7 @@
                     <p class="point" data-map-point="19"></p>
                 </div>
             </div>
-            <div class="floor-map floor-4F5F" data-floor-id="4">
+            <div class="floor-map floor-4F5F js-switch-tab" data-tab-id="4">
                 <picture>
                     <img src="/assets/images/top/map-4f5f.png" srcset="/assets/images/top/map-4f5f@2x.png 2x" alt="空庭ヒーローズ">
                 </picture>
@@ -138,6 +158,7 @@
                     <p class="point" data-map-point="21"></p>
                     <p class="point" data-map-point="22"></p>
                     <p class="point" data-map-point="23"></p>
+                    <p class="point" data-map-point="24"></p>
                 </div>
             </div>
 
@@ -148,7 +169,7 @@
             <div class="floor-map_modal">
                 <div class="floor-map_modal-block">
                     <a href="" class="close"></a>
-                    <%- include('./_index_floor') %>
+                    <%- include('./_include/index_floor') %>
                 </div>
             </div>
         </div>
@@ -182,28 +203,31 @@
                 <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-time.svg" alt="Time"></p>
                 <dl class="guide-item_info">
                     <dt>11:00～翌9:00</dt>
-                    <dd>16歳未満のみのご利用は夜19時まで、<br class="pc">18歳未満のみのご利用は夜22時までです。</dd>
-                </dl>
-            </div>
-            <div class="guide-item -location">
-                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-location.svg" alt="Location"></p>
-                <dl class="guide-item_info">
-                    <dt><a href="https://goo.gl/maps/bK8VPYoAMh62" target="_blank">大阪府大阪市港区弁天1丁目2-3</a></dt>
+                    <dd>16歳未満のみのご利用は夜19時まで、<br class="sp">18歳未満のみのご利用は夜22時までです。</dd>
                 </dl>
             </div>
             <div class="guide-item -station">
                 <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-station.svg" alt="Station"></p>
                 <dl class="guide-item_info">
-                    <dt>弁天町駅: JR大阪環状線<span>・大阪メトロ中央線</span></dt>
+                    <dt>弁天町駅:<br>JR大阪環状線・大阪メトロ中央線</dt>
                     <dd>連絡通路直結<br>
-                        大阪駅（梅田）から10分 / 関西国際空港から約60分
+                        大阪駅（梅田）から10分 /<br>
+                        関西国際空港から約60分
                     </dd>
+                </dl>
+            </div>
+            <div class="guide-item -location">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-location.svg" alt="Location"></p>
+                <dl class="guide-item_info">
+                    <dt>大阪府大阪市<br>港区弁天1丁目2-3</dt>
+                    <dd><a href="https://goo.gl/maps/bK8VPYoAMh62" target="_blank">Google mapで見る</a></dd>
                 </dl>
             </div>
             <div class="guide-item -parking">
                 <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-parking.svg" alt="Parking"></p>
                 <dl class="guide-item_info">
-                    <dt><a href="http://baytower.jp/parking/" target="_blank">近隣の駐車場</a></dt>
+                    <dt>近隣の駐車場</dt>
+                    <dd><a href="http://baytower.jp/parking/" target="_blank">詳しくはこちら</a></dd>
                 </dl>
             </div>
         </div>

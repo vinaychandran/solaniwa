@@ -1,0 +1,39 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%><section class="explore-category">
+    <div class="sec-title">To know more about us.</div>
+    <div class="explore-category_list">
+        <% if (category != 'onsen') { %>
+        <a href="/explore/onsen.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-onsen.png" alt="onsen"></p>
+            <span class="explore-item_label">Onsen</span>
+        </a>
+        <% } if (category != 'health') { %>
+        <a href="<%-topDir%>explore/health.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-health.png" alt="health"></p>
+            <span class="explore-item_label">Health</span>
+        </a>
+        <% } if (category != 'beauty') { %>
+        <a href="<%-topDir%>explore/beauty.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-beauty.png" alt="beauty"></p>
+            <span class="explore-item_label">Beauty</span>
+        </a>
+        <% } if (category != 'relax') { %>
+        <a href="<%-topDir%>explore/relax.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-relax.png" alt="relax"></p>
+            <span class="explore-item_label">Relax</span>
+        </a>
+        <% } if (category != 'eat') { %>
+        <a href="<%-topDir%>explore/eat.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-eat.png" alt="food"></p>
+            <span class="explore-item_label">Food</span>
+        </a>
+        <% } if (category != 'fun') { %>
+        <a href="<%-topDir%>explore/fun.html" class="explore-item">
+            <p class="explore-item_image"><img src="/assets/images/cmn/icn-img-fun.png" alt="fun"></p>
+            <span class="explore-item_label">Fun</span>
+        </a>
+        <% } %>
+    </div>
+</section>
