@@ -306,7 +306,6 @@
             width: 100%;
         }
     }
-
     a.btn-back {
         display: inline-block;
         background-color: rgba($color-background2, 0);
@@ -319,6 +318,7 @@
     .btn-area {
         text-align: center;
     }
+
 
     @include media-pc {
         width: 96%;
