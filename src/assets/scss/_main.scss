@@ -369,18 +369,18 @@ header {
         position: absolute;
         margin: auto;
         z-index: 10;
-        //&:after {
-        //    content: '';
-        //    display: block;
-        //    position: absolute;
-        //    top: 0.3em;
-        //    right: -1em;
-        //    width: 0.3em;
-        //    height: 0.3em;
-        //    border-top: solid 1px $color-main;
-        //    border-right: solid 1px $color-main;
-        //    transform: rotate(135deg);
-        //}
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0.3em;
+            right: -1em;
+            width: 0.3em;
+            height: 0.3em;
+            border-top: solid 1px $color-main;
+            border-right: solid 1px $color-main;
+            transform: rotate(135deg);
+        }
         &-others {
             display: none;
             a {
@@ -389,7 +389,6 @@ header {
             }
         }
     }
-
 
     @include media-pc {
         height: px(76);
@@ -402,7 +401,7 @@ header {
             position: absolute;
             width: 100%;
             right: px(0);
-            top: px(30);
+            top: px(26);
             .nv-btns {
                 padding-left: 1.5em;
                 > a:nth-of-type(n + 4) {
@@ -532,9 +531,9 @@ header {
         .nv-lang {
             top: 0; bottom: 0;
             right: px(30);
-            height: px(16);
+            height: px(18);
             img {
-                height: px(18);
+                height: px(20);
             }
         }
         &.white {
@@ -571,11 +570,6 @@ header {
                 margin-right: 1.4em;
                 padding-right: 1.4em;
             }
-        }
-    }
-    @include media($BP-SP, 960px) {
-        .logo {
-            display: none;
         }
     }
 
@@ -688,7 +682,7 @@ header {
         .nv-switch {
             display: block;
             position: fixed;
-            top: vw(18);
+            top: vw(16);
             right: vw(30);
             width: vw(90);
             height: vw(80);
@@ -730,7 +724,12 @@ header {
             }
         }
         .nv-lang {
-            display: none;
+            top: 0; bottom: 0;
+            left: vw(30);
+            height: vw(40);
+            img {
+                height: vw(40);
+            }
         }
         &.white {
             .logo {
@@ -739,7 +738,6 @@ header {
                 }
             }
             .nv-switch {
-                top: vw(40);
                 p {
                     background-color: white;
                 }
@@ -747,26 +745,24 @@ header {
         }
     }
 }
+@at-root html[lang='ja'] header {
+    @include media($BP-SP, 960px) {
+        .logo {
+            display: none;
+        }
+    }
+}
 @at-root html[lang='en'] header {
     @include media-pc {
         nav {
-            width: px(736);
+            .sub-nv a span {
+                width: px(60);
+            }
         }
     }
-    @include media($BP-SP, 1280px) {
+    @include media($BP-SP, 960px) {
         nav {
-            margin-left: px(60);
-        }
-    }
-    @include media($BP-SP, 1180px) {
-        nav {
-            right: px(0);
-        }
-    }
-    @include media($BP-SP, 1000px) {
-        nav {
-            right: px(0);
-            width: px(620);
+            width: px(690);
         }
     }
 }
@@ -941,6 +937,7 @@ footer {
                 a {
                     padding: px(60) 0;
                     font-size: px(18);
+                    transition: opacity 200ms;
 
                     &:nth-of-type(2) {
                         margin: 0 px(45);
@@ -951,9 +948,13 @@ footer {
                             width: px(40);
                         }
                     }
+                    &:hover {
+                        opacity: 0.7;
+                    }
                 }
             }
         }
+
         .f_contact {
             padding-bottom: px(70);
             h3 {
@@ -1326,7 +1327,7 @@ common
     width: 100%;
     margin: auto;
     background: $color-background;
-    z-index: 2;
+    z-index: 2 !important;
 
     &-bg {
         position: absolute;
@@ -1404,6 +1405,7 @@ common
         width: 100%;
         height: 100%;
         background: rgba(#3f3a39, 0.5);
+        z-index: 5;
         &_block {
             position: absolute;
             margin: auto;

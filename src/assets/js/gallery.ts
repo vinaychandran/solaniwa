@@ -9,7 +9,7 @@ $(()=>{
     const galleryItem:any = $galleryList.find('.gallery-item').remove();
     let pid:any = 0;
 
-    _.shuffle([].slice.call(galleryItem)).forEach((el:any)=>{
+    _.each(_.shuffle([].slice.call(galleryItem)), (el:any)=>{
         $(el).appendTo($galleryList);
     });
 

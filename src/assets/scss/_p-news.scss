@@ -279,7 +279,7 @@
             width: 96%;
             max-width: px(840);
             > div {
-                @include clearfix;
+                @include pie-clearfix;
                 &:nth-of-type(n + 2) {
                     margin-top: px(50);
                 }
@@ -314,7 +314,7 @@
             }
             a {
                 width: px(28);
-                margin: 0 px(32);
+                margin: 0 px(12);
                 @include transition(transform 300ms $easeOutCubic);
                 &:hover {
                     @include scale(1.1);
@@ -371,6 +371,27 @@
         }
     }
 }
+
+// en
+@at-root html[lang='en'] .news-article {
+    @include media-pc {
+        &_item {
+            picture {
+                float: left;
+                width: 42%;
+            }
+            .desc {
+                float: right;
+                position: relative;
+                right: auto;
+                top: 0;
+                @include translateY(0);
+            }
+        }
+    }
+}
+
+
 
 // FAQ
 .news-article {

@@ -84,7 +84,6 @@
 
     @include media-pc {
         margin-top: px(50);
-        margin-bottom: px(60);
         &-list {
             width: 100%;
             max-width: px(1440);
@@ -150,7 +149,6 @@
     }
     @include media-sp {
         padding-top: vw(70);
-        margin-bottom: vw(50);
 
         &-list {
             width: 100%;
@@ -245,6 +243,7 @@
         }
     }
     @include media-pc {
+        margin-top: px(60);
         margin-bottom: px(130);
         &-list {
             width: 96%;
@@ -267,6 +266,7 @@
         }
     }
     @include media-sp {
+        margin-top: vw(70);
         margin-bottom: vw(110);
         .sec-title {
             margin-bottom: vw(30);
@@ -287,9 +287,9 @@
     margin: auto;
 
     &-list {
-        display: flex;
-        flex-flow: row wrap;
-        align-content: stretch;
+        //display: flex;
+        //flex-flow: row wrap;
+        //align-content: stretch;
     }
     &-item {
         picture {
@@ -322,8 +322,9 @@
 
     @include media-pc {
         width: 96%;
+        margin-top: px(60);
         margin-bottom: px(150);
-        max-width: px(1100);
+        max-width: px(1000);
         &-item {
             background-color: $color-background2;
             width: 24.5%;
@@ -356,6 +357,7 @@
         }
     }
     @include media-sp {
+        margin-top: vw(70);
         margin-bottom: vw(110);
         .sec-title {
             margin-bottom: vw(30);

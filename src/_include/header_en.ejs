@@ -25,7 +25,7 @@ var topDir = '/en/';
             <div class="nv-btn">
                 <img src="/assets/images/cmn/icn-nav-01.svg" alt="">
                 <img src="/assets/images/cmn/icn-nav-01-white.svg" alt="">
-                <span>Introduction</span>
+                <span>Explorer</span>
                 <div class="sub-nv">
                     <a href="<%- topDir %>explore/onsen.html"><img src="/assets/images/cmn/icn-nav-img-onsen.png" alt="Onsen"><span>Onsen</span></a>
                     <a href="<%- topDir %>explore/health.html"><img src="/assets/images/cmn/icn-nav-img-health.png" alt="Health"><span>Health</span></a>
@@ -38,20 +38,28 @@ var topDir = '/en/';
             <a class="nv-btn" href="<%- topDir %>tickets/">
                 <img src="/assets/images/cmn/icn-nav-02.svg" alt="">
                 <img src="/assets/images/cmn/icn-nav-02-white.svg" alt="">
-                <span>Ticket</span></a>
+                <span>Online tickets</span></a>
             <a class="nv-btn <%- lower == '0' ? 'js-nv-floor' : '' %>" href="<%- topDir %>#floor">
                 <img src="/assets/images/cmn/icn-nav-03.svg" alt="">
                 <img src="/assets/images/cmn/icn-nav-03-white.svg" alt="">
-                <span>Floor map</span></a>
-            <a class="nv-btn" href="/news/">
+                <span>Map</span></a>
+            <a class="nv-btn" href="<%- topDir %>news/">
                 <img src="/assets/images/cmn/icn-nav-04.svg" alt="">
                 <img src="/assets/images/cmn/icn-nav-04-white.svg" alt="">
-                <span>About Solaniwa</span></a>
+                <span>News</span></a>
             <a class="nv-btn" href="<%- topDir %>fees/">
                 <img src="/assets/images/cmn/icn-nav-05.svg" alt="">
                 <img src="/assets/images/cmn/icn-nav-05-white.svg" alt="">
                 <span>Information</span></a>
         </div>
     </nav>
+    <div class="nv-lang">
+        <div class="current-lang">
+            <img src="/assets/images/cmn/lang-en.png" alt="en">
+            <div class="nv-lang-others">
+                <a href="/"><img src="/assets/images/cmn/lang-ja.png" alt="ja"></a>
+            </div>
+        </div>
+    </div>
     <div class="nv-switch"><p></p><p></p><p></p></div>
 </header>

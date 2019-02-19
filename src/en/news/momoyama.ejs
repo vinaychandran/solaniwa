@@ -1,0 +1,106 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'About Solaniwa',path:'news/momoyama.html'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-news p-lower">
+
+<%- include('../../_include/header_' + lang, {lower:1}) %>
+
+<div id="main">
+
+    <section class="news-article">
+        <div class="news-article_header">
+            <h2>Discover the wonders of <br>Azuchi-Momoyama era</h2>
+            <picture>
+                <source media="(max-width: 768px)" srcset="/assets/images/news/momoyama/head-image-sp.jpg">
+                <img src="/assets/images/news/momoyama/head-image.jpg" alt="">
+            </picture>
+        </div>
+        <div class="news-article_body">
+            <p class="news-article_text">
+                The overall  concept of Solaniwa Onsen comes from Japan's Azuchi Momoyama era.
+                Toyotomi Hideyoshi unified all of Japan from Osaka Castle. The short 30 years from 1573 to 1603 saw the people in the whole country go through prosperous times.
+            </p>
+            <div class="news-article_item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/assets/images/news/momoyama/image-1-sp.jpg">
+                    <img src="/assets/images/news/momoyama/image-1.jpg" srcset="/assets/images/news/momoyama/image-1@2x.jpg 2x" alt="">
+                </picture>
+                <dl class="desc">
+                    <dd>The architecture of Azuchi Momoyama revolves around the Daimyo and merchants in Sengoku but also Osaka Castle. It is characterized by the majestic Tenshuokaku, as well as the luxurious decorations on the Azuchi Castle which are all very eye-catching.<br>
+                        Toyotomi Hideyoshi's favorite color was "gold" and it comes as the most characteristic of the Azuchi Momoyama era.<br>
+                        Gold is everywhere. In the teahouse and tea sets, the armors, the feather weaving, the rubble, even the slippers are plated with gold. This is so to transport you in a luxurious and gorgeous era. Now, why don't you take a stroll in Osaka's "Golden Age" markets.</dd>
+                </dl>
+            </div>
+            <div class="news-article_item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/assets/images/news/momoyama/image-2-sp.jpg">
+                    <img src="/assets/images/news/momoyama/image-2.jpg" srcset="/assets/images/news/momoyama/image-2@2x.jpg 2x" alt="">
+                </picture>
+                <dl class="desc">
+                    <dd>There were so many businessmen and craftsmen in the Anzuchi Momoyama era.  During this time a variety of new arts flourished. We could give as an example, the puppet show-Bunraku accompanied by shamisen, as well as the songs and dances imagined by a witch named Izumo no Okuni from Izumo-taisha.<br>
+                        Oda Nobunaga initiated Rakuichi·Rakuza, which injected vitality into the city as never seen before.<br>
+                        At the same time the overseas Namban culture quietly came ashore and crossed the oceans.<br>
+                        Portugal, Great Britain and other prosperous European countries thrived thanks to their Navy. Their cultures converged and blossomed in rich and colorful ways.<br>
+                        The Popular Culture has dramatically changed. Bright red clothes and gorgeous designs began to be popular among women, while unique Japanese and foreign mixed clothes were favored by men.</dd>
+                </dl>
+            </div>
+            <div class="news-article_item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/assets/images/news/momoyama/image-3-sp.jpg">
+                    <img src="/assets/images/news/momoyama/image-3.jpg" srcset="/assets/images/news/momoyama/image-3@2x.jpg 2x" alt="">
+                </picture>
+                <dl class="desc">
+                    <dd>Foodies seeked new ingredients, such as watermelon, pumpkin, and onion. All recently appearing in the market, fried as the new custom wanted it.<br>
+                        Bread, honey cakes and wines were also introduced to Japan during this period. What is seen today as the most ordinary foods, actually found their roots in the country at that time. </dd>
+                </dl>
+            </div>
+            <div class="news-article_item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/assets/images/news/momoyama/image-4-sp.jpg">
+                    <img src="/assets/images/news/momoyama/image-4.jpg" srcset="/assets/images/news/momoyama/image-4@2x.jpg 2x" alt="">
+                </picture>
+                <dl class="desc">
+                    <dd>Luxury was back then appreciated, but the Sen no Rikyū philosophy has seen that the tea ceremony would take an artistic form. It also advocated a calm way of life, welcoming guests with the spirit of "Once in a lifetime".<br>
+                        Nowadays, the phrase "Once in a lifetime" is still widely used, and Osakans' "hospitality" was born and evolved from this phrase traveling through time to meet us.</dd>
+                </dl>
+            </div>
+            <p class="news-article_text">
+                Have you been moved by the Azuchi Momoyama culture?<br>
+                The more you understand it, the more you will feel that the Azuchi Momoyama era is full of charm. If you learn the historical background and visit Solaniwa Onsen, you will better appreciate this Grand World of Wonders.<br>
+                We invite you to experience the origin of contemporary Osaka, the world of Azuchi Momoyama, full of vitality and happiness.
+            </p>
+        </div>
+
+        <div class="news-article_share">
+            <p>Share on:</p>
+            <a href="" class="js-share-fb"><img src="/assets/images/cmn/sns-fb.svg" alt="facebook"></a>
+            <a href="" class="js-share-line"><img src="/assets/images/cmn/sns-line.svg" alt="LINE"></a>
+        </div>
+    </section>
+
+    <section class="news-others">
+        <div class="sec-title">Go on reading</div>
+        <%- include('./_newslist',{category:'momoyama'}) %>
+        <a href="./" class="btn -center">Home</a>
+    </section>
+
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+
+</div>
+
+<%- include('../../_include/script') %>
+
+</body>
+</html>

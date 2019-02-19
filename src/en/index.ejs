@@ -13,11 +13,6 @@ var topDir = '/'+lang+'/';
 <body class="p-top">
 
 <div class="welcome">
-    <div class="welcome-msg">
-        <p>Relaxation and happiness</p>
-        <p>in body and mind</p>
-        <p>Solaniwa Onsen</p>
-    </div>
     <div class="welcome-logo">
         <picture>
             <source media="(max-width: 768px)" srcset="/assets/images/cmn/welcome-logo-sp.png">
@@ -36,18 +31,17 @@ var topDir = '/'+lang+'/';
             <img src="/assets/images/top/kv.jpg" alt="Solaniwa Onsen">
         </picture>
         <div class="kv-btn">
-            <a href="/tickets/" class="btn -center">Buy a ticket</a>
+            <a href="./tickets/" class="btn -center">Book Now</a>
         </div>
         <div class="kv-grandopen">
-            <span>Official opening on</span><br>
-            <strong>February 26, 2019.</strong>
+            <img src="/assets/images/top/grandopen_en.png" srcset="/assets/images/top/grandopen_en@2x.png 2x" alt="grand open">
         </div>
     </section>
 
     <section class="explore">
-        <div class="sec-title">Welcome to Solaniwa Onsen</div>
         <div class="explore-message">
-            Relaxation and happiness<br>in body and mind
+            <p>Welcome to Solaniwa Onsen</p>
+            <p>Relaxation and happiness <br class="sp">in body and mind</p>
         </div>
         <div class="explore-list js-slick">
             <a href="explore/onsen.html" class="explore-item">
@@ -92,8 +86,29 @@ var topDir = '/'+lang+'/';
 
     <%- include('../_include/magazine_' + lang) %>
 
+    <section class="news">
+        <div class="news-list">
+            <div class="news-item">
+                <a href="./gallery/">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-gallery-sp.jpg">
+                        <img src="/assets/images/top/news-gallery.jpg" alt="photo gallery">
+                    </picture>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="/news/beginner.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-beginner-sp.jpg">
+                        <img src="/assets/images/top/news-beginner.jpg" alt="beginner">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="floor">
-        <div class="sec-title">Floor map</div>
+        <div class="sec-title">Floor Map</div>
         <div class="floor-btn_block">
             <a href="" class="floor-btn js-switch-tab-btn -active" data-tab-btn="2">2F</a>
             <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="3">3F</a>
@@ -142,6 +157,7 @@ var topDir = '/'+lang+'/';
                     <p class="point" data-map-point="21"></p>
                     <p class="point" data-map-point="22"></p>
                     <p class="point" data-map-point="23"></p>
+                    <p class="point" data-map-point="24"></p>
                 </div>
             </div>
 
@@ -180,34 +196,36 @@ var topDir = '/'+lang+'/';
     </section>
 
     <section class="guide">
-        <div class="sec-title">Bsiness hours</div>
+        <div class="sec-title">Opening Hours</div>
         <div class="guide-list">
             <div class="guide-item -time">
                 <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-time.svg" alt="Time"></p>
                 <dl class="guide-item_info">
-                    <dt>11:00～9:00 next day</dt>
+                    <dt>11:00am～9:00am the next day</dt>
                     <dd>※Unaccompanied child under 16 years old must check-out <br>by 19:00, and under 18 years old must check-out by 22:00</dd>
-                </dl>
-            </div>
-            <div class="guide-item -location">
-                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-location.svg" alt="Location"></p>
-                <dl class="guide-item_info">
-                    <dt><a href="https://goo.gl/maps/bK8VPYoAMh62" target="_blank">Address: Road 2-3, Benten 1,<br> Osaka Port, Ōsaka-fu</a></dt>
                 </dl>
             </div>
             <div class="guide-item -station">
                 <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-station.svg" alt="Station"></p>
                 <dl class="guide-item_info">
-                    <dt>Benten Railway station   JR Osaka Loop Line, <span>Osaka Metro Central Line.</span></dt>
-                    <dd>Direct Access<br>
-                        15 minutes from Osaka Station (Umeda )/<br>60 minutes from Kansai International Airport
+                    <dt>Benten Railway station JR Osaka Loop Line, <br><span>Osaka Metro Central Line.</span></dt>
+                    <dd>Approximately 10 minutes from Osaka Station (Umeda)<br>
+                        Approximately 60 minutes from Kansai International Airport
                     </dd>
+                </dl>
+            </div>
+            <div class="guide-item -location">
+                <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-location.svg" alt="Location"></p>
+                <dl class="guide-item_info">
+                    <dt>Address: 1-2-3 Benten, Minato-ku, Osaka</dt>
+                    <dd><a href="https://goo.gl/maps/bK8VPYoAMh62" target="_blank">Google map</a></dd>
                 </dl>
             </div>
             <div class="guide-item -parking">
                 <p class="guide-item_icon"><img src="/assets/images/cmn/icn-guide-parking.svg" alt="Parking"></p>
                 <dl class="guide-item_info">
-                    <dt><a href="http://baytower.jp/parking/" target="_blank">Surrounding parking lot</a></dt>
+                    <dt>Surrounding parking lot</dt>
+                    <dd><a href="http://baytower.jp/parking/" target="_blank">More</a></dd>
                 </dl>
             </div>
         </div>

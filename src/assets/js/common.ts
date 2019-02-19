@@ -87,6 +87,12 @@ $(()=>{
                 $langOthers.stop(true).slideUp(200);
             }
         });
+    } else {
+        $lang.find('.current-lang').on({
+            click: ()=>{
+                $langOthers.stop(true).slideToggle(200);
+            }
+        });
     }
 
     $('.js-about-toggle').on({

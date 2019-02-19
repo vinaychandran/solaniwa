@@ -117,24 +117,26 @@ $(()=>{
         let $msg = $welcome.find('.welcome-msg');
         let $logo = $welcome.find('.welcome-logo');
         let $p = $msg.find('p');
-        if (lang == 'ja') {
+        if ($msg.length && lang == 'ja') {
             $p.each((i:any, o:any)=>{
                 let $p = $(o);
                 let html = '';
-                $p.text().split('').forEach((c:any)=>{
+                _.each($p.text().split(''), (c:any)=>{
                     html += '<span>'+c+'</span>';
                 });
                 $p.empty().html(html);
             });
         }
-        $p.each((i:any, o:any)=>{
+        if ($msg.length) {
+            $p.each((i:any, o:any)=>{
+                setTimeout(()=>{
+                    $(o).addClass('-show');
+                },i * 300 + 100);
+            });
             setTimeout(()=>{
-                $(o).addClass('-show');
-            },i * 300 + 100);
-        });
-        setTimeout(()=>{
-            $msg.fadeOut(600,'linear');
-        }, 2600);
+                $msg.fadeOut(600,'linear');
+            }, 2600);
+        }
         setTimeout(()=>{
             $logo.addClass('-show').delay(800).promise().done(()=>{
                 window.scrollTo(0, 0);
@@ -143,7 +145,7 @@ $(()=>{
                     startAnimation();
                 }, 1000);
             });
-        }, 3600);
+        }, $msg.length ? 3600 : 1000);
     }
 
     function startAnimation() {
@@ -216,7 +218,7 @@ $(()=>{
 
     function newsAnimation() {
         let news:any[] = [].slice.call(document.querySelectorAll('section.news'));
-        news.forEach((el:any)=>{
+        _.each(news,(el:any)=>{
             let $news:any = $(el);
             let list:any = [].slice.call($news.find('.news-item'));
             Pararax.queue($news,{
@@ -239,7 +241,7 @@ $(()=>{
     function mapAnimation() {
         let floor:any = document.querySelector('section.floor');
         let magazine:any = document.querySelector('section.magazine');
-        [floor,magazine].forEach((el:any)=>{
+        _.each([floor,magazine], (el:any)=>{
             Pararax.queue($(el),{
                 setup:()=>{
                     anime.set(el, {opacity:0});

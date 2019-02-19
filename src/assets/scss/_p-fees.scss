@@ -244,6 +244,27 @@
         }
     }
 }
+@at-root html[lang='en'] .fee {
+    @include media-pc {
+        &-table {
+            &.-family {
+                width: 100%;
+                td {
+                    padding: 0 2%;
+                    div {
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: px(30) px(20);
+                        text-align: left;
+                        p {
+                            margin-bottom: 0.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 .fees {
     background: $color-background2;

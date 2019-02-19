@@ -1,0 +1,92 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'Terms of use'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-term p-lower">
+
+<%- include('../../_include/header_' + lang, {lower:1}) %>
+
+<div id="main">
+
+    <section class="term">
+        <div class="sec-title">Terms of use</div>
+        <div class="term-header">
+            <strong>Please make sure to read and agree to the following before entering the bathhouse.</strong><br>
+            <p>In case you do not comply with any of these terms, refrain from entering the bathhouse. <br>
+                In addition, please understand that our facility cannot be held responsible for any dispute or accident. Accompanied children fall under the sole responsibility of their guardian.
+            </p>
+        </div>
+        <div class="term-list">
+            <dl>
+                <dt>Following health conditions</dt>
+                <dd>
+                    If you have anyone of the following health conditions, please refrain from entering the bathhouse.<br>
+                    <div>
+                        ※People who are warned by doctors not to take a bath<br>
+                        ※People with infectious diseases and those with potential infectious diseases<br>
+                        ※People under the influence of alcohol <br>
+                        ※If you feel unwell, please avoid entering the bath.<br>
+                    </div>
+                    If you are injured or feeling unwell, please contact our staff for emergency treatment. There is no doctor in the facility. In case of emergency, please call an ambulance.
+                </dd>
+
+                <dt>Following bath etiquette</dt>
+                <dd>please make sure to take off all your clothes before entering the bath. It is forbidden to wear swimsuits, towels or any clothing in the bath. When taking a bath, please be sure to follow all bathhouse policies. When taking a rock bath, please be sure to wear the appropriate clothing following the bathhouse policies. Please take off all diapers before taking a bath. Children who need to wear their diapers should bath in the baby bathing pool. No diapers for swimming are allowed. Please do not wear jewelry and glasses when entering the rock bath and sauna. These could cause you harm. Please do not dive nor swim in the bathing pool.</dd>
+
+                <dt>衛生面について</dt>
+                <dd>In order to avoid any health issue please rinse your body with hot water and rinse before taking a bath. Please refrain from bringing towels, hand towels, toiletries, toys into the bathing pool.Please do not apply oil on your body before taking the bath. This is to prevent contaminating the water quality in the bathing pool. Please do notenter any unfinished area.Please do not bring pets into the bathhouse. (Except for guide dogs)</dd>
+
+                <dt>安全面について</dt>
+                <dd>For safety, please avoid running in the facility, including the bathing place.The bathhouse may be temporarily closed due to weather, geological changes, fires and other accidents. In case of disasters or accidents, please evacuate promptly under our staff's guidance. Please keep your luggage in the locker. While bathing, there could be minor contact with other guests which could cause accidents. Thus, please do not wear glasses, sunglasses or jewelry so to avoid their damage. Please do not take photos in the changing rooms, baths, toilets, lockers and so on. When taking pictures, please make sure to avoid exposing personal information of other guests and staff. Children (not attending primary school) need to be accompanied by guardians over the age of 18. Under no condition should the guardian divert their eyes during the child's bathing. Please refrain from taking a bath after drinking alcohol, this may cause you harm.</dd>
+
+                <dt>持込物について</dt>
+                <dd>Under the authorities' guidance, it is strictly forbidden to bring food into the bathhouse.<br>
+                    <div>
+                        ※People with allergies and guests who need to eat specific food can be authorized to carry their meal.<br>
+                        ※Please be informed that the food prepared in our kitchens might touch and is not made for people with food allergies.
+                    </div>
+                    Please do not bring in dangerous items (glass, metal, knives, explosives) or pets. Please do not play with children's toys in the bath. Please do not bring in items carrying strong odors to avoid disturbing other guests. Even in the absence of a specific rule, the facility retains the right to refuse letting a guest to bring in an item under the judgement of our staff and according to the specific situation. Please safe-keep your own luggage in a secure fashion.<br>
+                    <div>※There is no guarantee that your luggage or items will not be lost, stolen or damaged.</div>
+                </dd>
+
+                <dt>その他注意事項</dt>
+                <dd>
+                    Under no circumstances can tattooed guests enter the bathhouse.<br>
+                    <div>
+                        ※If a tattooed guest enters the bathhouse, he is asked to leave as soon as possible.<br>
+                        ※No refund is guaranteed
+                    </div>
+                    Guests with body paintings and stickers should wipe them off before entering the bathhouse. We reject any anti-social force, and any behavior that may cause troubles for other guests.<br>
+                    <div>
+                        ※No refund is guaranteed
+                    </div>
+                    Please make sure to follow our staff's guidance and refrain from causing any trouble or danger to other guests. Please follow our staff direction, more so during emergency procedures. Please avoid any behavior that might cause trouble to other guests, including ones related to luggage storage and such. When a minor enters the bathhouse, he/she should be accompanied by a guardian over the age of 18.<br>
+                    (In accordance with the regulations, there are time limits imposed to minors. (Child under 16 years old must check-out by 19:00, and under 18 years old must check-out by 22:00) Children over 120cm in height or over 10 years old should not enter the bathing pool with their partners of opposite sex.Please do not charge your cell phone in sockets outside of the designated areas.
+                    Please keep a good care of the key of each locker and IC bracelets.<br>
+                    <div>
+                        ※We will charge 5,000 yen If you happen to lose the key of IC locker; for other lockers' keys the charge will be of 3,000 Yen. For security reasons, we might be brought to change secret keys. In this case no refund will be issued.
+                    </div>
+                </dd>
+
+            </dl>
+        </div>
+    </section>
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+
+</div>
+
+<%- include('../../_include/script') %>
+
+</body>
+</html>

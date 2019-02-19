@@ -1,0 +1,123 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'About Solaniwa',path:'news/heroes.html'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-news p-lower">
+
+<%- include('../../_include/header_' + lang, {lower:1}) %>
+
+<div id="main">
+
+    <section class="news-article">
+        <div class="news-article_header">
+            <h2>Solaniwa heroes</h2>
+            <picture>
+                <source media="(max-width: 768px)" srcset="/assets/images/news/heroes/head-image-sp.jpg">
+                <img src="/assets/images/news/heroes/head-image.jpg" alt="">
+            </picture>
+        </div>
+        <div class="news-article_body">
+            <p class="news-article_text">
+                Meet the heroes from Azuchi Momoyama era in Solaniwa Onsen.
+                These heroes mission is to elevate your stay and offer you five charming and unique personalities.
+            </p>
+            <div class="news-article_item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/assets/images/news/heroes/image-1-sp.jpg">
+                    <img src="/assets/images/news/heroes/image-1.jpg" srcset="/assets/images/news/heroes/image-1@2x.jpg 2x" alt="">
+                </picture>
+                <dl class="desc">
+                    <dt>Dosan Manase</dt>
+                    <dd>Let us introduce you to the most famous doctor in Sengoku: Manase Dosan.
+                        Nowadays, people spend way too much time checking their phones, damaging their health, getting sore eyes, shoulder aches and other inconveniences. In order to heal every guest who comes to Solaniwa Onsen, we have brought you a famed physician from the past, who once served the emperor of Japan during Azushi Momoyama era. After his service to the court, he acted as the attending doctor of many military officers, such as Ashikaga Shogun, Mouri Motonari, Oda Nobunaga, Toyotomi Hideyoshi and Tokugawa Ieyasu.<br>
+                        Once upon a time, there was a "Health Song" written to help people understand health therapy, We are bringing it back rewriting it for Solaniwa Onsen's esteemed guests.<br>
+                        The steam coming out from the Rouryu rock bath, designed by Manase Dosan, embodies all five elements. They will bring you relaxation, detoxifying your body and clearing your fatigue. </dd>
+                </dl>
+            </div>
+            <div class="news-article_item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/assets/images/news/heroes/image-2-sp.jpg">
+                    <img src="/assets/images/news/heroes/image-2.jpg" srcset="/assets/images/news/heroes/image-2@2x.jpg 2x" alt="">
+                </picture>
+                <dl class="desc">
+                    <dt>Tora Minagawa</dt>
+                    <dd>She is the first one to run and expand a cosmetics chain in Japan.<br>
+                        In the spirit of exploration and foresight, Minagawa never stops seeking the essence of beauty. She made cosmetics with natural materials which she finds through repeated experimentations. The cosmetics brought to life are all designed to highlight the beauty of each woman. Her carefully selected products are made so that every woman find herself more attractive after using them. This is the reason why her wears have always been so widely praised.<br>
+                        Find in Solaniwa Onsen a varied selection of cosmetics and beauty products curated so to satisfy the needs and wants of modern women.</dd>
+                </dl>
+            </div>
+            <div class="news-article_item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/assets/images/news/heroes/image-3-sp.jpg">
+                    <img src="/assets/images/news/heroes/image-3.jpg" srcset="/assets/images/news/heroes/image-3@2x.jpg 2x" alt="">
+                </picture>
+                <dl class="desc">
+                    <dt>Zenemon Konoike</dt>
+                    <dd>He is known as a Sake collector in Itami and the first ancestor of the Kohnoike Yamanaka Family. He is also related to the first Japanese sake brewer.<br>
+                        In order to transport the Sake fermented by his father to all parts of Japan, he opened up a warehouse (which extends to Benten Railway station) and established there a stronghold. In addition to this, he invented a large wine barrel and created a shipping method that had been in use since ancient times to the modern era.<br>
+                        He could be called a young industrialist, who ran a maritime shipping company.<br>
+                        The famous "Sake" made in Osaka and "Aiioi", Kohnoike Village is very popular all around Japan. It is said that its annual output is over 15 million dous.</dd>
+                </dl>
+            </div>
+            <div class="news-article_item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/assets/images/news/heroes/image-4-sp.jpg">
+                    <img src="/assets/images/news/heroes/image-4.jpg" srcset="/assets/images/news/heroes/image-4@2x.jpg 2x" alt="">
+                </picture>
+                <dl class="desc">
+                    <dt>Sekisai Tsubouchi</dt>
+                    <dd>He, who is known as the legendary chef, once served the great Oda Nobunaga,.
+                        It was told that when Tsubouchi Sekisai first cooked for Nobunaga, the later angrily said, "This tastes as light as water. How can I eat it?" "Kill the chef!" Then Tsubouchi Sekisai was sentenced to death.<br>
+                        However, Tsubouchi answered, "If the food I would cook tomorrow morning could not satisfy your distinguished palate, I will gladly commit Seppuku".  The next morning, the food served by Tsubouchi was so delicious, that it made Nobunaga marvel.<br>
+                        Sekisai stated, "The meal prepared yesterday was light as it is favored by the generals in Kyoto,<br>
+                        but today's meal was cooked in rustic fashion, enhanced with strong flavors".<br>
+                        Our restaurant will bring you an authentic Japanese cuisine and Osaka's specials crafted for the modern foodie. In the dining hall, you will be able to experience the know-how of our 「Chef Ukase-tei 」and savor delicate, tasty dishes.</dd>
+                </dl>
+            </div>
+            <div class="news-article_item">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/assets/images/news/heroes/image-5-sp.jpg">
+                    <img src="/assets/images/news/heroes/image-5.jpg" srcset="/assets/images/news/heroes/image-5@2x.jpg 2x" alt="">
+                </picture>
+                <dl class="desc">
+                    <dt>Goemon Ishikawa</dt>
+                    <dd>During Anzuchi Momoyama era he was famed as the king of thieves, so talented that he was known as the best "thief in the world". It was also said that he might actually have been a ninja.<br>
+                        There story goes like: The Iga Ninja, known for his village of Ninja, accepted Goemon Ishikawa as a disciple. But Ishikawa never got promoted. When he asked the Ninja Lord the reason, the later simply answered "You have no sense of humor"<br>
+                        Later on, it was said that Ishikawa had left the Ninja cult and set himself out to rob the rich and assist the poor.<br>
+                        Ishikawa can appear anywhere around our facilities and can come at any moment, lookout for him, he occasionally holds breathtaking performances in Solaniwa Onsen.</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="news-article_share">
+            <p>Share on:</p>
+            <a href="" class="js-share-fb"><img src="/assets/images/cmn/sns-fb.svg" alt="facebook"></a>
+            <a href="" class="js-share-line"><img src="/assets/images/cmn/sns-line.svg" alt="LINE"></a>
+        </div>
+    </section>
+
+    <section class="news-others">
+        <div class="sec-title">Go on reading</div>
+        <%- include('./_newslist',{category:'heroes'}) %>
+        <a href="./" class="btn -center">Home</a>
+    </section>
+
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+
+</div>
+
+<%- include('../../_include/script') %>
+
+</body>
+</html>

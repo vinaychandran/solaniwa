@@ -105,6 +105,7 @@ KV
         img {
             width: 100%;
         }
+
         &-btn {
             position: absolute;
             width: 100%;
@@ -291,6 +292,15 @@ explore
     }
 }
 @at-root html[lang='en'] .explore {
+    @include media-pc {
+        &-message {
+            p:nth-of-type(1) {
+            }
+            p:nth-of-type(2) {
+                font-size: px(38);
+            }
+        }
+    }
     @include media-sp {
         &-message {
             font-size: vw(60);
@@ -737,12 +747,14 @@ news
         &-item {
             width: 49.2%;
             max-width: px(700);
-            @include transition(opacity 200ms);
+            picture {
+                @include transition(opacity 200ms);
+            }
             &.-wide {
                 width: 100%;
                 max-width: 100%;
             }
-            &:hover {
+            &:hover picture {
                 opacity: 0.8;
             }
         }
@@ -848,7 +860,7 @@ guide 営業案内
         &-item {
             width: 33%;
             height: px(280);
-            padding-top: px(50);
+            padding: px(50) px(20) 0;
             text-align: center;
             &_icon {
                 margin-bottom: px(16);
@@ -859,7 +871,7 @@ guide 営業案内
             &_info {
                 dt {
                     width: 100%;
-                    height: px(56);
+                    min-height: px(56);
                     margin-bottom: px(14);
                     font-size: px(18);
                 }
@@ -884,11 +896,6 @@ guide 営業案内
                 margin-bottom: px(50);
                 dt {
                     height: auto;
-                }
-            }
-            &.-parking {
-                dt {
-                    padding-top: 0.7em;
                 }
             }
         }
@@ -939,15 +946,23 @@ guide 営業案内
     }
 }
 
+
 @at-root html[lang='ja'] .guide {
     @include media-sp {
-        .-station {
-            dt {
-                span {
-                    display: block;
-                    overflow: hidden;
-                    margin-left: 4.5em;
-                    text-indent: -1em;
+        &-item {
+            .-station {
+                dt {
+                    span {
+                        display: block;
+                        overflow: hidden;
+                        margin-left: 4.5em;
+                        text-indent: -1em;
+                    }
+                }
+            }
+            .-parking {
+                dt {
+                    padding-top: 0.7em;
                 }
             }
         }
