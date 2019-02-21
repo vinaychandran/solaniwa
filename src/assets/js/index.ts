@@ -131,11 +131,11 @@ $(()=>{
             $p.each((i:any, o:any)=>{
                 setTimeout(()=>{
                     $(o).addClass('-show');
-                },i * 300 + 100);
+                },i * 300 + 300);
             });
             setTimeout(()=>{
                 $msg.fadeOut(600,'linear');
-            }, 2600);
+            }, 3000);
         }
         setTimeout(()=>{
             $logo.addClass('-show').delay(800).promise().done(()=>{
@@ -145,7 +145,7 @@ $(()=>{
                     startAnimation();
                 }, 1000);
             });
-        }, $msg.length ? 3600 : 1000);
+        }, $msg.length ? 4000 : 1000);
     }
 
     function startAnimation() {
@@ -186,10 +186,7 @@ $(()=>{
                 translateY:0,
                 delay: anime.stagger(100),
                 easing: 'easeOutCubic'
-            })
-            .finished.then(()=>{
-
-            })
+            });
     }
 
     function exploreAnimation() {
