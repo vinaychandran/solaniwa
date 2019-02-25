@@ -773,6 +773,11 @@ footer
 footer {
     z-index: 2;
     background-color: $color-background;
+    .f_announcement {
+        margin: 0 auto 2em;
+        line-height: 1.6;
+        text-align: left;
+    }
     .f_follow {
         .sec-title {
             &:after {
@@ -915,6 +920,11 @@ footer {
     }
 
     @include media-pc {
+        .f_announcement {
+            width: 90%;
+            max-width: px(690);
+            font-size: px(12);
+        }
         .f_follow {
             //padding: px(42) 0;
             padding-top: px(50);
@@ -1333,6 +1343,8 @@ common
         position: absolute;
         margin: auto;
         z-index: 1;
+        pointer-events: none;
+
         &:before, &:after {
             content: '';
             display: block;

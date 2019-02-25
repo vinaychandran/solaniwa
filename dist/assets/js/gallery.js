@@ -1,1 +1,197 @@
-!function(r){function e(e){for(var n,c,l=e[0],i=e[1],u=e[2],s=0,p=[];s<l.length;s++)c=l[s],a[c]&&p.push(a[c][0]),a[c]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(r[n]=i[n]);for(f&&f(e);p.length;)p.shift()();return o.push.apply(o,u||[]),t()}function t(){for(var r,e=0;e<o.length;e++){for(var t=o[e],n=!0,l=1;l<t.length;l++){var i=t[l];0!==a[i]&&(n=!1)}n&&(o.splice(e--,1),r=c(c.s=t[0]))}return r}var n={},a={6:0},o=[];function c(e){if(n[e])return n[e].exports;var t=n[e]={i:e,l:!1,exports:{}};return r[e].call(t.exports,t,t.exports,c),t.l=!0,t.exports}c.m=r,c.c=n,c.d=function(r,e,t){c.o(r,e)||Object.defineProperty(r,e,{configurable:!1,enumerable:!0,get:t})},c.r=function(r){Object.defineProperty(r,"__esModule",{value:!0})},c.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return c.d(e,"a",e),e},c.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},c.p="";var l=window.webpackJsonp=window.webpackJsonp||[],i=l.push.bind(l);l.push=e,l=l.slice();for(var u=0;u<l.length;u++)e(l[u]);var f=i;o.push([5,0]),t()}({5:function(r,e,t){"use strict";t.r(e);var n=t(0),a=t(1);n(function(){var r=n(".modal-gallery"),e=r.find("img"),t=r.find(".nav-btn"),o=n(".gallery-list"),c=o.find(".gallery-item").remove(),l=0;a.each(a.shuffle([].slice.call(c)),function(r){n(r).appendTo(o)});var i=n(".js-gallery").on({click:function(e){return l=n(e.currentTarget).attr("data-gallery-id")-0,r.fadeIn(300),u(n(e.currentTarget).attr("href")),!1}});function u(r){e.css("opacity",0).attr("src",r).fadeTo(500,1)}i.each(function(r,e){n(e).attr("data-gallery-id",r)}),t.on({click:function(r){var e=n(r.currentTarget),t=i.length;return l=e.hasClass("-next")?++l%t:(--l+t)%t,u(i.eq(l).attr("href")),!1}}),o.find(".gallery-item").each(function(r,e){n(e).delay(100*r).fadeTo(500,1)})})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// install a JSONP callback for chunk loading
+/******/ 	function webpackJsonpCallback(data) {
+/******/ 		var chunkIds = data[0];
+/******/ 		var moreModules = data[1];
+/******/ 		var executeModules = data[2];
+/******/ 		// add "moreModules" to the modules object,
+/******/ 		// then flag all "chunkIds" as loaded and fire callback
+/******/ 		var moduleId, chunkId, i = 0, resolves = [];
+/******/ 		for(;i < chunkIds.length; i++) {
+/******/ 			chunkId = chunkIds[i];
+/******/ 			if(installedChunks[chunkId]) {
+/******/ 				resolves.push(installedChunks[chunkId][0]);
+/******/ 			}
+/******/ 			installedChunks[chunkId] = 0;
+/******/ 		}
+/******/ 		for(moduleId in moreModules) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 		}
+/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
+/******/ 		while(resolves.length) {
+/******/ 			resolves.shift()();
+/******/ 		}
+/******/
+/******/ 		// add entry modules from loaded chunk to deferred list
+/******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
+/******/
+/******/ 		// run deferred modules when all chunks ready
+/******/ 		return checkDeferredModules();
+/******/ 	};
+/******/ 	function checkDeferredModules() {
+/******/ 		var result;
+/******/ 		for(var i = 0; i < deferredModules.length; i++) {
+/******/ 			var deferredModule = deferredModules[i];
+/******/ 			var fulfilled = true;
+/******/ 			for(var j = 1; j < deferredModule.length; j++) {
+/******/ 				var depId = deferredModule[j];
+/******/ 				if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 			}
+/******/ 			if(fulfilled) {
+/******/ 				deferredModules.splice(i--, 1);
+/******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 			}
+/******/ 		}
+/******/ 		return result;
+/******/ 	}
+/******/
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// object to store loaded and loading chunks
+/******/ 	var installedChunks = {
+/******/ 		6: 0
+/******/ 	};
+/******/
+/******/ 	var deferredModules = [];
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
+/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+/******/ 	jsonpArray.push = webpackJsonpCallback;
+/******/ 	jsonpArray = jsonpArray.slice();
+/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+/******/ 	var parentJsonpFunction = oldJsonpFunction;
+/******/
+/******/
+/******/ 	// add entry module to deferred list
+/******/ 	deferredModules.push([9,0]);
+/******/ 	// run deferred modules when ready
+/******/ 	return checkDeferredModules();
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 9:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(underscore__WEBPACK_IMPORTED_MODULE_1__);
+
+
+jquery__WEBPACK_IMPORTED_MODULE_0__(function () {
+    var $modal = jquery__WEBPACK_IMPORTED_MODULE_0__('.modal-gallery');
+    var $img = $modal.find('img');
+    var $nav = $modal.find('.nav-btn');
+    var $galleryList = jquery__WEBPACK_IMPORTED_MODULE_0__('.gallery-list');
+    var galleryItem = $galleryList.find('.gallery-item').remove();
+    var pid = 0;
+    underscore__WEBPACK_IMPORTED_MODULE_1__["each"](underscore__WEBPACK_IMPORTED_MODULE_1__["shuffle"]([].slice.call(galleryItem)), function (el) {
+        jquery__WEBPACK_IMPORTED_MODULE_0__(el).appendTo($galleryList);
+    });
+    var $gallery = jquery__WEBPACK_IMPORTED_MODULE_0__('.js-gallery').on({
+        click: function (e) {
+            pid = jquery__WEBPACK_IMPORTED_MODULE_0__(e.currentTarget).attr('data-gallery-id') - 0;
+            $modal.fadeIn(300);
+            changePhoto(jquery__WEBPACK_IMPORTED_MODULE_0__(e.currentTarget).attr('href'));
+            return false;
+        }
+    });
+    $gallery.each(function (i, e) {
+        jquery__WEBPACK_IMPORTED_MODULE_0__(e).attr('data-gallery-id', i);
+    });
+    $nav.on({
+        click: function (e) {
+            var $btn = jquery__WEBPACK_IMPORTED_MODULE_0__(e.currentTarget);
+            var total = $gallery.length;
+            if ($btn.hasClass('-next')) {
+                pid = (++pid) % total;
+            }
+            else {
+                pid = (--pid + total) % total;
+            }
+            changePhoto($gallery.eq(pid).attr('href'));
+            return false;
+        }
+    });
+    $galleryList.find('.gallery-item').each(function (i, el) {
+        jquery__WEBPACK_IMPORTED_MODULE_0__(el).delay(i * 100).fadeTo(500, 1);
+    });
+    function changePhoto(src) {
+        $img.css('opacity', 0)
+            .attr('src', src)
+            .fadeTo(500, 1);
+    }
+});
+
+
+/***/ })
+
+/******/ });

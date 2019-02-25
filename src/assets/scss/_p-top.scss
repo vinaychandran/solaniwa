@@ -303,7 +303,9 @@ explore
     }
     @include media-sp {
         &-message {
-            font-size: vw(60);
+            p:nth-of-type(2) {
+                font-size: vw(70);
+            }
         }
     }
 }
@@ -722,6 +724,22 @@ news
         img {
             width: 100%;
         }
+        a {
+            display: block;
+            p {
+                position: absolute;
+                display: inline-block;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                transform: translateY(-50%);
+                color: white;
+                text-align: center;
+                line-height: 1.4;
+                letter-spacing: 0.05em;
+                @include font-serif;
+            }
+        }
     }
 
     @include media-pc {
@@ -750,9 +768,19 @@ news
             picture {
                 @include transition(opacity 200ms);
             }
+            a {
+                p {
+                    font-size: rem(36);
+                }
+            }
             &.-wide {
                 width: 100%;
                 max-width: 100%;
+                a {
+                    p {
+                        font-size: rem(48);
+                    }
+                }
             }
             &:hover picture {
                 opacity: 0.8;
@@ -773,6 +801,23 @@ news
         }
         &-item {
             width: vw(710);
+            a {
+                p {
+                    font-size: vw(56);
+                    text-shadow:0 0 16px #7b7b7b;
+                    span {
+                        display: inline-block;
+                        padding-left: 0.5em;
+                    }
+                }
+            }
+            &.-wide {
+                a {
+                    p {
+                        font-size: vw(76);
+                    }
+                }
+            }
         }
     }
 }

@@ -18,13 +18,13 @@ var topDir = '/'+lang+'/';
 
     <section class="sec-header">
         <div class="sec-header_title">
-            <h2>Family Bath</h2>
+            <h2>Private Baths</h2>
             <a href="./" class="back"></a>
         </div>
     </section>
 
-    <div class="tickets">
-        <div class="sec-title">Online Tickets</div>
+    <% if (false) { %><div class="tickets">
+        <div class="sec-title">Advanced Ticket</div>
         <div class="tickets-list">
             <iframe id="regiondo" src="" data-location="all" data-order="tag_position" data-src="https://solaniwa.regiondo.com/categories?tag=privatebath&frame=1" width="100%" height="400" frameborder="0" scrolling="auto"></iframe>
             <script type="text/javascript" src="https://cdn.regiondo.net/media/resellers/js/20284/20284_4.js"></script>
@@ -32,7 +32,10 @@ var topDir = '/'+lang+'/';
         <div class="btn-area">
             <a href="./" class="btn-back">Back to list</a>
         </div>
-    </div>
+    </div><% } else { %>
+    <div class="tickets">
+        <div class="sec-title">coming soon</div>
+    </div><% } %>
 
 
     <%- include('../../_include/magazine_' + lang) %>

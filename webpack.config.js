@@ -1,8 +1,8 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
-const path = require('path');
 
 module.exports = {
   // mode: 'development',
@@ -34,18 +34,23 @@ module.exports = {
         use: 'ts-loader'
       },{
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
+        use:  [
+            MiniCssExtractPlugin.loader,
             {
-              loader: 'css-loader',
-              options: {
-                  url: false
-              }
+                loader: 'css-loader',
+                options: {
+                    url: false
+                    // ,minimize: true
+                }
             },
-            'sass-loader'
-          ]
-        })
+
+            {
+                loader: "sass-loader",
+                options: {
+                    sourceMap: false
+                }
+            }
+        ]
       },{
         test: /\.ejs$/,
         use: [
@@ -56,7 +61,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('assets/css/[name].css'),
+    new MiniCssExtractPlugin({filename:'assets/css/[name].css'}),
     new CopyWebpackPlugin([
       {
         from: './src/assets/images',
@@ -134,6 +139,9 @@ module.exports = {
     })
   ],
   optimization: {
+    minimizer: [
+      new OptimizeCSSAssetsPlugin(),
+    ],
     splitChunks: {
       name: 'vendor',
       chunks: 'initial'
