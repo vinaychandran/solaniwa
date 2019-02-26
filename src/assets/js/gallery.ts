@@ -3,6 +3,7 @@ import * as _ from 'underscore';
 
 $(()=>{
     const $modal:any = $('.modal-gallery');
+    const $modalIn:any = $('.modal-gallery-in');
     const $img:any = $modal.find('img');
     const $nav:any = $modal.find('.nav-btn');
     const $galleryList:JQuery = $('.gallery-list');
@@ -43,8 +44,15 @@ $(()=>{
     });
 
     function changePhoto(src:any) {
-        $img.css('opacity', 0)
-            .attr('src', src)
-            .fadeTo(500, 1);
+        let $img = $modalIn.find('img');
+        let img = new Image();
+        img.onload = function() {
+            setTimeout(function(){
+                $img.attr('src', src)
+                    .fadeTo(500, 1);
+            }, 100);
+        };
+        img.src = src;
+        $img.fadeTo(100, 0);
     }
 });

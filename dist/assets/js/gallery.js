@@ -148,6 +148,7 @@ __webpack_require__.r(__webpack_exports__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0__(function () {
     var $modal = jquery__WEBPACK_IMPORTED_MODULE_0__('.modal-gallery');
+    var $modalIn = jquery__WEBPACK_IMPORTED_MODULE_0__('.modal-gallery-in');
     var $img = $modal.find('img');
     var $nav = $modal.find('.nav-btn');
     var $galleryList = jquery__WEBPACK_IMPORTED_MODULE_0__('.gallery-list');
@@ -185,9 +186,16 @@ jquery__WEBPACK_IMPORTED_MODULE_0__(function () {
         jquery__WEBPACK_IMPORTED_MODULE_0__(el).delay(i * 100).fadeTo(500, 1);
     });
     function changePhoto(src) {
-        $img.css('opacity', 0)
-            .attr('src', src)
-            .fadeTo(500, 1);
+        var $img = $modalIn.find('img');
+        var img = new Image();
+        img.onload = function () {
+            setTimeout(function () {
+                $img.attr('src', src)
+                    .fadeTo(500, 1);
+            }, 100);
+        };
+        img.src = src;
+        $img.fadeTo(100, 0);
     }
 });
 
