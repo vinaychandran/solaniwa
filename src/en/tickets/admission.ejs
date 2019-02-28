@@ -23,7 +23,7 @@ var topDir = '/'+lang+'/';
         </div>
     </section>
 
-    <div class="tickets">
+    <% if (false) { %><div class="tickets">
         <div class="sec-title">Advanced Ticket</div>
         <div class="tickets-list">
             <iframe id="regiondo" src="" data-location="all" data-order="tag_position" data-src="https://solaniwa.regiondo.com/categories?tag=admission-ticket&frame=1" width="100%" height="400" frameborder="0" scrolling="auto"></iframe>
@@ -32,7 +32,10 @@ var topDir = '/'+lang+'/';
         <div class="btn-area">
             <a href="./" class="btn-back">Back to list</a>
         </div>
-    </div>
+    </div><% } else { %>
+    <div class="tickets">
+        <div class="sec-title">coming soon</div>
+    </div><% } %>
 
     <%- include('../../_include/magazine_' + lang) %>
     <%- include('../../_include/footer_' + lang, {lower:1}) %>
