@@ -149,6 +149,7 @@ $(()=>{
     }
 
     function startAnimation() {
+        $('.modal-apology').fadeIn(0);
         setTimeout(()=>{
             window.scrollTo(0, 0);
             kvAnimation();

@@ -293,6 +293,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0__(function () {
         }, $msg_1.length ? 4000 : 1000);
     }
     function startAnimation() {
+        jquery__WEBPACK_IMPORTED_MODULE_0__('.modal-apology').fadeIn(0);
         setTimeout(function () {
             window.scrollTo(0, 0);
             kvAnimation();

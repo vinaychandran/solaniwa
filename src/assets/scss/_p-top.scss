@@ -67,8 +67,10 @@ KV
         strong {
             font-weight: 400;
         }
-        img {
+        img, svg {
             width: 100%;
+            //filter: drop-shadow(0 3px 3px rgba(black,0.6));
+            //-webkit-filter: drop-shadow(0 3px 3px rgba(black,0.6));
         }
     }
 
@@ -96,7 +98,7 @@ KV
             left: 0; right: 0;
             //top: vw(90, 1440);
             top: vw(130, 1440);
-            width: vw(310, 1440);
+            width: vw(330, 1440);
             font-size: px(30);
         }
     }
@@ -119,8 +121,8 @@ KV
             position: absolute;
             margin: auto;
             left: 0; right: 0;
-            top: vw(120);
-            width: vw(400);
+            top: vw(170);
+            width: vw(420);
             font-size: vw(55);
         }
     }
@@ -1010,6 +1012,49 @@ guide 営業案内
                 dt {
                     padding-top: 0.7em;
                 }
+            }
+        }
+    }
+}
+
+/* お詫び */
+.modal-apology {
+    .modal-in {
+        bottom: auto;
+        height: auto;
+        background-color: white;
+        .modal-content {
+            height: auto;
+        }
+        dt {
+            margin-bottom: 1em;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    @include media-pc {
+        .modal-in {
+            width: px(600);
+            padding: px(35) px(40);
+            top: px(180);
+            dt {
+                font-size: px(14);
+            }
+            dd {
+                font-size: px(12);
+            }
+        }
+    }
+    @include media-sp {
+
+        .modal-in {
+            top: vw(30);
+            padding: vw(45);
+            dt {
+                font-size: vw(22);
+            }
+            dd {
+                font-size: vw(18);
             }
         }
     }

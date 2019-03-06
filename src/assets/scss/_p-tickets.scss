@@ -214,6 +214,14 @@
 }
 
 .category {
+    .sec-title {
+        //padding-bottom: 0;
+        //margin-bottom: px(5);
+    }
+    .gift-ticket {
+        margin: auto;
+        text-align: right;
+    }
 
     &-list {
         margin: auto;
@@ -245,6 +253,14 @@
     @include media-pc {
         margin-top: px(60);
         margin-bottom: px(130);
+        .gift-ticket {
+            width: 96%;
+            max-width: px(1080);
+            margin-bottom: px(20);
+            a {
+                width: px(205);
+            }
+        }
         &-list {
             width: 96%;
             max-width: px(1080);
@@ -270,6 +286,13 @@
         margin-bottom: vw(110);
         .sec-title {
             margin-bottom: vw(30);
+        }
+        .gift-ticket {
+            width: vw(710);
+            margin-bottom: vw(30);
+            a {
+                width: 100%;
+            }
         }
         &-list {
             width: vw(710);
@@ -344,7 +367,7 @@
         }
 
         .btn-area {
-            margin-top: px(100);
+            margin-top: px(50);
         }
         a.btn-back {
             padding: px(16) 0;

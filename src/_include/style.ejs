@@ -1,2 +1,5 @@
-<% var css = (lang == 'ja' ? 'style.css' : 'style_'+lang+'.css'); %>
+<%
+var css = (lang == 'ja' ? 'style.css' : 'style_'+lang+'.css');
+// css = css + '?' + (Date.now());
+%>
 <link rel="stylesheet" href="/assets/css/<%- css %>">
