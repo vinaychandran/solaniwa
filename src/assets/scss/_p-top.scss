@@ -1034,9 +1034,10 @@ guide 営業案内
     }
     @include media-pc {
         .modal-in {
-            width: px(600);
-            padding: px(35) px(40);
-            top: px(180);
+            max-width: px(750);
+            padding: px(30);
+            top: 50%;
+            transform: translateY(-50%);
             dt {
                 font-size: px(14);
             }
@@ -1048,8 +1049,8 @@ guide 営業案内
     @include media-sp {
 
         .modal-in {
-            top: vw(30);
-            padding: vw(45);
+            top: vw(25);
+            padding: vw(30) vw(30);
             dt {
                 font-size: vw(22);
             }
