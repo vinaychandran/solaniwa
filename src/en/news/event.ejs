@@ -1,0 +1,307 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'Shows＆Event Program',path:'event/index.html'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-news p-lower">
+
+<%- include('../../_include/header_' + lang, {lower:1}) %>
+
+<div id="main">
+
+    <section class="news-article_event">
+        <div class="news-article_header">
+            <h2>Shows & Event Program</h2>
+            <picture>
+                <source media="(max-width: 768px)" srcset="/assets/images/news/event/head-image-sp.jpg">
+                <img src="/assets/images/news/event/head-image.jpg" alt="">
+            </picture>
+        </div>
+        <div class="news-article_body">
+            <div class="event-item">
+                <div class="event-item_image">
+                    <div class="catch">
+                        <span>Performance in</span><br>
+                        <span>pleasant heat</span>
+                    </div>
+                    <picture>
+                        <img src="/assets/images/news/event/image-1.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="event-item_title">
+                    <h3>Rouryu Show</h3>
+                    <p>@ Jingu-bo, 2F Bedrock area </p>
+                </div>
+                <div class="event-item_info">
+                    <div class="desc">A famed physician in the past, Manase Dohsan's apprentices present detoxifying Rouryo show. Detox your body and mind while enjoying spectacular performance in bedrock. </div>
+                    <div class="schedule">
+                        <dl>
+                            <dt>平日</dt><dd>15:00～15:20、 19:00～19:20</dd>
+                        </dl>
+                        <dl>
+                            <dt>土日祝</dt><dd>13:00～13:20、16:00～16:20、<br class="sp">19:00～19:20</dd>
+                        </dl>
+                        <p class="notice">※Additional bedrock admission will be applied to entering this area. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="event-item">
+                <div class="event-item_image">
+                    <div class="catch">
+                        <span>Brand-new experience</span><br>
+                        <span>to meet Sake.</span>
+                    </div>
+                    <picture>
+                        <img src="/assets/images/news/event/image-2.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="event-item_title">
+                    <h3>Sake Shows </h3>
+                    <p>@ Sake tasting stand YAMAZEN-TEI in 2F restaurant area</p>
+                </div>
+                <div class="event-item_info">
+                    <div class="desc">Konoike Zenemon, master of Sake shop alongside of Benten road introduces his selection of finnest Sakes at YAMAZEN-TEI. Whether you are Sake drinker or not, you can enjoy the show. </div>
+                    <div class="schedule">
+                        <dl>
+                            <dt>Weekday</dt><dd>14:00～14:20、18:00～18:20</dd>
+                        </dl>
+                        <dl>
+                            <dt>Holiday</dt><dd>12:00～12:20、15:00～15:20、<br class="sp">18:00～18:20</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="event-item">
+                <div class="event-item_image">
+                    <div class="catch">
+                        <span>Refresh by laughing</span><br>
+                        <span>and Relax by bathing</span>
+                    </div>
+                    <picture>
+                        <img src="/assets/images/news/event/image-3.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="event-item_title">
+                    <h3>Solaniwa-Za</h3>
+                    <p>@Solaniwa-tei on OSAKA BAY TOWER NORTH 1F</p>
+                </div>
+                <div class="event-item_info">
+                    <div class="desc">Comedy events are held at Solaniwa-tei every Saturday. Laugh hard and relax at Onsen afterword. </div>
+                    <div class="schedule">
+                        <dl>
+                            <dd>March 2 to March 25, 2019.<br>
+                                Saturday: 14:00～14:35、18:00～18:35</dd>
+                        </dl>
+                        <dl>
+                            <dd>March 20 to April 7, 2019<br>
+                                Monday to Sunday: 14:00～14:35、18:00～18:35</dd>
+                        </dl>
+                        <p class="notice">※Solaniwa-tei is separate facility from Solaniwa Onsen.<br>
+                            　Please enjoy here before/after enterting to Solaniwa Onsen. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-guest">
+                <h4>March</h4>
+                <div class="event-guest_list">
+                    <div class="event-guest_item -sat">
+                        <div class="time">
+                            <p class="day">3.2 <span>(sat)</span></p>
+                        </div>
+                        <dl>
+                            <dd>Sakai KunioToru<br>
+                                Arumikan</dd>
+                            <dt>MC</dt>
+                            <dd>Kinose Hikaru</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item -sat">
+                        <div class="time">
+                            <p class="day">3.9<span>（Sat）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Daisou Mitsukuni<br>
+                                Concert</dd>
+                            <dt>MC</dt>
+                            <dd>Kinose Hikaru</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item -sat">
+                        <div class="time">
+                            <p class="day">3.16<span>（Sat）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Shofukutei Fukyou<br>
+                                Hijikata brothers (Kyodai)</dd>
+                            <dt>MC</dt>
+                            <dd>OK Okayama</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item -sun">
+                        <div class="time">
+                            <p class="day">3.20<span>（Sun）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Morino Ishimatsu<br>
+                                Daisou Mitsukuni</dd>
+                            <dt>MC</dt>
+                            <dd>Shintaku Maki</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item -sun">
+                        <div class="time">
+                            <p class="day">3.21<span>（thu・holiday）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Shofukutei Kyohei<br>
+                                Trio the Three</dd>
+                            <dt>MC</dt>
+                            <dd>Shintaku Maki</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item">
+                        <div class="time">
+                            <p class="day">3.22<span>（Fri）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Sakai KunioToru<br>
+                                Kamijo Takeshi</dd>
+                            <dt>MC</dt>
+                            <dd>Kinose Hikaru</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item -sat">
+                        <div class="time">
+                            <p class="day">3.23<span>（Sat）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Triangle<br>
+                                Donguri brothers (Kyodoi)</dd>
+                            <dt>MC</dt>
+                            <dd>Shintaku Maki</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item -sun">
+                        <div class="time">
+                            <p class="day">3.24<span>（Sun）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Kaminari Jackson<br>
+                                Pandora</dd>
+                            <dt>MC</dt>
+                            <dd>Shintaku Maki</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item">
+                        <div class="time">
+                            <p class="day">3.25<span>（Mon）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Boltbols<br>
+                                Hijikata brothers (Kyodai)</dd>
+                            <dt>MC</dt>
+                            <dd>Taguchi Mari</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item">
+                        <div class="time">
+                            <p class="day">3.26<span>（Tue）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Boltbols<br>
+                                Versailles</dd>
+                            <dt>MC</dt>
+                            <dd>Taguchi Mari</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item">
+                        <div class="time">
+                            <p class="day">3.27<span>（Wed）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Arumikan<br>
+                                Concert</dd>
+                            <dt>MC</dt>
+                            <dd>Kinose Hikaru</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item">
+                        <div class="time">
+                            <p class="day">3.28<span>（Thu）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Daisou Mitsukuni<br>
+                                Tennen Morokoshi</dd>
+                            <dt>MC</dt>
+                            <dd>Shintaku Maki</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item">
+                        <div class="time">
+                            <p class="day">3.29<span>（Fri）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Shohukutei Tobiume<br>
+                                Kamijo Takeshi</dd>
+                            <dt>MC</dt>
+                            <dd>OK Okayama</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item -sat">
+                        <div class="time">
+                            <p class="day">3.30<span>（Sat）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Shofukutei Fukyou<br>
+                                Trio the Three</dd>
+                            <dt>MC</dt>
+                            <dd>Yanopan</dd>
+                        </dl>
+                    </div>
+                    <div class="event-guest_item -sun">
+                        <div class="time">
+                            <p class="day">3.31<span>（Sun）</span></p>
+                        </div>
+                        <dl>
+                            <dd>Chikichiki Johnny<br>
+                                Pandora</dd>
+                            <dt>MC</dt>
+                            <dd>Kinose Hikaru</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-article_share">
+            <p>Share on:</p>
+            <a href="" class="js-share-fb"><img src="/assets/images/cmn/sns-fb.svg" alt="facebook"></a>
+            <a href="" class="js-share-line"><img src="/assets/images/cmn/sns-line.svg" alt="LINE"></a>
+        </div>
+    </section>
+
+    <section class="news-others">
+        <div class="sec-title">Go on reading</div>
+        <%- include('./_newslist',{category:'event'}) %>
+        <a href="./" class="btn -center">Home</a>
+    </section>
+
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+
+</div>
+
+<%- include('../../_include/script') %>
+
+</body>
+</html>

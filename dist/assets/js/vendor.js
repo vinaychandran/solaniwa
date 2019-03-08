@@ -10371,6 +10371,42 @@ return jQuery;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export device */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isPC; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return isSP; });
+/* unused harmony export isIOS */
+/* unused harmony export isTablet */
+/* unused harmony export isMobile */
+/* unused harmony export isLegacyIE */
+var _UA = navigator.userAgent.toLocaleLowerCase();
+var device = {
+    iphone: /iphone/.test(_UA),
+    ipad: /ipad/.test(_UA),
+    android: /android/.test(_UA),
+    mobile: /mobile/.test(_UA),
+    windowsPhone: /windows phone/.test(_UA),
+    safari: /safari/.test(_UA) && !/edge/.test(_UA),
+    chrome: /chrome/.test(_UA) && !/edge/.test(_UA),
+    edge: /edge/.test(_UA),
+    msie: (_UA.indexOf('msie') >= 0 || _UA.indexOf('trident') >= 0)
+};
+var isPC = !(device.iphone || device.ipad || device.android || device.windowsPhone);
+var isSP = (device.iphone || (device.android && device.mobile) || device.windowsPhone);
+var isIOS = (device.iphone || device.iphone);
+// tablet only
+var isTablet = (device.ipad || (device.android && !device.mobile));
+// smartphone & tablet
+var isMobile = (function () {
+    return isSP || isTablet;
+})();
+var isLegacyIE = !('addEventListener' in window);
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.9.1
@@ -12068,42 +12104,6 @@ return jQuery;
 }());
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(11), __webpack_require__(10)(module)))
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export device */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isPC; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return isSP; });
-/* unused harmony export isIOS */
-/* unused harmony export isTablet */
-/* unused harmony export isMobile */
-/* unused harmony export isLegacyIE */
-var _UA = navigator.userAgent.toLocaleLowerCase();
-var device = {
-    iphone: /iphone/.test(_UA),
-    ipad: /ipad/.test(_UA),
-    android: /android/.test(_UA),
-    mobile: /mobile/.test(_UA),
-    windowsPhone: /windows phone/.test(_UA),
-    safari: /safari/.test(_UA) && !/edge/.test(_UA),
-    chrome: /chrome/.test(_UA) && !/edge/.test(_UA),
-    edge: /edge/.test(_UA),
-    msie: (_UA.indexOf('msie') >= 0 || _UA.indexOf('trident') >= 0)
-};
-var isPC = !(device.iphone || device.ipad || device.android || device.windowsPhone);
-var isSP = (device.iphone || (device.android && device.mobile) || device.windowsPhone);
-var isIOS = (device.iphone || device.iphone);
-// tablet only
-var isTablet = (device.ipad || (device.android && !device.mobile));
-// smartphone & tablet
-var isMobile = (function () {
-    return isSP || isTablet;
-})();
-var isLegacyIE = !('addEventListener' in window);
-
 
 /***/ }),
 /* 3 */

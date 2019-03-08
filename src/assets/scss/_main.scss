@@ -920,6 +920,7 @@ footer {
     }
 
     @include media-pc {
+        z-index: 1;
         .f_announcement {
             width: 90%;
             max-width: px(690);

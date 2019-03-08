@@ -1,0 +1,96 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'FAQ',path:'news/faq.html'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-news p-lower">
+
+<%- include('../../_include/header_' + lang, {lower:1}) %>
+
+<div id="main">
+
+    <section class="news-article">
+        <div class="news-article_header">
+            <h2>FAQ</h2>
+        </div>
+        <div class="news-article_body">
+            <dl class="faq-item">
+                <dt><span>Q</span>Is there any hotel close by? </dt>
+                <dd>Solaniwa Onsen offers recliner rooms where you can rest. (Pleae note a late-night fee will be applied if you stay after 1:00 am. )<br>
+                    Also, we have our group hotel, Art Hotel OSAKA BAY TOWER located three hundreds meters away from Solaniwa Onsen. <br>
+                    Please check the hotel details here. <br>
+                    <a href="https://www.osaka-baytower.com" target="_blank" class="link"> > Art Hotel Osaka Bay Tower</a>
+                </dd>
+            </dl>
+            <dl class="faq-item">
+                <dt><span>Q</span>Can I smoke in the facility? </dt>
+                <dd>Please refrain from smoking in Solaniwa Onsen except at the designated smoking spaces.<br>
+                    They are located next to Solaniwa Tenjin shrine on 2F and Fish therapy WASH-YA in Japanese garden on 4F.
+                </dd>
+            </dl>
+            <dl class="faq-item">
+                <dt><span>Q</span>What are your business hours? </dt>
+                <dd>We are open from 11:00 am to 9:00 am next day (22 hours). For business hours of each stores and services inside Solaniwa Onsen, please go to Explore section of the website to see details. <br>
+                    <a href="/fees/" class="link"> > Information</a></dd>
+            </dl>
+            <dl class="faq-item">
+                <dt><span>Q</span>Which payment methods can I use? </dt>
+                <dd>Cash, VISA, Mastercard, JCB, AMEX, Diners, Discover, UnionPay, Alipay and Wechat pay.<br>
+                    For customer paying with Discover, UnionPay, Alipay and Wechatpay, please come to front desk to check out.
+                </dd>
+            </dl>
+            <dl class="faq-item">
+                <dt><span>Q</span>Can you ship/deliver items I bought? </dt>
+                <dd>Yes. This service is available at the Cloak room counter on 2F.</dd>
+            </dl>
+            <dl class="faq-item">
+                <dt><span>Q</span>Can I bring a stroller inside the facility? </dt>
+                <dd>Please refrain to bring a stroller into Solaniwa Onsen. We are happy to keep your stroller at Cloak room free of charge.</dd>
+            </dl>
+            <dl class="faq-item">
+                <dt><span>Q</span>Can I use a wheelchair in the facility? </dt>
+                <dd>Yes. We have weelchairs available at Solaniwa Onsen as well. Aslo, you can enjoy our accessable private family bath (additional charge) if you are intrested in. </dd>
+            </dl>
+            <dl class="faq-item">
+                <dt><span>Q</span>Is there ATM machine at the facility? </dt>
+                <dd>We are sorry there is no ATM machine inside of the facilty. Please go to "Kinki Osaka Bank ATM" on Osaka Bay Tower EAST 1F or one at Family Mart, convenience store on Osaka Bay Tower West 2F.  </dd>
+            </dl>
+            <% if (false) { %><dl class="faq-item">
+                <dt><span>Q</span>朝ごはんは食べられますか？</dt>
+                <dd>はい。2F 角打ち 山善亭にてご用意しております。（7:00～8:30）<br>
+                    おにぎりやうどんの他、こだわり出汁のお茶漬け各種をお楽しみください。
+                </dd>
+            </dl><% } %>
+            <dl class="faq-item">
+                <dt><span>Q</span>Where can I see the term of use?</dt>
+                <dd>Please check it here. <br>
+                    <a href="/en/term/term.html"> > Terms of use</a>
+                </dd>
+            </dl>
+        </div>
+    </section>
+
+    <section class="news-others">
+        <div class="sec-title">Go on reading</div>
+        <%- include('./_newslist',{category:'faq'}) %>
+        <a href="./" class="btn -center">Home</a>
+    </section>
+
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+
+</div>
+
+<%- include('../../_include/script') %>
+
+</body>
+</html>

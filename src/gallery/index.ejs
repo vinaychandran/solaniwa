@@ -19,7 +19,7 @@
     </section>
 
     <section class="gallery-list">
-        <% for (var i = 0; i <= 37; i++) { if (i != 20 && i != 21 && i != 34) { %>
+        <% for (var i = 0; i <= 70; i++) { if (true) { %>
             <div class="gallery-item">
                 <a href="/assets/images/gallery/detail-<%= (i < 10) ? ('00' + i) : ('0' + i) %>.jpg" class="js-gallery"><img src="/assets/images/gallery/<%= (i < 10) ? ('00' + i) : ('0' + i) %>.jpg" alt=""></a>
             </div>
@@ -32,9 +32,9 @@
     <%- include('../_include/navFix') %>
 
     <div class="modal-window modal-gallery">
+        <a href="" class="modal-close js-modal-close"></a>
         <div class="modal-gallery-in">
-            <a href="" class="modal-close js-modal-close"></a>
-            <img src="" alt="">
+            <p class="modal-image"></p>
         </div>
         <div class="modal-gallery-nav">
             <button class="nav-btn -prev"></button>

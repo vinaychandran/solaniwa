@@ -391,106 +391,6 @@ floor フロアマップ
                     border-radius: 50%;
                     @include translate(-50%, -50%);
                 }
-                &[data-map-point="1"] {
-                    left: per(192, $MAP-W);
-                    top: per(234, $MAP-H);
-                }
-                &[data-map-point="2"] {
-                    left: per(237, $MAP-W);
-                    top: per(157, $MAP-H);
-                }
-                &[data-map-point="3"] {
-                    left: per(324, $MAP-W);
-                    top: per(150, $MAP-H);
-                }
-                &[data-map-point="4"] {
-                    left: per(272, $MAP-W);
-                    top: per(212, $MAP-H);
-                }
-                &[data-map-point="5"] {
-                    left: per(384, $MAP-W);
-                    top: per(196, $MAP-H);
-                }
-                &[data-map-point="6"] {
-                    left: per(405, $MAP-W);
-                    top: per(256, $MAP-H);
-                }
-                &[data-map-point="7"] {
-                    left: per(456, $MAP-W);
-                    top: per(108, $MAP-H);
-                }
-                &[data-map-point="8"] {
-                    left: per(170, $MAP-W);
-                    top: per(300, $MAP-H);
-                }
-                &[data-map-point="9"] {
-                    left: per(348, $MAP-W);
-                    top: per(284, $MAP-H);
-                }
-                &[data-map-point="10"] {
-                    left: per(266, $MAP-W);
-                    top: per(376, $MAP-H);
-                }
-                &[data-map-point="11"] {
-                    left: per(444, $MAP-W);
-                    top: per(362, $MAP-H);
-                }
-                &[data-map-point="12"] {
-                    left: per(262, $MAP-W);
-                    top: per(470, $MAP-H);
-                }
-                &[data-map-point="13"] {
-                    left: per(333, $MAP-W);
-                    top: per(406, $MAP-H);
-                }
-                &[data-map-point="14"] {
-                    left: per(564, $MAP-W);
-                    top: per(310, $MAP-H);
-                }
-                &[data-map-point="15"] {
-                    left: per(1010, $MAP-W);
-                    top: per(202, $MAP-H);
-                }
-                &[data-map-point="16"] {
-                    left: per(962, $MAP-W);
-                    top: per(267, $MAP-H);
-                }
-                &[data-map-point="17"] {
-                    left: per(1290, $MAP-W);
-                    top: per(424, $MAP-H);
-                }
-                &[data-map-point="18"] {
-                    left: per(1120, $MAP-W);
-                    top: per(458, $MAP-H);
-                }
-
-                &[data-map-point="19"] {
-                    left: per(770, $MAP-W);
-                    top: per(332, $MAP-H);
-                }
-
-
-                &[data-map-point="20"] {
-                    left: per(394, $MAP-W);
-                    top: per(288, $MAP-H);
-                }
-                &[data-map-point="21"] {
-                    left: per(394, $MAP-W);
-                    top: per(364, $MAP-H);
-                }
-                &[data-map-point="22"] {
-                    left: per(960, $MAP-W);
-                    top: per(164, $MAP-H);
-                }
-                &[data-map-point="23"] {
-                    left: per(520, $MAP-W);
-                    top: per(160, $MAP-H);
-                }
-                &[data-map-point="24"] {
-                    left: per(663, $MAP-W);
-                    top: per(135, $MAP-H);
-                }
-
             }
         }
         &_modal {
@@ -635,7 +535,7 @@ floor フロアマップ
             background: $color-background;
         }
         &-btn_block {
-            margin: vw(60) 0 vw(100);
+            margin: vw(60) 0 vw(50);
         }
         &-btn {
             width: vw(126);
@@ -708,6 +608,172 @@ floor フロアマップ
                         height: vw(65);
                     }
                 }
+            }
+        }
+    }
+}
+
+// ja -----
+.floor {
+    $MAP-W: 1440;
+    $MAP-H: 600;
+    &-map_points {
+        .point {
+            &[data-map-point="1"] {
+                left: per(192, $MAP-W);
+                top: per(234, $MAP-H);
+            }
+            &[data-map-point="2"] {
+                left: per(237, $MAP-W);
+                top: per(157, $MAP-H);
+            }
+            &[data-map-point="3"] {
+                left: per(324, $MAP-W);
+                top: per(150, $MAP-H);
+            }
+            &[data-map-point="4"] {
+                left: per(272, $MAP-W);
+                top: per(215, $MAP-H);
+            }
+            &[data-map-point="5"] {
+                left: per(384, $MAP-W);
+                top: per(200, $MAP-H);
+            }
+            &[data-map-point="6"] {
+                left: per(405, $MAP-W);
+                top: per(246, $MAP-H);
+            }
+            &[data-map-point="7"] {
+                left: per(456, $MAP-W);
+                top: per(108, $MAP-H);
+            }
+            &[data-map-point="8"] {
+                left: per(160, $MAP-W);
+                top: per(282, $MAP-H);
+            }
+            &[data-map-point="9"] {
+                left: per(296, $MAP-W);
+                top: per(282, $MAP-H);
+            }
+            &[data-map-point="10"] {
+                left: per(266, $MAP-W);
+                top: per(372, $MAP-H);
+            }
+            &[data-map-point="11"] {
+                left: per(444, $MAP-W);
+                top: per(362, $MAP-H);
+            }
+            &[data-map-point="12"] {
+                left: per(262, $MAP-W);
+                top: per(470, $MAP-H);
+            }
+            &[data-map-point="13"] {
+                left: per(333, $MAP-W);
+                top: per(406, $MAP-H);
+            }
+            &[data-map-point="14"] {
+                left: per(564, $MAP-W);
+                top: per(310, $MAP-H);
+            }
+            &[data-map-point="15"] {
+                left: per(1016, $MAP-W);
+                top: per(202, $MAP-H);
+            }
+            &[data-map-point="16"] {
+                left: per(962, $MAP-W);
+                top: per(256, $MAP-H);
+            }
+            &[data-map-point="17"] {
+                left: per(1290, $MAP-W);
+                top: per(424, $MAP-H);
+            }
+            &[data-map-point="18"] {
+                left: per(1124, $MAP-W);
+                top: per(452, $MAP-H);
+            }
+
+            &[data-map-point="19"] {
+                left: per(770, $MAP-W);
+                top: per(332, $MAP-H);
+            }
+
+            &[data-map-point="20"] {
+                left: per(394, $MAP-W);
+                top: per(288, $MAP-H);
+            }
+            &[data-map-point="21"] {
+                left: per(394, $MAP-W);
+                top: per(362, $MAP-H);
+            }
+            &[data-map-point="22"] {
+                left: per(960, $MAP-W);
+                top: per(164, $MAP-H);
+            }
+            &[data-map-point="23"] {
+                left: per(520, $MAP-W);
+                top: per(170, $MAP-H);
+            }
+            &[data-map-point="24"] {
+                left: per(663, $MAP-W);
+                top: per(135, $MAP-H);
+            }
+
+        }
+    }
+}
+// en -----
+@at-root html[lang='en'] .floor {
+    $MAP-W: 1440;
+    $MAP-H: 600;
+    &-map_points {
+        .point {
+            &[data-map-point="3"] {
+                left: per(324, $MAP-W);
+                top: per(160, $MAP-H);
+            }
+            &[data-map-point="5"] {
+                left: per(380, $MAP-W);
+                top: per(196, $MAP-H);
+            }
+            &[data-map-point="6"] {
+                left: per(398, $MAP-W);
+                top: per(246, $MAP-H);
+            }
+            &[data-map-point="7"] {
+                left: per(456, $MAP-W);
+                top: per(124, $MAP-H);
+            }
+            &[data-map-point="8"] {
+                left: per(170, $MAP-W);
+                top: per(281, $MAP-H);
+            }
+            &[data-map-point="9"] {
+                left: per(270, $MAP-W);
+                top: per(281, $MAP-H);
+            }
+            &[data-map-point="13"] {
+                left: per(360, $MAP-W);
+                top: per(380, $MAP-H);
+            }
+            &[data-map-point="14"] {
+                left: per(564, $MAP-W);
+                top: per(296, $MAP-H);
+            }
+            &[data-map-point="15"] {
+                left: per(1007, $MAP-W);
+                top: per(202, $MAP-H);
+            }
+            &[data-map-point="18"] {
+                left: per(1154, $MAP-W);
+                top: per(420, $MAP-H);
+            }
+            &[data-map-point="22"] {
+                left: per(950, $MAP-W);
+                top: per(158, $MAP-H);
+            }
+            &[data-map-point="23"] {
+                left: per(528, $MAP-W);
+                top: per(176, $MAP-H);
             }
         }
     }
@@ -806,7 +872,7 @@ news
             width: vw(710);
             a {
                 p {
-                    font-size: vw(56);
+                    font-size: vw(52);
                     text-shadow:0 0 16px #7b7b7b;
                     span {
                         display: inline-block;
@@ -858,6 +924,10 @@ guide 営業案内
             dt {
                 line-height: 1.4;
                 font-weight: 400;
+                span {
+                    text-align: center;
+                    font-size: 0.75em;
+                }
             }
             dd {
                 line-height: 1.4;
@@ -885,10 +955,25 @@ guide 営業案内
         &.-time {
             background: $color-background;
         }
+        &_closure {
+            background: white;
+            margin: auto;
+            color: $color-red;
+            font-weight: 400;
+            line-height: 1.5;
+            dt {
+                margin-bottom: 1em;
+                text-align: center;
+            }
+            dd {
+                text-align: left;
+            }
+        }
     }
 
     @include media-pc {
-        padding-top: px(150);
+        margin-top: px(-70);
+        padding-top: px(120);
         &:before {
             background: {
                 image: url("../images/top/guide-cloud.png");
@@ -936,7 +1021,18 @@ guide 営業案内
                     }
                 }
             }
-
+            &_closure {
+                margin-top: 2em;
+                padding: 2em;
+                width: px(840);
+                dt {
+                    font-size: px(18);
+                }
+                dd {
+                    padding-left: 1em;
+                    font-size: px(16);
+                }
+            }
             &.-time {
                 width: 100%;
                 height: auto;
@@ -949,7 +1045,8 @@ guide 営業案内
         }
     }
     @include media-sp {
-        padding: vw(124) 0 vw(60);
+        margin-top: vw(-40);
+        padding: vw(60) 0 vw(60);
         &:before {
             background: {
                 image: url("../images/top/guide-cloud-sp.png");
@@ -979,6 +1076,9 @@ guide 営業案内
                     margin-bottom: vw(20);
                     font-size: vw(30);
                     line-height: 1.4;
+                    span {
+                        display: block;
+                    }
                 }
                 dd {
                     font-size: vw(22);
@@ -988,6 +1088,17 @@ guide 営業案内
                         width: vw(350);
                         font-size: vw(24);
                     }
+                }
+            }
+            &_closure {
+                margin-top: 1em;
+                padding: 1em;
+                dt {
+                    font-size: vw(30);
+                }
+                dd {
+                    padding-left: 1em;
+                    font-size: vw(26);
                 }
             }
         }
@@ -1021,10 +1132,16 @@ guide 営業案内
 .modal-apology {
     .modal-in {
         bottom: auto;
-        height: auto;
-        background-color: white;
+        height: 96%;
+        background-color: transparent;
+        overflow: auto;
         .modal-content {
-            height: auto;
+            //height: 96%;
+            overflow: visible;
+        }
+        dl {
+            padding-bottom: 1em;
+            background-color: white;
         }
         dt {
             margin-bottom: 1em;
@@ -1035,9 +1152,11 @@ guide 営業案内
     @include media-pc {
         .modal-in {
             max-width: px(750);
-            padding: px(30);
-            top: 50%;
-            transform: translateY(-50%);
+            //padding: px(30);
+            top: 2%;
+            dl {
+                padding: px(30);
+            }
             dt {
                 font-size: px(14);
             }
@@ -1050,7 +1169,9 @@ guide 営業案内
 
         .modal-in {
             top: vw(25);
-            padding: vw(30) vw(30);
+            dl {
+                padding: vw(30) vw(30);
+            }
             dt {
                 font-size: vw(22);
             }

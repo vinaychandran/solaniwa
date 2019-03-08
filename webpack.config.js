@@ -80,7 +80,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({inject: false, filename: 'news/index.html', template: './src/news/index.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'news/momoyama.html', template: './src/news/momoyama.ejs'}),
-    new HtmlWebpackPlugin({inject: false, filename: 'news/heroes.html', template: './src/news/heroes.ejs'}),
+    new HtmlWebpackPlugin({inject: false, filename: 'news/heros.html', template: './src/news/heros.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'news/onsen.html', template: './src/news/onsen.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'news/faq.html', template: './src/news/faq.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'news/beginner.html', template: './src/news/beginner.ejs'}),
@@ -88,7 +88,9 @@ module.exports = {
 
     new HtmlWebpackPlugin({inject: false, filename: 'en/news/index.html', template: './src/en/news/index.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'en/news/momoyama.html', template: './src/en/news/momoyama.ejs'}),
-    new HtmlWebpackPlugin({inject: false, filename: 'en/news/heroes.html', template: './src/en/news/heroes.ejs'}),
+    new HtmlWebpackPlugin({inject: false, filename: 'en/news/heros.html', template: './src/en/news/heros.ejs'}),
+    new HtmlWebpackPlugin({inject: false, filename: 'en/news/faq.html', template: './src/en/news/faq.ejs'}),
+    new HtmlWebpackPlugin({inject: false, filename: 'en/news/event.html', template: './src/en/news/event.ejs'}),
 
     new HtmlWebpackPlugin({inject: false, filename: 'explore/onsen.html', template: './src/explore/onsen.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'en/explore/onsen.html', template: './src/en/explore/onsen.ejs'}),
@@ -124,6 +126,7 @@ module.exports = {
     new HtmlWebpackPlugin({inject: false, filename: 'en/tickets/costume.html', template: './src/en/tickets/costume.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'en/tickets/relaxation.html', template: './src/en/tickets/relaxation.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'en/tickets/beauty.html', template: './src/en/tickets/beauty.ejs'}),
+    new HtmlWebpackPlugin({inject: false, filename: 'en/tickets/guide.html', template: './src/en/tickets/guide.ejs'}),
 
 
     new HtmlWebpackPlugin({inject: false, filename: 'gallery/index.html', template: './src/gallery/index.ejs'}),

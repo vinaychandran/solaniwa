@@ -142,8 +142,10 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var underscore__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(underscore__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
+
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0__(function () {
@@ -154,7 +156,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0__(function () {
     var $galleryList = jquery__WEBPACK_IMPORTED_MODULE_0__('.gallery-list');
     var galleryItem = $galleryList.find('.gallery-item').remove();
     var pid = 0;
-    underscore__WEBPACK_IMPORTED_MODULE_1__["each"](underscore__WEBPACK_IMPORTED_MODULE_1__["shuffle"]([].slice.call(galleryItem)), function (el) {
+    underscore__WEBPACK_IMPORTED_MODULE_1__["each"]([].slice.call(galleryItem), function (el) {
         jquery__WEBPACK_IMPORTED_MODULE_0__(el).appendTo($galleryList);
     });
     var $gallery = jquery__WEBPACK_IMPORTED_MODULE_0__('.js-gallery').on({
@@ -186,11 +188,23 @@ jquery__WEBPACK_IMPORTED_MODULE_0__(function () {
         jquery__WEBPACK_IMPORTED_MODULE_0__(el).delay(i * 100).fadeTo(500, 1);
     });
     function changePhoto(src) {
-        var $img = $modalIn.find('img');
+        var $img = $modalIn.find('.modal-image');
         var img = new Image();
         img.onload = function () {
             setTimeout(function () {
-                $img.attr('src', src)
+                if (!_utils__WEBPACK_IMPORTED_MODULE_2__[/* isSP */ "b"]) {
+                    var width = (img.height > img.width) ? window.innerHeight : '100%';
+                    $modalIn.css('width', width);
+                }
+                else {
+                    // let height:any = (img.height / img.width) * 100 + '%';
+                    // if (img.height > img.width) {
+                    //     height = window.innerHeight * 0.8;
+                    // }
+                    var height = window.innerHeight * 0.8;
+                    $img.css('padding-top', height);
+                }
+                $img.css('background-image', 'url(' + src + ')')
                     .fadeTo(500, 1);
             }, 100);
         };

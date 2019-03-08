@@ -1,0 +1,42 @@
+<%
+var lang = 'en';
+var topDir = '/'+lang+'/';
+%>
+<!DOCTYPE html>
+<html lang="<%- lang %>">
+<head>
+    <%- include('../../_include/meta_' + lang, {title:'Ticket'}) %>
+    <%- include('../../_include/style', {lang:lang}) %>
+
+    <%- include('../../_include/analytics') %>
+</head>
+<body class="p-tickets p-lower">
+
+<%- include('../../_include/header_' + lang, {lower:1}) %>
+
+<div id="main">
+
+    <section class="sec-header">
+        <div class="sec-header_title">
+            <h2>Redeem Gift voucher</h2>
+            <a href="./" class="back"></a>
+        </div>
+    </section>
+
+    <div class="tickets">
+        <iframe style="border: none;" name="voucher" src="https://solaniwa.regiondo.com/voucher" width="100%" height="250">iframe&gt;</iframe>
+        <div class="btn-area">
+            <a href="./" class="btn-back">Back to list</a>
+        </div>
+    </div>
+
+    <%- include('../../_include/magazine_' + lang) %>
+    <%- include('../../_include/footer_' + lang, {lower:1}) %>
+    <%- include('../../_include/navFix_' + lang) %>
+</div>
+
+<%- include('../../_include/script') %>
+<script src="/assets/js/tickets.js"></script>
+
+</body>
+</html>

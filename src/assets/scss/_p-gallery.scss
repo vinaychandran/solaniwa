@@ -16,7 +16,7 @@
     justify-content: flex-start;
   }
   &-item {
-    opacity: 0;
+    //opacity: 0;
     a {
       display: block;
       background-color: black;
@@ -55,16 +55,12 @@
   }
   @include media-sp {
     &-list {
+      width: 96%;
       margin-top: vw(18);
       justify-content: space-between;
-      > div {
-        &:nth-of-type(3n + 1) {
-          width: 100%;
-        }
-      }
     }
     &-item {
-      width: vw(365);
+      width: 46.8vw;
       margin-bottom: vw(18);
     }
   }
@@ -86,9 +82,18 @@
     left: 0; right: 0;
     top: 50%;
     width: 80%;
+    height: 90%;
     transform: translateY(-50%);
-    img {
+    text-align: center;
+    pointer-events: none;
+    .modal-image {
       width: 100%;
+      height: 100%;
+      margin: auto;
+      pointer-events: none;
+      background: center center no-repeat {
+        size: contain;
+      };
     }
   }
   &-nav {
@@ -96,7 +101,7 @@
     margin: auto;
     left: 0; right: 0;
     top: 46%;
-    width: 90%;
+    width: 92%;
     .nav-btn {
       position: absolute;
       color: white;
@@ -116,8 +121,17 @@
   }
 
   @include media-pc {
+    .modal-close {
+      width: px(30);
+      height: px(30);
+      right: px(65);
+      transform: translateY(20px);
+    }
     &-in {
       max-width: px(1150);
+      .modal-image {
+        width: 90%;
+      }
     }
     &-nav {
       max-width: px(1320);
@@ -128,12 +142,25 @@
     }
   }
   @include media-sp {
+    .modal-close {
+      right: vw(10);
+      transform: translateY(2vw);
+    }
     &-in {
+      position: relative;
       width: 96%;
+      transform: translateY(10vw);
+      top: auto;
+      height: auto;
+      .modal-image {
+        width: 100%;
+        height: 0;
+      }
     }
     &-nav {
-      top: 70%;
-      width: 55%;
+      position: relative;
+      width: 90%;
+      top: 8%;
       .nav-btn {
         width: vw(60);
         height: vw(60);

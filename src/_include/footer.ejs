@@ -1,5 +1,8 @@
+<%
+var follow;
+%>
 <footer>
-    <div class="f_follow">
+    <% if (follow != false) { %><div class="f_follow">
         <h3 class="sec-title">FOLLOW US</h3>
         <ul class="f_follow-sns">
             <li class="facebook"><a href="https://www.facebook.com/solaniwa.onsen/" target="_blank">
@@ -15,7 +18,7 @@
                     <p class="name">YouTube</p>
                 </a></li>
         </ul>
-    </div>
+    </div><% } %>
     <% if (lower != 1) { %>
     <div class="f_contact">
         <h3 class="sec-title">お問合せ</h3>

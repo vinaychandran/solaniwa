@@ -1,5 +1,6 @@
 import * as $ from 'jquery';
 import * as _ from 'underscore';
+import * as utils from './utils';
 
 $(()=>{
     const $modal:any = $('.modal-gallery');
@@ -10,7 +11,7 @@ $(()=>{
     const galleryItem:any = $galleryList.find('.gallery-item').remove();
     let pid:any = 0;
 
-    _.each(_.shuffle([].slice.call(galleryItem)), (el:any)=>{
+    _.each([].slice.call(galleryItem), (el:any)=>{
         $(el).appendTo($galleryList);
     });
 
@@ -44,11 +45,22 @@ $(()=>{
     });
 
     function changePhoto(src:any) {
-        let $img = $modalIn.find('img');
+        let $img = $modalIn.find('.modal-image');
         let img = new Image();
         img.onload = function() {
             setTimeout(function(){
-                $img.attr('src', src)
+                if (!utils.isSP) {
+                    let width:any = (img.height > img.width) ? window.innerHeight : '100%';
+                    $modalIn.css('width', width);
+                } else {
+                    // let height:any = (img.height / img.width) * 100 + '%';
+                    // if (img.height > img.width) {
+                    //     height = window.innerHeight * 0.8;
+                    // }
+                    let height:any = window.innerHeight * 0.8;
+                    $img.css('padding-top', height);
+                }
+                $img.css('background-image', 'url(' + src + ')')
                     .fadeTo(500, 1);
             }, 100);
         };

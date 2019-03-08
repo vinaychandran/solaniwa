@@ -84,7 +84,15 @@ a.btn {
             image: url("../images/cmn/arr-right-white.svg");
             repeat: no-repeat;
             position: 96% center;
-            size: 0.8em auto;
+            size: 0.9em auto;
+        };
+    }
+    &.-gift {
+        background: {
+            image: url("../images/cmn/arr-right-white.svg"), url("../images/cmn/icn-gift.svg");
+            repeat: no-repeat;
+            position: 96% center, 8% center;
+            size: 0.9em auto, 1.2em auto;
         };
     }
 
@@ -96,11 +104,20 @@ a.btn {
         &:hover {
             background-color: #d34c5c;
         }
+        &.-gift {
+            font-size: px(14);
+            padding-left: 0.5em;
+        }
     }
     @include media-sp {
         padding: vw(32) 0;
         width: vw(500);
         font-size: vw(24);
+        &.-gift {
+            background: {
+                position: 96% center, 29% center;
+            }
+        }
     }
 }
 

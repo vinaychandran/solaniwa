@@ -3,30 +3,75 @@
 
 .time {
     &-summary {
+        margin: auto;
         text-align: center;
         line-height: 1.2;
         font-weight: 400;
         p {
             margin-bottom: 0.6em;
+            line-height: 1.3;
+            span {
+                font-size: 0.75em;
+            }
         }
-        span {
+        > span {
             font-weight: 300;
+        }
+        .closure {
+            background: white;
+            color: $color-red;
+            line-height: 1.5;
+            dt {
+                margin-bottom: 1em;
+                text-align: center;
+            }
+            dd {
+                text-align: left;
+            }
         }
     }
 
     @include media-pc {
         padding: px(60) 0;
         &-summary {
+            max-width: px(840);
             margin-top: px(48);
             font-size: px(18);
+            .closure {
+                margin-top: 2em;
+                padding: 2em;
+                dt {
+                    font-size: px(18);
+                }
+                dd {
+                    padding-left: 1em;
+                    font-size: px(16);
+                }
+            }
         }
     }
     @include media-sp {
         padding: vw(70) 0 vw(60);
         &-summary {
-            margin: auto;
+            width: vw(710);
             margin-top: vw(50);
             font-size: vw(30);
+            p {
+                span {
+                    display: block;
+                }
+            }
+            .closure {
+                margin-top: 1em;
+                padding: 1em;
+                dt {
+                    font-size: vw(30);
+                }
+                dd {
+                    padding-left: 1em;
+                    font-size: vw(26);
+                }
+            }
         }
     }
 }
@@ -176,7 +221,6 @@
                     }
                 }
             }
-            &.-fish,
             &.-health {
                 caption {
                     height: px(76);
@@ -187,8 +231,6 @@
             }
             &.-fish {
                 caption {
-                    display: table-cell;
-                    vertical-align: middle;
                 }
             }
         }
@@ -387,7 +429,7 @@
             dt {
                 padding-right: px(0);
                 width: px(300);
-                font-size: px(18);
+                font-size: px(16);
             }
             dd {
                 font-size: px(14);

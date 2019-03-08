@@ -718,14 +718,15 @@
             align-content: stretch;
             justify-content: flex-start;
             > div {
-                &:nth-of-type(4n + 1) {
-                    background: #fefcf7;
+                border-left: solid 1px $color-background;
+                border-right: solid 1px $color-background;
+                border-bottom: solid 1px $color-background;
+                background-color: #fbf7f3;
+                &.-sat {
+                    background: #f6f9ff;
                 }
-                &:nth-of-type(even) {
-                    background: #fbf7f3;
-                }
-                &:nth-of-type(4n + 3) {
-                    background: #f6f1ea;
+                &.-sun {
+                    background: #fcf0f0;
                 }
             }
         }
@@ -737,6 +738,7 @@
             }
             .day span {
                 font-weight: 300;
+                font-size: 0.7em;
                 margin-left: -0.3em;
             }
         }
@@ -853,6 +855,9 @@
                 dl {
                     margin-top: px(16);
                     font-size: px(12);
+                    dd:first-of-type {
+                        margin-bottom: px(16);
+                    }
                 }
             }
         }
@@ -957,10 +962,42 @@
                     dd {
                         font-size: vw(18);
                     }
-                    &:nth-of-type(1) {
-
+                    dd:first-of-type {
+                        margin-bottom: vw(16);
                     }
                 }
+            }
+        }
+    }
+}
+@at-root html[lang='en'] .news-article_event {
+    .event-item {
+        &_title {
+            p {
+                line-height: 1.3;
+            }
+        }
+    }
+    @include media-pc {
+        .event-item {
+            &_title {
+                p {
+                    font-size: px(16);
+                }
+            }
+        }
+    }
+    @include media-sp {
+        .event-item {
+            &_title {
+                p {
+                    font-size: vw(30);
+                }
+            }
+        }
+        .event-guest {
+            &_item {
+                width: 33.3333%;
             }
         }
     }
