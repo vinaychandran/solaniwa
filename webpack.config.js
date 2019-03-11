@@ -1,12 +1,13 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
   // mode: 'development',
-   mode: 'production',
+  mode: 'production',
   entry: {
     common: './src/assets/js/common.ts',
     index: './src/assets/js/index.ts',
@@ -90,6 +91,7 @@ module.exports = {
     new HtmlWebpackPlugin({inject: false, filename: 'en/news/momoyama.html', template: './src/en/news/momoyama.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'en/news/heros.html', template: './src/en/news/heros.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'en/news/faq.html', template: './src/en/news/faq.ejs'}),
+    new HtmlWebpackPlugin({inject: false, filename: 'en/news/beginner.html', template: './src/en/news/beginner.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'en/news/event.html', template: './src/en/news/event.ejs'}),
 
     new HtmlWebpackPlugin({inject: false, filename: 'explore/onsen.html', template: './src/explore/onsen.ejs'}),
@@ -143,12 +145,13 @@ module.exports = {
     })
   ],
   optimization: {
-    minimizer: [
-      new OptimizeCSSAssetsPlugin(),
-    ],
     splitChunks: {
       name: 'vendor',
       chunks: 'initial'
-    }
+    },
+    minimizer: [
+        new TerserPlugin({}),
+        new OptimizeCSSAssetsPlugin({})
+    ]
   }
 };

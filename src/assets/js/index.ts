@@ -203,12 +203,12 @@ $(()=>{
                 anime({
                     targets:msg,
                     opacity:1, translateY:0,
-                    duration: 2000, delay: anime.stagger(100), easing: 'easeOutCubic'
+                    duration: 1000, delay: anime.stagger(100), easing: 'easeOutCubic'
                 });
                 anime({
                     targets:list,
                     opacity:1,
-                    duration: 2000, delay:300, easing: 'easeOutCubic'
+                    duration: 1000, delay:300, easing: 'easeOutCubic'
                 });
             }
         });
@@ -229,7 +229,7 @@ $(()=>{
                     anime({
                         targets:list,
                         opacity:1, scale:1.001,
-                        duration: 800, easing: 'easeOutCubic'
+                        duration: 400, easing: 'easeOutCubic'
                     });
                 }
             });
@@ -248,7 +248,7 @@ $(()=>{
                     anime({
                         targets:el,
                         opacity:1,
-                        duration: 2000, easing: 'easeOutCubic'
+                        duration: 600, easing: 'easeOutCubic'
                     });
                 }
             });
@@ -268,13 +268,13 @@ $(()=>{
                 anime({
                     targets: title,
                     opacity: 1, translateY: 0,
-                    duration: 1600, easing: 'easeOutCubic'
+                    duration: 800, easing: 'easeOutCubic'
                 });
                 setTimeout(()=>{
                     anime({
                         targets: item,
                         opacity: 1,
-                        duration: 1600, delay: anime.stagger(100), easing: 'easeOutCubic'
+                        duration: 800, delay: anime.stagger(100), easing: 'easeOutCubic'
                     });
                 }, 300);
             }
@@ -294,15 +294,15 @@ $(()=>{
                 anime({
                     targets: title,
                     opacity: 1, translateY: 0,
-                    duration: 1600, easing: 'easeOutCubic'
+                    duration: 800, easing: 'easeOutCubic'
                 });
                 setTimeout(()=>{
                     anime({
                         targets: item,
                         opacity: 1,
-                        duration: 1600, delay: anime.stagger(100), easing: 'easeOutCubic'
+                        duration: 600, delay: anime.stagger(100), easing: 'easeOutCubic'
                     });
-                }, 400);
+                }, 200);
             }
         });
     }
@@ -321,15 +321,15 @@ $(()=>{
                 anime({
                     targets: title,
                     opacity: 1, translateY: 0,
-                    duration: 1600, easing: 'easeOutCubic'
+                    duration: 800, easing: 'easeOutCubic'
                 });
                 setTimeout(()=>{
                     anime({
                         targets: [item,hotel],
                         opacity: 1,
-                        duration: 1600, delay: anime.stagger(100), easing: 'easeOutCubic'
+                        duration: 800, delay: anime.stagger(100), easing: 'easeOutCubic'
                     });
-                }, 400);
+                }, 200);
             }
         });
     }

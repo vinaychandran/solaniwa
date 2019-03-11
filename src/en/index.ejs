@@ -99,7 +99,7 @@ var topDir = '/'+lang+'/';
                 </a>
             </div>
             <div class="news-item">
-                <a href="/news/beginner.html">
+                <a href="./news/beginner.html">
                     <picture>
                         <source media="(max-width: 768px)" srcset="/assets/images/top/news-beginner-sp.jpg">
                         <img src="/assets/images/top/news-beginner.jpg" alt="First Timer's Guide">
@@ -268,8 +268,7 @@ var topDir = '/'+lang+'/';
     </div>
 </div>
 
-<%- include('../_include/script') %>
-<script src="/assets/js/index.js"></script>
+<%- include('../_include/script',{page:'index'}) %>
 
 </body>
 </html>
