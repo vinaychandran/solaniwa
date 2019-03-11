@@ -530,10 +530,16 @@ header {
         }
         .nv-lang {
             top: 0; bottom: 0;
-            right: px(30);
+            right: 0;
             height: px(18);
+            .current-lang {
+                padding-right: px(30);
+            }
             img {
                 height: px(20);
+            }
+            &:after {
+                right: px(12);
             }
         }
         &.white {
@@ -654,7 +660,6 @@ header {
                     font-size: vw(28);
                 }
             }
-
             .sub-nv {
                 //display: block;
                 @include clearfix;

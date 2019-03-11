@@ -182,7 +182,7 @@
         }
         &-item {
             width: px(360);
-            min-height: px(286);
+            min-height: px(256);
             &_note {
                 font-size: px(12);
                 padding: px(18) px(18) 0;
@@ -314,12 +314,18 @@
         padding: px(60) 0 px(70);
         .sec-title {
             margin-bottom: px(50);
+            &.-option {
+                margin-top: px(50);
+            }
         }
     }
     @include media-sp {
         padding: vw(70) 0 0;
         .sec-title {
             margin-bottom: vw(50);
+            &.-option {
+                margin-top: vw(50);
+            }
         }
     }
 }
@@ -339,7 +345,7 @@
     }
 }
 .hours {
-    background: $color-background4;
+    background: $color-background3;
 
     &-btn {
         display: inline-block;

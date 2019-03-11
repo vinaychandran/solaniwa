@@ -1,5 +1,5 @@
 <%
 var css = (lang == 'ja' ? 'style.css' : 'style_'+lang+'.css');
-// css = css + '?' + (Date.now());
+css = css + '?' + (Date.now().toString().substr(8));
 %>
 <link rel="stylesheet" href="/assets/css/<%- css %>">

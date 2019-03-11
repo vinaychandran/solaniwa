@@ -1,4 +1,25 @@
 <div class="news-list">
+    <% if (category != 'faq') { %><div class="news-list_item">
+        <a href="faq.html">
+            <picture><img src="/assets/images/news/top/top-img-4.jpg" alt=""></picture>
+            <p class="date">2019.2.15</p>
+            <p class="desc">Q&A</p>
+        </a>
+    </div><% } %>
+    <% if (category != 'beginner') { %><div class="news-list_item">
+        <a href="beginner.html">
+            <picture><img src="/assets/images/news/top/top-img-5.jpg" alt=""></picture>
+            <p class="date">2019.2.15</p>
+            <p class="desc">First-timer guide</p>
+        </a>
+    </div><% } %>
+    <% if (category != 'event') { %><div class="news-list_item">
+        <a href="event.html">
+            <picture><img src="/assets/images/news/top/top-img-6.jpg" alt=""></picture>
+            <p class="date">2019.2.15</p>
+            <p class="desc">Shows＆Event Program</p>
+        </a>
+    </div><% } %>
     <% if (category != 'momoyama') { %><div class="news-list_item">
         <a href="momoyama.html">
             <picture><img src="/assets/images/news/top/top-img-1.jpg" alt=""></picture>
@@ -11,20 +32,6 @@
             <picture><img src="/assets/images/news/top/top-img-2.jpg" alt=""></picture>
             <p class="date">2019.1.15</p>
             <p class="desc">Solaniwa heros</p>
-        </a>
-    </div><% } %>
-    <% if (category != 'faq') { %><div class="news-list_item">
-        <a href="faq.html">
-            <picture><img src="/assets/images/news/top/top-img-4.jpg" alt=""></picture>
-            <p class="date">2019.2.15</p>
-            <p class="desc">Q&A</p>
-        </a>
-    </div><% } %>
-    <% if (category != 'event') { %><div class="news-list_item">
-        <a href="event.html">
-            <picture><img src="/assets/images/news/top/top-img-6.jpg" alt=""></picture>
-            <p class="date">2019.2.15</p>
-            <p class="desc">Shows＆Event Program</p>
         </a>
     </div><% } %>
 </div>
