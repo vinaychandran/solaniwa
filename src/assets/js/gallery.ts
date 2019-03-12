@@ -3,9 +3,18 @@ import * as _ from 'underscore';
 import * as utils from './utils';
 
 $(()=>{
+    let $catBtn = $('.sec-header_category a');
+    $catBtn.on('click', (e:any)=>{
+        let $btn = $(e.currentTarget);
+        let tag = $btn.attr('data-photo-tag').split(',');
+        alert(tag);
+        return false;
+    });
+});
+
+$(()=>{
     const $modal:any = $('.modal-gallery');
     const $modalIn:any = $('.modal-gallery-in');
-    const $img:any = $modal.find('img');
     const $nav:any = $modal.find('.nav-btn');
     const $galleryList:JQuery = $('.gallery-list');
     const galleryItem:any = $galleryList.find('.gallery-item').remove();

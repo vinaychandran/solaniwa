@@ -113,9 +113,9 @@ var topDir = '/'+lang+'/';
     <section class="floor">
         <div class="sec-title">Floor Map</div>
         <div class="floor-btn_block">
-            <a href="" class="floor-btn js-switch-tab-btn -active" data-tab-btn="2">2F</a>
+            <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="2">2F</a>
             <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="3">3F</a>
-            <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="4">4F・5F</a>
+            <a href="" class="floor-btn js-switch-tab-btn -active" data-tab-btn="4">4F・5F</a>
         </div>
         <div class="floor-map_list">
             <div class="floor-map floor-2F js-switch-tab" data-tab-id="2">
@@ -151,7 +151,7 @@ var topDir = '/'+lang+'/';
                     <p class="point" data-map-point="19"></p>
                 </div>
             </div>
-            <div class="floor-map floor-4F5F js-switch-tab" data-tab-id="4">
+            <div class="floor-map floor-4F5F js-switch-tab -active" data-tab-id="4">
                 <picture>
                     <img src="/assets/images/top/map-4f5f-en.png" srcset="/assets/images/top/map-4f5f-en@2x.png 2x" alt="4F,5F">
                 </picture>
@@ -245,27 +245,6 @@ var topDir = '/'+lang+'/';
 
     <%- include('../_include/navFix_' + lang,{isTop:1}) %>
 
-    <div class="modal-window modal-apology">
-        <div class="modal-in">
-            <a href="" class="modal-close js-modal-close"></a>
-            <div class="modal-content -apology">
-                <dl>
-                    <dt>Important Notice</dt>
-                    <dd>
-                        Dear guests,  <br>
-                        <br>
-                        The three bath types – the Origin (Gensen Kakenagashi) bath, the Open-air bath, and the Family baths - which have been temporarily stopped due to our pump malfunction, will be fully reopened from Tuesday, March 12th, at 11:00am.<br>
-                        <br>
-                        The discount on admission fees currently offered to our guests, during the time of repair, will end on Tuesday, March 12th at 6:00am.<br>
-                        <br>
-                        We deeply apologize for the inconvenience caused by the repair,  and we are looking forward to welcoming you soon.<br>Thank you very much for your patience.<br>
-                        <br>
-                        Sincerely,<br>
-                        Solaniwa Onsen OSAKA BAY TOWER</dd>
-                </dl>
-            </div>
-        </div>
-    </div>
 </div>
 
 <%- include('../_include/script',{page:'index'}) %>

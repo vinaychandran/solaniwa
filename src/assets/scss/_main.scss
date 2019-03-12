@@ -779,6 +779,7 @@ footer {
     z-index: 2;
     background-color: $color-background;
     .f_announcement {
+        width: 90%;
         margin: 0 auto 2em;
         line-height: 1.6;
         text-align: left;
@@ -927,7 +928,6 @@ footer {
     @include media-pc {
         z-index: 1;
         .f_announcement {
-            width: 90%;
             max-width: px(690);
             font-size: px(12);
         }
@@ -1212,6 +1212,13 @@ footer {
     }
 }
 
+@at-root html[lang='en'] footer {
+    @include media-pc {
+        .f_announcement {
+            max-width: px(450);
+        }
+    }
+}
 
 /* ------------------------------------------------
 common

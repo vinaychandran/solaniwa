@@ -217,6 +217,51 @@ a.btn {
     }
 }
 
+.sec-header {
+
+    &_category {
+        text-align: center;
+        font-size: 0;
+        a {
+            //display: none;
+            display: inline-block;
+            padding: 0.4em 0;
+            text-decoration: none;
+            &.-active {
+                border-bottom: solid 1px;
+            }
+        }
+    }
+
+    @include media-pc {
+        &_category {
+            background: url("../images/cmn/lower-bg.png") center 0 repeat-x $color-background;
+            background-size: px(46) auto;
+            padding: px(50) 0;
+            a {
+                margin: 0 px(30);
+                font-size: px(14);
+                &:hover {
+                    border-bottom: solid 1px;
+                }
+            }
+        }
+    }
+    @include media-sp {
+        &_category {
+            //display: none;
+            background: white;
+            border-top: solid 1px #eee;
+            padding: vw(24) 0;
+            a {
+                margin: 0 vw(20);
+                font-size: vw(20);
+            }
+        }
+    }
+}
+
+
 
 @include media-pc {
     .sp {

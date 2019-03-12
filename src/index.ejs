@@ -114,9 +114,9 @@
     <section class="floor">
         <div class="sec-title">フロアマップ</div>
         <div class="floor-btn_block">
-            <a href="" class="floor-btn js-switch-tab-btn -active" data-tab-btn="2">2F</a>
+            <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="2">2F</a>
             <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="3">3F</a>
-            <a href="" class="floor-btn js-switch-tab-btn" data-tab-btn="4">4F・5F</a>
+            <a href="" class="floor-btn js-switch-tab-btn -active" data-tab-btn="4">4F・5F</a>
         </div>
         <div class="floor-map_list">
             <div class="floor-map floor-2F js-switch-tab" data-tab-id="2">
@@ -152,7 +152,7 @@
                     <p class="point" data-map-point="19"></p>
                 </div>
             </div>
-            <div class="floor-map floor-4F5F js-switch-tab" data-tab-id="4">
+            <div class="floor-map floor-4F5F js-switch-tab -active" data-tab-id="4">
                 <picture>
                     <img src="/assets/images/top/map-4f5f.png" srcset="/assets/images/top/map-4f5f@2x.png 2x" alt="空庭ヒーローズ">
                 </picture>
@@ -190,12 +190,12 @@
                 </a>
             </div>
             <div class="news-item">
-                <a href="./news/onsen.html">
+                <a href="./news/event.html">
                     <picture>
-                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-onsen-sp.jpg">
-                        <img src="/assets/images/top/news-onsen.jpg" alt="空庭温泉で美味しく、愉しく、美しく">
+                        <source media="(max-width: 768px)" srcset="/assets/images/top/news-event-sp.jpg">
+                        <img src="/assets/images/top/news-event.jpg" alt="Shows&Event Program">
                     </picture>
-                    <p>空庭温泉で<br><span>美味しく、愉しく、</span><br class="sp">美しく</p>
+                    <p>ショー・イベント<br class="sp">プログラム</p>
                 </a>
             </div>
         </div>
@@ -246,26 +246,6 @@
     <%- include('./_include/footer',{lower:0}) %>
 
     <%- include('./_include/navFix',{isTop:1}) %>
-
-    <div class="modal-window modal-apology">
-        <div class="modal-in">
-            <a href="" class="modal-close js-modal-close"></a>
-            <div class="modal-content -apology">
-                <dl>
-                    <dt>通常営業再開のお知らせ</dt>
-                    <dd>お客様各位<br>
-                        <br>
-                        先般より復旧工事を実施しておりましたが、3月12日（火）午前11時をもちまして全てのお風呂のご利用を再開いたします。<br>
-                        <br>
-                        通常営業再開に伴い、復旧工事期間中に実施しておりました入館料特別割引は、3月12日（火）朝6時をもちまして終了させていただきます。期間中、ご不便をおかけしましたことを深くお詫び申し上げます。<br>
-                        <br>
-                        皆様のお越しを心よりお待ち申し上げております。<br>
-                        <br>
-                        空庭温泉 OSAKA BAY TOWER</dd>
-                </dl>
-            </div>
-        </div>
-    </div>
 </div>
 
 <%- include('./_include/script',{page:'index'}) %>

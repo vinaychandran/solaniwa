@@ -61,7 +61,10 @@ $(()=>{
     let $tabBtn:any = $('.js-switch-tab-btn');
     let $tabs:any = $('.js-switch-tab');
 
-    $tabs.css('display','none').eq(0).css('display','block').addClass('-active');
+    if ($tabs.filter('.-active').length == 0) {
+        $tabs.css('display','none').eq(0).css('display','block').addClass('-active');
+    }
+
     $tabBtn.eq(0).css('-active');
     $tabBtn.on('click', (e:any)=>{
         let $btn:any = $(e.currentTarget);
