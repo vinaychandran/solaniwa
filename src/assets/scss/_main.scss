@@ -105,15 +105,15 @@ body {
             span {
                 position: absolute;
                 top: 0;
-                right: px(-160);
+                right: px(-165);
                 display: block;
                 height: 100%;
-                width: px(160);
-                padding: px(14) px(15);
+                width: px(165);
+                padding: px(15) px(15);
                 box-sizing: border-box;
                 background: $color-red;
                 border-right: solid px(0) $color-red;
-                font-size: px(16);
+                font-size: px(15);
                 color: $color-red;
                 white-space: nowrap;
                 z-index: 0;
@@ -170,10 +170,9 @@ body {
             }
             span {
                 display: block;
-                font-size: vw(16);
+                font-size: vw(15);
                 font-weight: 400;
             }
-
             &.-active {
                 span {
                     color: $color-red;
