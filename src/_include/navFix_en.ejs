@@ -5,24 +5,24 @@
         <p><img src="/assets/images/cmn/icn-fnav-explore-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-explore-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-explore-white.svg" alt=""></p>
         <span>Explore</span>
     </a><!--
-    --><% if (isTop) {%><a href="" class="nv-floor js-nv-floor"><% } else {%><a href="/<%- lang %>/#floor" class="nv-floor"><% } %>
-        <p><img src="/assets/images/cmn/icn-fnav-map-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-map-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-map-white.svg" alt=""></p>
-        <span>Map</span>
+    --><a href="/<%- lang %>/fees/">
+        <p><img src="/assets/images/cmn/icn-fnav-fees-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-fees-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-map-white.svg" alt=""></p>
+        <span>Open・Fee</span>
     </a><!--
     <% if (false) {%>--><a href="javascript:void(0);" class="nv-plan">
         <p><img src="/assets/images/cmn/icn-fnav-plan-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-plan-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-plan-white.svg" alt=""></p>
         <span>Plan</span>
     </a><!--<% } %>
-    --><a href="/<%- lang %>/tickets/" class="nv-tickets <%= page=='tickets' ? '-active' : ''%>">
+    <% if (false) {%>--><a href="/<%- lang %>/tickets/" class="nv-tickets <%= page=='tickets' ? '-active' : ''%>">
         <p><img src="/assets/images/cmn/icn-fnav-tickets-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-tickets-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-tickets-white.svg" alt=""></p>
         <span class="pc">Online Tickets</span>
         <span class="sp">Tickets</span>
+    </a><!--<% } %>
+    --><a href="/<%- lang %>/news/faq.html" class="<%= page=='faq' ? '-active' : ''%>">
+        <p><img src="/assets/images/cmn/icn-fnav-faq-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-faq-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-faq-white.svg" alt=""></p>
+        <span>FAQ</span>
     </a><!--
-    --><a href="" class="nv-follow js-nv-follow">
-        <p><img src="/assets/images/cmn/icn-fnav-follow-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-follow-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-follow-white.svg" alt=""></p>
-        <span>Follow us</span>
-    </a><!--
-    --><a href="https://www.osaka-baytower.com/" target="_blank" class="nv-hotel pc">
+    --><a href="https://www.osaka-baytower.com/" target="_blank" class="nv-hotel">
         <p><img src="/assets/images/cmn/icn-fnav-hotel-gray.svg" alt=""><img src="/assets/images/cmn/icn-fnav-hotel-red.svg" alt=""><img src="/assets/images/cmn/icn-fnav-hotel-white.svg" alt=""></p>
         <span>Hotel</span>
     </a><!--

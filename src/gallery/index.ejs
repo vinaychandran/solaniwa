@@ -17,7 +17,7 @@
             <a href="/" class="back"></a>
         </div>
         <div class="sec-header_category">
-            <% if (true) { %><a href="" class="-active" data-photo-tag="">すべて</a>
+            <% if (false) { %><a href="" class="-active" data-photo-tag="">すべて</a>
             <a href="" data-photo-tag="onsen">温泉</a>
             <a href="" data-photo-tag="clothing">変身</a>
             <a href="" data-photo-tag="food">食事</a>
@@ -27,8 +27,12 @@
 
     <section class="gallery-list">
         <% for (var i = 0; i <= 70; i++) { if (true) { %>
+            <%
+            var arr = ['onsen','clothing','fun','food'];
+            var cat = arr[(Math.random() * 4 | 0)];
+            %>
             <div class="gallery-item">
-                <a href="/assets/images/gallery/detail-<%= (i < 10) ? ('00' + i) : ('0' + i) %>.jpg" class="js-gallery"><img src="/assets/images/gallery/<%= (i < 10) ? ('00' + i) : ('0' + i) %>.jpg" alt=""></a>
+                <a href="/assets/images/gallery/detail-<%= (i < 10) ? ('00' + i) : ('0' + i) %>.jpg" class="js-gallery" data-tag="<%=cat%>"><img src="/assets/images/gallery/<%= (i < 10) ? ('00' + i) : ('0' + i) %>.jpg" alt=""></a>
             </div>
         <% }} %>
     </section>

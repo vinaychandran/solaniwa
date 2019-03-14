@@ -26,11 +26,12 @@
     }
   }
 
+
   @include media-pc {
     &-list {
       width: 96%;
       max-width: px(1020);
-      padding-top: px(100);
+      //padding-top: px(100);
       padding-bottom: px(150);
       > div {
         &:nth-of-type(3n + 2) {
