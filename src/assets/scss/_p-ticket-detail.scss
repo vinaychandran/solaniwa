@@ -1,0 +1,560 @@
+@import "../../../node_modules/compass-mixins/lib/compass";
+@import "settings";
+
+.ticket-detail {
+    margin: auto;
+
+    &__slider {
+        margin: auto;
+        //overflow: hidden;
+        .slick-dots {
+            margin: px(25) auto;
+            width: vw(600);
+            @include clearfix;
+            display: flex;
+            li {
+                flex: 1;
+                float: left;
+                background: #d5ccc0;
+                margin: 0;
+                @include transition(background 400ms);
+                &.slick-active {
+                    background: $color-red;
+                }
+                button {
+                    display: block;
+                    width: 100%;
+                    height: px(2);
+                    font-size: 0;
+                }
+            }
+        }
+
+        .slick-arr {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: px(36);
+            height: px(36);
+            color: white;
+            border-radius: 50%;
+            background: center center no-repeat #3f3a39;
+            background-size: 40% auto;
+            cursor: pointer;
+            z-index: 5;
+
+            &.-prev {
+                background-image: url("../images/cmn/arr-left-white.svg");
+                left: px(10);
+            }
+
+            &.-next {
+                background-image: url("../images/cmn/arr-right-white.svg");
+                right: px(10);
+            }
+
+            @include media-sp {
+                width: vw(50);
+                height: vw(50);
+            }
+        }
+    }
+
+    &__item {
+        display: block;
+        outline: none;
+        text-align: center;
+        text-decoration: none;
+
+        img {
+            width: 100%;
+        }
+
+        &__image {
+            text-align: center;
+
+            img {
+                display: inline-block;
+            }
+        }
+
+        &__label {
+            display: block;
+        }
+    }
+
+    &__info-block {
+        width: 64%;
+
+        &.desktop {
+            .ticket-detail__info-block__include,
+            .ticket-detail__info-block__venue {
+                @include media-sp {
+                    display: none;
+                }
+            }
+        }
+
+        &.mobile {
+            display: none;
+            @include media-sp {
+                display: block;
+            }
+        }
+
+        &__include {
+            margin-top: px(20);
+
+            .table-included {
+                display: flex;
+                background-color: white;
+                flex-wrap: wrap;
+                span {
+                    display: block;
+                    font-family: "Roboto", sans-serif;
+                    font-size: 14px;
+                    color: #000;
+                    padding: 10px;
+                }
+    
+                ul {
+                    width: 100%;
+                }
+                span:nth-child(odd) {
+                    width: 38.6%;
+                    font-weight: 700;
+                }
+
+                span:nth-child(even),
+                ul {
+                    margin: 0;
+                    padding: 10px;
+                    width: 54%;
+                } 
+
+                li {
+                    font-size: 14px;
+                    color: #000;
+                    list-style: disc outside none;
+                    margin: 0 0 0 14px;
+                }
+            }
+        }
+
+        .block__venue {
+            &__content {
+                font-family: "PT Sans", Arial, Helvetica, sans-serif;
+                font-weight: 400;
+                margin: 0 0 10px;
+                font-size: 14px;
+                line-height: 1.2;
+                color: #000;
+            }
+
+            &__title {
+                font-family: "PT Sans", Arial, Helvetica, sans-serif;
+                width: 100%;
+                font-size: px(17);
+                line-height: 22px;
+                font-weight: bold;    
+                margin: 0 0 10px;
+                color: #000;
+            }
+
+            &__right-block {
+                width: 58%;
+            }
+
+            &__googleMap {
+                width: 40%;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            &__address {
+                font-family: "PT Sans", Arial, Helvetica, sans-serif;
+                font-size: px(14);
+                line-height: px(16.8);
+                font-weight: 700;
+                display: block;
+                margin: 0 0 px(10);
+                color: #000;
+            }
+
+            &__icon {
+                font-family: "PT Sans", Arial, Helvetica, sans-serif;
+                min-height: px(30);
+                margin: 0 0 px(10);
+                padding: px(6) px(3) px(3) px(38); 
+                line-height: px(17);
+                display: block;
+                color: #000;
+
+                &__title {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    font-size: px(16);
+
+                    h3 {
+                        display: inline-block;
+                    }
+                    span {
+                        display: inline-block;
+                        margin-left: px(5);
+                    }
+                }
+
+                &.parking {
+                    background: url("../images/tickets/icon/parking.png") no-repeat 0 px(10);
+                }
+
+                &.public-transport {
+                    background: url("../images/tickets/icon/public-transport.png") no-repeat 0 0;
+                }
+            }
+
+            &__offer-title {
+                font-family: "PT Sans", Arial, Helvetica, sans-serif;
+                padding-bottom: px(3);
+                margin-bottom: px(8);
+                font-size: px(20);
+                line-height: px(22);
+                font-weight: bold;
+                margin: 0 0 10px;
+                color: #000;
+            }
+
+            &__offer-name {
+                font-family: "PT Sans", Arial, Helvetica, sans-serif;
+                display: block;
+                font-size: 14px;
+                line-height: 1.2;
+                color: #000;
+            }
+        }
+
+        ul {
+            line-height: 1.33;
+            margin: px(20) 0 px(30);
+
+            li {
+                list-style: outside;
+                margin: 0 0 px(8) px(20);
+                line-height: 1.4;
+            }
+        }
+    }
+
+
+    @include media-pc {
+        margin-top: px(60);
+        //margin-bottom: px(150);
+        max-width: px(1000);
+        display: flex;
+        &__info-block {
+            &__header {
+                font-size: px(24);
+                font-weight: 700;
+            }
+            &__body {
+                margin-top: px(20);
+            }
+            &__intro {
+                margin-top: px(20);
+                line-height: 1.4;
+            }
+            &__include {
+                margin-top: px(20);
+            }
+            &__venue {
+                margin-top: px(20);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: flex-start;
+
+            }
+
+        }
+
+        &__process-block {
+            width: 36%;
+
+            &__price {
+                text-align: right;
+                font-size: px(16);
+                &--old {
+                    font-size: px(16);
+                    text-decoration: line-through;
+                }
+
+                &--new {
+                    font-size: px(30);
+                    font-weight: 700;
+                }
+            }
+
+            &__process-frame {
+                margin-top: px(20);
+                text-align: right;
+            }
+        }
+    }
+
+    @include media-sp {
+        iframe {
+            width: 100% !important;
+        }
+
+        &__process-block {
+            margin-top: px(20);
+
+            &__price {
+                text-align: center;
+                font-size: px(16);
+                &--old {
+                    font-size: px(16);
+                    text-decoration: line-through;
+                }
+
+                &--new {
+                    font-size: px(30);
+                    font-weight: 700;
+                }
+            }
+
+            &__process-frame {
+                padding: px(0) px(10);
+                margin-top: px(20);
+                margin-bottom: px(40);
+            }
+        }
+
+        &__info-block {
+            width: 100%;
+            &__header {
+                font-size: px(24);
+                font-weight: 700;
+                padding: px(10) px(10) px(15);
+                //padding-top: px(10);
+                //padding-bottom: px(15);
+            }
+
+            &__intro {
+                padding: px(0) px(10);
+                line-height: 1.4;
+            }
+
+            &__include {
+                padding: px(0) px(10);
+            }
+
+            .table-included {
+                span {
+                    &:nth-child(odd),
+                    &:nth-child(even) {
+                        width: 100% !important;
+                        padding: px(10) px(20) !important;
+                    }
+
+                    &:nth-child(even) {
+                        border-top: 1px solid #dad9d9;
+                    }
+
+                    &:nth-child(odd) {
+                        box-shadow: 0 1px 0 rgba(0,0,0,0.1) inset;
+                    }
+                }
+
+                li {
+                    padding: px(10) px(5) !important;
+                    margin: 0 0 0 px(40);
+                }
+
+                ul {
+                    width: 100% !important;
+                    padding: 0 !important;
+                    list-style: none;
+                    margin: 0;
+                }
+            }
+
+
+            &__venue {
+                margin-top: px(20);
+                padding: 0 px(10);
+            }
+        }
+
+        .block__venue {
+            &__right-block {
+                width: 100%;
+            }
+
+            &__title {
+                display: block;
+            }
+
+            &__icon {
+
+                &__content span {
+                    display: block;
+                }
+            }
+
+            &__right-block {
+                margin-top: px(20);
+            }
+
+            &__googleMap {
+                width: 100%;
+                margin-top: px(20);
+                margin-bottom: px(50);
+                position: relative;
+                height: px(200);
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+.ticket-others {
+    .ticket-list {
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: stretch;
+        justify-content: flex-start;
+
+        &_item {
+            a {
+                text-decoration: none;
+            }
+            img {
+                width: 100%;
+            }
+            .desc {
+                margin-top: px(10);
+                font-weight: 400;
+                line-height: 1.4;
+            }
+        }
+    }
+    @include media-pc {
+        background: url("../images/news/cloud-bg.png") center 0 no-repeat $color-background2;
+        padding-top: px(150);
+        padding-bottom: px(80);
+        .sec-title {
+            margin-bottom: px(72);
+        }
+        .ticket-list {
+            width: 100%;
+            max-width: px(1000);
+            justify-content: center;
+            &_item {
+                width: px(240);
+                height: px(370);
+                margin: px(0) px(40);
+                // &:nth-of-type(even) {
+                //     margin-left: px(120);
+                // }
+                .desc {
+                    font-size: px(17);
+                }
+            }
+        }
+    }
+
+    @include media-sp {
+        background: url("../images/news/cloud-bg-sp.png") center 0 no-repeat $color-background2;
+        background-size: 100% auto;
+        padding-top: vw(150);
+        padding-bottom: vw(100);
+        .sec-title {
+            margin-bottom: vw(52);
+        }
+        .ticket-list {
+            padding-bottom: vw(74);
+            width: vw(630);
+            justify-content: space-between;
+            &_item {
+                width: vw(180);
+                height: vw(280);
+                &:nth-of-type(even) {
+                    float: right;
+                }
+                img {
+                    width: 100%;
+                }
+                .desc {
+                    font-size: vw(28);
+                }
+            }
+        }
+    }
+}
+
+
+.ticket-detail__process-block__price {
+    &--old {
+        margin-bottom: px(10);
+    }
+
+    span.ticket-detail__process-block__price--new {
+        color: $color-red;
+    }
+}
+
+#googleMapPopUp {
+    height: 100%;
+}
+
+.modal-window.modal-googleMap {
+
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .modal-in {
+        width: calc(100% - 30px);
+        max-width: px(800);
+        height: auto;
+        top: 50%;
+        left: 50%;
+        right: initial;
+        bottom: initial;
+        transform: translate(-50%, -50%);
+    }
+
+    .modal-content_head {
+        height: initial;
+    }
+
+    .modal-content_body {
+        border: none;
+        height: px(350);
+        margin-bottom: px(20);
+    }
+}
+
+// en
+@at-root html[lang='en'] .ticket-detail {
+    @include media-pc {
+    }
+}

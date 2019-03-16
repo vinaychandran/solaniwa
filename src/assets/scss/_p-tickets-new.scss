@@ -1,0 +1,443 @@
+@import "../../../node_modules/compass-mixins/lib/compass";
+@import "settings";
+
+.sec-title {
+    &:after {
+        content: none;
+    }
+    @include media-pc {
+        margin-bottom: px(50);
+        font-size: px(24);
+    }
+    @include media-sp {
+        margin-bottom: vw(70);
+        padding-bottom: 0;
+        font-size: vw(36);
+    }
+}
+
+.campaign {
+
+    &-list {
+        overflow: hidden;
+        margin: auto;
+    }
+    &-indicator {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+        li {
+            display: inline-block;
+            cursor: pointer;
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: #fdf6ec;
+                transition: background-color 200ms;
+            }
+            &.slick-active:after {
+                background-color: $color-red;
+            }
+        }
+    }
+    &-item {
+        //position: absolute;
+        //top: 0;
+        //left: 0;
+        width: 100%;
+
+        picture {
+            position: relative;
+            display: block;
+        }
+
+        &_ticket {
+            position: absolute;
+            margin: auto;
+            background: 0 0 no-repeat {
+                size: contain;
+            };
+
+            .ticket-title {
+                display: inline-block;
+                @include font-serif;
+                background: #dabb76;
+            }
+            .ticket-info {
+                .desc,.note {
+                    @include font-serif;
+                    line-height: 1.2;
+                    font-feature-settings: 'palt';
+                }
+                .off {
+                    display: inline-block;
+                    border: solid 2px $color-red;
+                    color: $color-red;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    @include media-pc {
+        margin-top: px(50);
+        &-list {
+            width: 100%;
+            max-width: px(1440);
+            height: px(492);
+        }
+        &-indicator {
+            bottom: px(10);
+            li {
+                width: px(60);
+                padding: px(10);
+            }
+        }
+        &-item {
+            height: px(492);
+            overflow: hidden;
+
+            picture {
+                position: absolute;
+                width: 100%;
+                img {
+                    position: relative;
+                    width: px(1440);
+                    height: px(492);
+                    left: 50%;
+                    margin-left: px(-770);
+                }
+            }
+
+            &_ticket {
+                top: 0; bottom: 0;
+                left: 8%;
+                width: px(530);
+                height: px(370);
+                padding-top: px(20);
+                background-image: url("../images/tickets/campaign/campaign-bg.jpg");
+
+                .ticket-title {
+                    padding: px(6) px(18);
+                    margin-left: px(-6);
+                    font-size: px(23);
+                }
+                .ticket-info {
+                    margin-top: px(38);
+                    margin-left: px(66);
+                    .off {
+                        padding: px(4) px(6);
+                        margin-bottom: px(10);
+                        font-size: px(24);
+                    }
+                    .desc {
+                        font-size: px(40);
+                    }
+                    .note {
+                        margin: px(10) 0 px(18);
+                        font-size: px(20);
+                    }
+                    .btn {
+                        width: px(205);
+                    }
+                }
+            }
+        }
+    }
+    @include media-sp {
+        padding-top: vw(70);
+
+        &-list {
+            width: 100%;
+            height: vw(747);
+        }
+        &-indicator {
+            bottom: 0;
+            li {
+                width: vw(160);
+                padding: vw(30);
+            }
+        }
+        &-item {
+            width: 100%;
+            height: vw(747);
+
+            picture {
+                position: absolute;
+                height: vw(747);
+                left: 50%;
+                transform: translateX(-50%);
+                img {
+                    height: 100%;
+                }
+            }
+
+            &_ticket {
+                left: vw(40);
+                bottom: vw(70);
+                width: vw(480);
+                height: vw(410);
+                padding-top: vw(20);
+                background-image: url("../images/tickets/campaign/campaign-bg-sp.jpg");
+
+                .ticket-title {
+                    padding: vw(6) vw(18);
+                    margin-left: vw(-6);
+                    font-size: vw(28);
+                }
+                .ticket-info {
+                    margin-top: vw(30);
+                    margin-left: vw(46);
+                    .off {
+                        padding: vw(4) vw(6);
+                        margin-bottom: vw(16);
+                        font-size: vw(24);
+                    }
+                    .desc {
+                        font-size: vw(40);
+                    }
+                    .note {
+                        margin: vw(16) 0 vw(22);
+                        font-size: vw(26);
+                    }
+                    .btn {
+                        padding: vw(20) 0;
+                        width: vw(290);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category {
+    .sec-title {
+        padding-bottom: 0;
+        margin-bottom: px(5);
+    }
+    .gift-ticket {
+        margin: auto;
+        text-align: right;
+    }
+
+    &-list {
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: stretch;
+        justify-content: space-between;
+    }
+
+    &-item {
+        display: block;
+        //pointer-events: none;
+        picture {
+            display: block;
+            overflow: hidden;
+            background-color: black;
+            img {
+                width: 100%;
+            }
+        }
+        .category-name {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            @include font-serif;
+            color: white;
+            text-align: center;
+            span {
+                display: block;
+                margin-top: 0.2em;
+                font-size: 0.7em;
+            }
+        }
+    }
+    @include media-pc {
+        margin-top: px(60);
+        margin-bottom: px(130);
+        .gift-ticket {
+            width: 96%;
+            max-width: px(1080);
+            margin-bottom: px(20);
+            a {
+                width: px(205);
+            }
+        }
+        &-list {
+            width: 96%;
+            max-width: px(1080);
+        }
+        &-item {
+            width: 49%;
+            margin-bottom: 2%;
+            .category-name {
+                font-size: px(36);
+            }
+            picture img {
+                transform: scale(1.01);
+                transition: all 500ms $easeOutCubic;
+            }
+            &:hover img {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+    }
+    @include media-sp {
+        margin-top: vw(70);
+        margin-bottom: vw(110);
+        .sec-title {
+            margin-bottom: vw(30);
+        }
+        .gift-ticket {
+            width: vw(710);
+            margin-bottom: vw(30);
+            a {
+                width: 100%;
+            }
+        }
+        &-list {
+            width: vw(710);
+        }
+        &-item {
+            margin-bottom: vw(30);
+            .category-name {
+                font-size: vw(40);
+            }
+        }
+    }
+}
+
+.tickets {
+    margin: auto;
+
+    &-list {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: stretch;
+    }
+    &-item {
+        background-color: $color-background-white;
+        picture {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        dl {
+            box-sizing: border-box;
+            line-height: 1.4;
+        }
+
+        &__title {
+            font-size: px(16);
+            font-weight: 700;
+        }
+        &__old-price {
+            font-size: px(12);
+            text-decoration: line-through;
+            text-align: right;
+        }
+        &__new-price {
+            font-size: px(14);
+            text-align: right;
+            &--hot {
+                font-size: px(14);
+                font-weight: 500;
+            }
+        }
+        &__location {
+            font-size: px(14);
+            font-weight: 500;
+            &--icon {
+                width: 12px;
+                height: 12px;
+                display: inline-block;
+                background: url("../images/tickets/icon/pin.png") no-repeat 0 50%;
+                background-size: contain;
+                
+            }
+        }
+        &__bottom-info {
+            margin-top: px(10);
+            display: inline-block;
+            width: 100%;
+        }
+        &__detail-btn {
+            float: right;
+            padding: px(2) px(20);
+            background-color: $color-red;
+            
+            a {
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    margin: auto;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    border-top: 1px solid $color-background-white;
+                    border-right: 1px solid $color-background-white;
+                    width: .4em;
+                    height: .4em;
+                    transform: rotate(45deg);
+                }
+            }
+            
+
+            &--text {
+                font-size: px(14);
+                text-decoration: none;
+                font-weight: 500;
+                color: $color-background-white;
+                padding-right: px(10);
+            }
+        }
+    }
+
+    @include media-pc {
+        width: 96%;
+        margin-top: px(60);
+        margin-bottom: px(150);
+        max-width: px(1000);
+        &-item {
+            width: 27.5%;
+            margin: 0 2.25% 5%;
+            dl {
+                padding: px(15);
+            }
+           
+        }
+    }
+    @include media-sp {
+        //margin-top: vw(70);
+        //margin-bottom: vw(110);
+        .sec-title {
+            margin-bottom: vw(35);
+            margin-top: vw(35);
+        }
+
+        &-list {
+            width: 94.666vw;
+            margin: auto;
+        }
+
+        &-item {
+            margin-bottom: px(30);
+            dl {
+                padding: px(15);
+            }
+            &__title {
+                margin-bottom: px(10);
+                font-size: px(16);
+                font-weight: 700;
+            }
+        }
+    }
+}

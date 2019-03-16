@@ -1,5 +1,9 @@
 import * as $ from 'jquery';
 import * as utils from './utils';
+import {} from '@types/googlemaps';
+
+
+declare var google: any;
 
 $(()=>{
     const $win = $(window);
@@ -166,12 +170,17 @@ $(()=>{
         'click':(e:any)=>{
             let sel = '.' + $(e.currentTarget).attr('data-modal-target');
             $(sel).fadeIn(300);
+            $('body').css('overflow', 'hidden');
+            if (sel == '.modal-googleMap') {
+                initGoogleMapPopupTicketPage();
+            }
             return false;
         }
     });
     $('.js-modal-close').on({
         'click':(e:any)=>{
             $(e.currentTarget).closest('.modal-window').fadeOut(300);
+            $('body').css('overflow', 'initial');
             return false;
         }
     });
@@ -189,6 +198,29 @@ $(()=>{
             return false;
         }
     });
+    const initGoogleMapPopupTicketPage = function() {
+        const latInput: HTMLInputElement = document.querySelector('input#sdfLatTicketDetail');
+        const lngInput: HTMLInputElement = document.querySelector('input#sdfLngTicketDetail');
+        if (latInput && lngInput) {
+            const myLatlng = new google.maps.LatLng(latInput.value, lngInput.value);const mapOptions = {
+                zoom: 13,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                panControl: true,
+                zoomControl: true,
+                mapTypeControl: true,
+                scaleControl: true,
+                streetViewControl: true,
+                overviewMapControl: true
+            };
+            let marker = new google.maps.Marker({
+                position: myLatlng,
+                map: new google.maps.Map(document.getElementById('googleMapPopUp'), mapOptions),
+                title: ''
+            });
+        }
+    }
+
     const openShareWindow = function(url:any) {
         var width = 600;
         var height = 500;

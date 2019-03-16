@@ -33,9 +33,9 @@
     @import "p-explore";
 }
 // tickets
-.p-tickets {
-    @import "p-tickets";
-}
+// .p-tickets {
+//     @import "p-tickets";
+// }
 // gallery
 .p-gallery {
     @import "p-gallery";
@@ -43,5 +43,13 @@
 // term
 .p-term {
     @import "p-term";
+}
+// tickets new
+.p-tickets {
+    @import "p-tickets-new";
+}
+// tickets detail 
+.p-ticket-detail {
+    @import "p-ticket-detail";
 }
 
