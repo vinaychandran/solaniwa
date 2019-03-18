@@ -63,7 +63,10 @@
                     <div class="ticket-detail__info-block__include">
                         <div class="table-included">
                             <span>Included</span>
-                            <span>Towels and shower amenities</span>
+                            <ul>
+                                <li>Towels and shower amenities</li>
+                                <li>Food and beverages</li>
+                            </ul>
                         </div>
                         <div class="table-included">
                             <span>Not included</span>
@@ -74,7 +77,12 @@
                         </div>
                         <div class="table-included">
                             <span>Important information</span>
-                            <span>Entrance ticket is not included</span>
+                            <ul>
+                                <li>
+                                    Guests with tattoos must cover them with tattoo seal before entering to Solaniwa
+                                    Onsen.
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
@@ -247,7 +255,7 @@
     <%- include('../_include/script',{page:'tickets'}) %>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo8ICXyf-BwI1tBv-PJxvHgm-0wUbTLAY"
         defer></script>
-        <script id="regiondo-booking-js" src="https://cdn.regiondo.net/js/integration/regiondo-booking.js" async defer></script>
+    <script id="regiondo-booking-js" src="https://cdn.regiondo.net/js/integration/regiondo-booking.js" async defer></script>
 </body>
 
 </html>

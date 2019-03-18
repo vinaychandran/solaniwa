@@ -113,27 +113,29 @@
                 background-color: white;
                 flex-wrap: wrap;
                 span {
-                    display: block;
-                    font-family: "Roboto", sans-serif;
-                    font-size: 14px;
+                    font-size: px(14);
                     color: #000;
-                    padding: 10px;
+                    padding: px(15);
+                    font-weight: 700;
+                    width: 100%;
                 }
     
                 ul {
                     width: 100%;
-                }
-                span:nth-child(odd) {
-                    width: 38.6%;
-                    font-weight: 700;
-                }
-
-                span:nth-child(even),
-                ul {
                     margin: 0;
-                    padding: 10px;
-                    width: 54%;
-                } 
+                    padding: px(0) px(25) px(15);
+                }
+                // span:nth-child(odd) {
+                //     width: 38.6%;
+                //     font-weight: 700;
+                // }
+
+                // span:nth-child(even),
+                // ul {
+                //     margin: 0;
+                //     padding: 10px;
+                //     width: 54%;
+                // } 
 
                 li {
                     font-size: 14px;
