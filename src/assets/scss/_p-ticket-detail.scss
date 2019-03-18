@@ -125,17 +125,6 @@
                     margin: 0;
                     padding: px(0) px(25) px(15);
                 }
-                // span:nth-child(odd) {
-                //     width: 38.6%;
-                //     font-weight: 700;
-                // }
-
-                // span:nth-child(even),
-                // ul {
-                //     margin: 0;
-                //     padding: 10px;
-                //     width: 54%;
-                // } 
 
                 li {
                     font-size: 14px;
@@ -148,19 +137,19 @@
 
         .block__venue {
             &__content {
-                font-family: "PT Sans", Arial, Helvetica, sans-serif;
+                //font-family: "PT Sans", Arial, Helvetica, sans-serif;
                 font-weight: 400;
                 margin: 0 0 10px;
-                font-size: 14px;
-                line-height: 1.2;
+                font-size: px(16);
+                line-height: 1.4;
                 color: #000;
             }
 
             &__title {
-                font-family: "PT Sans", Arial, Helvetica, sans-serif;
+                //font-family: "PT Sans", Arial, Helvetica, sans-serif;
                 width: 100%;
                 font-size: px(17);
-                line-height: 22px;
+                line-height: 1.4;
                 font-weight: bold;    
                 margin: 0 0 10px;
                 color: #000;
@@ -182,9 +171,9 @@
             }
 
             &__address {
-                font-family: "PT Sans", Arial, Helvetica, sans-serif;
-                font-size: px(14);
-                line-height: px(16.8);
+                //font-family: "PT Sans", Arial, Helvetica, sans-serif;
+                font-size: px(16);
+                line-height: 1.4;
                 font-weight: 700;
                 display: block;
                 margin: 0 0 px(10);
@@ -230,7 +219,7 @@
                 padding-bottom: px(3);
                 margin-bottom: px(8);
                 font-size: px(20);
-                line-height: px(22);
+                line-height: 1.4;
                 font-weight: bold;
                 margin: 0 0 10px;
                 color: #000;
@@ -240,7 +229,7 @@
                 font-family: "PT Sans", Arial, Helvetica, sans-serif;
                 display: block;
                 font-size: 14px;
-                line-height: 1.2;
+                line-height: 1.4;
                 color: #000;
             }
         }
@@ -279,7 +268,7 @@
                 margin-top: px(20);
             }
             &__venue {
-                margin-top: px(20);
+                margin-top: px(40);
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
