@@ -414,14 +414,6 @@
                 position: relative;
                 height: px(250);
                 overflow: hidden;
-
-                img {
-                    position: absolute;
-                    width: 100%;
-                    top: 50%;
-                    left: 0;
-                    transform: translateY(-50%);
-                }
             }
         }
     }
