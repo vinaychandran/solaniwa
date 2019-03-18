@@ -172,6 +172,7 @@
 
             &__googleMap {
                 width: 40%;
+                height: px(250);
                 cursor: pointer;
 
                 img {
@@ -422,7 +423,7 @@
                 margin-top: px(20);
                 margin-bottom: px(50);
                 position: relative;
-                height: px(200);
+                height: px(250);
                 overflow: hidden;
 
                 img {
@@ -524,7 +525,7 @@
     }
 }
 
-#googleMapPopUp {
+.googleMapPopUp {
     height: 100%;
 }
 

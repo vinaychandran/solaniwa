@@ -2,6 +2,10 @@ import * as $ from 'jquery';
 import * as _ from 'underscore';
 import * as utils from './utils';
 import 'slick-carousel';
+import {} from '@types/googlemaps';
+
+
+declare var google: any;
 
 $(()=>{
     // $('.js-slick').slick({
@@ -62,4 +66,32 @@ $(()=>{
            location.reload();
        }
     });
+    initGoogleMapPopupTicketPage();
 });
+
+const initGoogleMapPopupTicketPage = function() {
+    const latInput: HTMLInputElement = (document.querySelector('input#sdfLatTicketDetail'));
+    const lngInput: HTMLInputElement = document.querySelector('input#sdfLngTicketDetail');
+    if (latInput && lngInput) {
+        const myLatlng = new google.maps.LatLng(parseFloat(latInput.value), parseFloat(lngInput.value));
+        const mapOptions = {
+            zoom: 13,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            panControl: true,
+            zoomControl: true,
+            mapTypeControl: true,
+            scaleControl: true,
+            streetViewControl: true,
+            overviewMapControl: true
+        };
+        const googleMapPopUps = document.querySelectorAll('.googleMapPopUp');
+        for (let i = 0; i < googleMapPopUps.length; i++) {
+            let marker = new google.maps.Marker({
+                position: myLatlng,
+                map: new google.maps.Map(googleMapPopUps[i], mapOptions),
+                title: ''
+            });
+        }
+    }
+}
