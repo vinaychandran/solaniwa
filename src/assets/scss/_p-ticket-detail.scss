@@ -529,36 +529,6 @@
     height: 100%;
 }
 
-.modal-window.modal-googleMap {
-
-    .modal-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .modal-in {
-        width: calc(100% - 30px);
-        max-width: px(800);
-        height: auto;
-        top: 50%;
-        left: 50%;
-        right: initial;
-        bottom: initial;
-        transform: translate(-50%, -50%);
-    }
-
-    .modal-content_head {
-        height: initial;
-    }
-
-    .modal-content_body {
-        border: none;
-        height: px(350);
-        margin-bottom: px(20);
-    }
-}
-
 // en
 @at-root html[lang='en'] .ticket-detail {
     @include media-pc {
