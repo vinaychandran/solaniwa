@@ -35,7 +35,7 @@ $(()=>{
     // });
     
     $('.js-slick').slick({
-        dots: false,
+        dots: true,
         autoplay: true,
         autoplaySpeed: 6000,
         touchThreshold:20,

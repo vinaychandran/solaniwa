@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <%- include('../_include/meta', {title:'前売りチケット'}) %>
+    <%- include('../_include/style', {lang:'ja'}) %>
+    <%- include('../_include/analytics') %>
+</head>
+
+<body class="p-tickets p-lower">
+
+    <%- include('../_include/header',{lower:1}) %>
+
+    <div id="main">
+
+        <section class="sec-header">
+            <div class="sec-header_title">
+                <h2>Relaxation JP</h2>
+                <a href="./" class="back"></a>
+            </div>
+        </section>
+
+        <div class="tickets">
+            <div class="sec-title">Relaxation services available</div>
+            <div class="tickets-list">
+                <div class="tickets-item">
+                    <a href="./">
+                        <picture>
+                            <img src="/assets/images/explore/onsen/image-1-1.jpg" alt="">
+                        </picture>
+                    </a>
+                    <dl>
+                        <div class="tickets-item__title">LARGE PRIVATE BATH AND BED KING-SIZE</div>
+                        <div class="tickets-item__old-price">¥10,000.00</div>
+                        <div class="tickets-item__bottom-info">
+                            <span class="tickets-item__new-price">from ¥9,200.00</span>
+                            <span class="tickets-item__detail-btn">
+                                <a href="ticket-detail.html" class="tickets-item__detail-btn--text">Detail</a>
+                            </span>
+                        </div>
+                    </dl>
+                </div>
+                <div class="tickets-item">
+                    <a href="./">
+                        <picture>
+                            <img src="/assets/images/explore/onsen/image-1-1.jpg" alt="">
+                        </picture>
+                    </a>
+                    <dl>
+                        <div class="tickets-item__title">LARGE PRIVATE BATH AND BED KING-SIZE</div>
+                        <div class="tickets-item__old-price">¥10,000.00</div>
+                        <div class="tickets-item__bottom-info">
+                            <span class="tickets-item__new-price">from ¥9,200.00</span>
+                            <span class="tickets-item__detail-btn">
+                                <a href="ticket-detail.html" class="tickets-item__detail-btn--text">Detail</a>
+                            </span>
+                        </div>
+                    </dl>
+                </div>
+                <div class="tickets-item">
+                    <a href="./">
+                        <picture>
+                            <img src="/assets/images/explore/onsen/image-1-1.jpg" alt="">
+                        </picture>
+                    </a>
+                    <dl>
+                        <div class="tickets-item__title">LARGE PRIVATE BATH AND BED KING-SIZE</div>
+                        <div class="tickets-item__old-price">¥10,000.00</div>
+                        <div class="tickets-item__bottom-info">
+                            <span class="tickets-item__new-price">from ¥9,200.00</span>
+                            <span class="tickets-item__detail-btn">
+                                <a href="ticket-detail.html" class="tickets-item__detail-btn--text">Detail</a>
+                            </span>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <%- include('../_include/magazine') %>
+        <%- include('../_include/footer', {lower:1, follow:false}) %>
+        <%- include('../_include/navFix') %>
+    </div>
+
+    <%- include('../_include/script',{page:'tickets'}) %>
+
+</body>
+
+</html>
