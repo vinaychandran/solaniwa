@@ -341,11 +341,11 @@
         &__old-price {
             font-size: px(12);
             text-decoration: line-through;
-            text-align: right;
+            margin-top: px(10);
         }
         &__new-price {
             font-size: px(14);
-            text-align: right;
+            //text-align: right;
             &--hot {
                 font-size: px(14);
                 font-weight: 500;
@@ -364,14 +364,16 @@
             }
         }
         &__bottom-info {
-            margin-top: px(10);
-            display: inline-block;
             width: 100%;
+            position: relative;
         }
+
         &__detail-btn {
-            float: right;
-            padding: px(2) px(20);
+            padding: px(3) px(20);
             background-color: $color-red;
+            position: absolute;
+            right: 0;
+            bottom: 0;
             
             a {
                 &::after {

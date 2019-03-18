@@ -28,6 +28,9 @@
                     font-size: 0;
                 }
             }
+            @include media-pc {
+                width: 100%;
+            }
         }
 
         .slick-arr {

@@ -120,6 +120,8 @@ module.exports = {
     new HtmlWebpackPlugin({inject: false, filename: 'tickets/relaxation.html', template: './src/tickets/relaxation.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'tickets/beauty.html', template: './src/tickets/beauty.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'tickets/guide.html', template: './src/tickets/guide.ejs'}),
+    new HtmlWebpackPlugin({inject: false, filename: 'tickets/relaxation-new.html', template: './src/tickets/relaxation-new.ejs'}),
+    new HtmlWebpackPlugin({inject: false, filename: 'tickets/ticket-detail.html', template: './src/tickets/ticket-detail.ejs'}),
 
     new HtmlWebpackPlugin({inject: false, filename: 'en/tickets/index.html', template: './src/en/tickets/index.ejs'}),
     new HtmlWebpackPlugin({inject: false, filename: 'en/tickets/admission.html', template: './src/en/tickets/admission.ejs'}),
