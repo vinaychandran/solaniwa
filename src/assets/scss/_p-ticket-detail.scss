@@ -506,6 +506,10 @@
     &--old {
         margin-bottom: px(10);
     }
+
+    span.ticket-detail__process-block__price--new {
+        color: $color-red;
+    }
 }
 
 .googleMapPopUp {
