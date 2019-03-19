@@ -33,11 +33,9 @@
     @import "p-explore";
 }
 //tickets
-// .p-tickets {
-//     @import "p-tickets";
-// }
-//point to new scss for ticket page 
 .p-tickets {
+    @import "p-tickets";
+    //point to new additional style for ticket page 
     @import "p-tickets-new";
 }
 // gallery

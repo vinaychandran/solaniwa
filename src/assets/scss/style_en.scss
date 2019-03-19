@@ -47,8 +47,8 @@
 // tickets new
 .p-tickets {
     @import "p-tickets";
+    //point to new additional style for ticket page 
     @import "p-tickets-new";
-
 }
 // tickets detail 
 .p-ticket-detail {
