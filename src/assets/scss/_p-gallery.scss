@@ -101,7 +101,7 @@
     position: absolute;
     margin: auto;
     left: 0; right: 0;
-    top: 46%;
+    top: 7%;
     width: 92%;
     .nav-btn {
       position: absolute;
@@ -155,13 +155,13 @@
       height: auto;
       .modal-image {
         width: 100%;
-        height: 0;
+        height: 200px;
       }
     }
     &-nav {
-      position: relative;
-      width: 90%;
-      top: 8%;
+      position: absolute;
+      width: 99%;
+      top: 45%;
       .nav-btn {
         width: vw(60);
         height: vw(60);
