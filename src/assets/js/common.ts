@@ -154,7 +154,7 @@ $(()=>{
             if (!utils.isPC && $switch.hasClass('-open')) {
                 $switch.trigger('click');
             }
-            scrollTo('section.guide');
+            scrollTo('section.guide', -550);
             return false;
         }
     });
