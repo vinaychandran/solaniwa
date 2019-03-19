@@ -90,11 +90,9 @@
         width: 64%;
 
         &.desktop {
-            .ticket-detail__info-block__include,
-            .ticket-detail__info-block__venue {
-                @include media-sp {
-                    display: none;
-                }
+            display: block;
+            @include media-sp {
+                display: none;
             }
         }
 
@@ -141,10 +139,9 @@
 
         .block__venue {
             &__content {
-                //font-family: "PT Sans", Arial, Helvetica, sans-serif;
                 font-weight: 400;
                 margin: 0 0 10px;
-                font-size: px(16);
+                font-size: px(14);
                 line-height: 1.4;
                 color: #000;
             }
@@ -177,7 +174,7 @@
             &__address {
                 //font-family: "PT Sans", Arial, Helvetica, sans-serif;
                 font-size: px(16);
-                line-height: 1.4;
+                line-height: 1.5;
                 font-weight: 700;
                 display: block;
                 margin: 0 0 px(10);
@@ -192,6 +189,7 @@
                 line-height: px(17);
                 display: block;
                 color: #000;
+                min-height: px(35);
 
                 &__title {
                     width: 100%;
@@ -210,7 +208,7 @@
                 }
 
                 &.parking {
-                    background: url("../images/tickets/icon/parking.png") no-repeat 0 px(10);
+                    background: url("../images/tickets/icon/parking.png") no-repeat 0 0;
                 }
 
                 &.public-transport {
