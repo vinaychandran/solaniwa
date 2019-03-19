@@ -124,6 +124,8 @@
                     width: 100%;
                     margin: 0;
                     padding: px(0) px(25) px(15);
+
+                    
                 }
 
                 li {
@@ -131,6 +133,8 @@
                     color: #000;
                     list-style: disc outside none;
                     margin: 0 0 0 14px;
+
+                    
                 }
             }
         }
@@ -355,7 +359,7 @@
                     &:nth-child(odd),
                     &:nth-child(even) {
                         width: 100% !important;
-                        padding: px(10) px(20) !important;
+                        //padding: px(10) px(20) !important;
                     }
 
                     &:nth-child(even) {
@@ -368,8 +372,11 @@
                 }
 
                 li {
-                    padding: px(10) px(5) !important;
-                    margin: 0 0 0 px(40);
+                    margin: 0 px(15) 0 px(40);
+                    line-height: 1.6;
+                    &:nth-last-child(1) {
+                        padding-bottom: px(10);
+                    }
                 }
 
                 ul {
@@ -510,9 +517,13 @@
     height: 100%;
 }
 
-#regiondo-modal {
-    width: calc(100% - 30px) !important;
+#regiondo-modal-close {
+    z-index: 1000;
 }
+
+// #regiondo-modal {
+//     width: calc(100% - 30px) !important;
+// }
 
 // en
 @at-root html[lang='en'] .ticket-detail {
