@@ -90,9 +90,11 @@
         width: 64%;
 
         &.desktop {
-            display: block;
-            @include media-sp {
-                display: none;
+            .ticket-detail__info-block__include,
+            .ticket-detail__info-block__venue {
+                @include media-sp {
+                    display: none;
+                }
             }
         }
 
@@ -519,9 +521,11 @@
     z-index: 1000;
 }
 
-// #regiondo-modal {
-//     width: calc(100% - 30px) !important;
-// }
+#regiondo-modal {
+    @include media-sp {
+        width: calc(100% - 30px) !important;
+    }
+}
 
 // en
 @at-root html[lang='en'] .ticket-detail {
