@@ -529,6 +529,10 @@
     height: 100%;
 }
 
+#regiondo-modal {
+    width: calc(100% - 30px) !important;
+}
+
 // en
 @at-root html[lang='en'] .ticket-detail {
     @include media-pc {
