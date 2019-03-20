@@ -289,6 +289,7 @@
                 &--old {
                     font-size: px(16);
                     text-decoration: line-through;
+                    font-weight: 700;
                 }
 
                 &--new {
@@ -314,6 +315,7 @@
                 font-size: px(16);
                 &--old {
                     font-size: px(16);
+                    font-weight: 700;
                     text-decoration: line-through;
                 }
 
@@ -333,6 +335,7 @@
         &__info-block {
             width: 100%;
             &__header {
+                text-align: center;
                 font-size: px(24);
                 font-weight: 700;
                 padding: px(10) px(10) px(15);
