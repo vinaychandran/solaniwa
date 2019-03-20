@@ -111,20 +111,19 @@
             .table-included {
                 display: flex;
                 background-color: white;
+                flex-wrap: wrap;
                 span {
                     font-size: px(14);
                     color: #000;
                     padding: px(15);
                     font-weight: 700;
-                    width: 30%;
+                    width: 100%;
                 }
     
                 ul {
-                    width: 70%;
+                    width: 100%;
                     margin: 0;
-                    padding: px(15) px(25) px(15);
-
-                    
+                    padding: px(0) px(25) px(15);                    
                 }
 
                 li {
