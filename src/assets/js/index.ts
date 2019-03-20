@@ -127,7 +127,7 @@ $(()=>{
                 $p.empty().html(html);
             });
         }
-        if ($msg.length) {
+        if ($msg.length && lang == 'ja') {
             $p.each((i:any, o:any)=>{
                 setTimeout(()=>{
                     $(o).addClass('-show');
@@ -145,7 +145,7 @@ $(()=>{
                     startAnimation();
                 }, 1000);
             });
-        }, $msg.length ? 4000 : 1000);
+        }, ($msg.length && lang == 'ja') ? 4000 : 600);
     }
 
     function startAnimation() {
