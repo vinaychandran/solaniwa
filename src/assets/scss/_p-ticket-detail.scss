@@ -305,9 +305,6 @@
     }
 
     @include media-sp {
-        iframe {
-            width: 100% !important;
-        }
 
         &__process-block {
             margin-top: px(20);
@@ -515,6 +512,14 @@
     height: 100%;
 }
 
+// Custom styling of Regiondo Booking Widget 
+iframe {
+    @include media-sp {
+        width: 100% !important;
+    }
+}
+
+// Custom Checkout pop-up of Regiondo Booking widget
 #regiondo-modal-close {
     z-index: 1000;
 }
