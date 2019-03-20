@@ -131,7 +131,7 @@ $(()=>{
             $p.each((i:any, o:any)=>{
                 setTimeout(()=>{
                     $(o).addClass('-show');
-                },i * 300 + 300);
+                },i * 100 + 200);
             });
             setTimeout(()=>{
                 $msg.fadeOut(600,'linear');
