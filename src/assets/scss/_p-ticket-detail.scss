@@ -342,7 +342,7 @@
             width: 100%;
             &__header {
                 text-align: center;
-                font-size: px(24);
+                font-size: px(20);
                 font-weight: 700;
                 padding: px(10) px(10) px(15);
                 //padding-top: px(10);
@@ -393,7 +393,7 @@
                 p {
                     font-size: px(14);
                     line-height: 1.6;
-                    padding: px(0) px(15);
+                    padding: px(0) px(15) px(10);
                     color: #000;
                 }
             }
