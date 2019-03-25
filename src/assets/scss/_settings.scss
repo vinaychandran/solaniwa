@@ -72,16 +72,22 @@ $easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     $per: floor($per * 1000) / 1000;
     @return $per + 0%;
 }
+
+// >= 769
 @mixin media-pc() {
     @media only screen and (min-width: $BP-PC) {
         @content;
     }
 }
+
+// >= 768, <= 1200
 @mixin media-mid() {
     @media only screen and (min-width: $BP-SP) and (max-width: $BP-MID) {
         @content;
     }
 }
+
+// <= 768
 @mixin media-sp() {
     @media only screen and (max-width: $BP-SP) {
         @content;

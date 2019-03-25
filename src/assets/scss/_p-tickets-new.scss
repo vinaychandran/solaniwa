@@ -1,6 +1,17 @@
 @import "../../../node_modules/compass-mixins/lib/compass";
 @import "settings";
 
+.category {
+    &-list {
+        @include media-pc {
+            display: flex;
+        }
+        @include media-sp {
+            display: block;
+        }
+    }
+}
+
 .tickets {
     margin: auto;
 
