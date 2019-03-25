@@ -1079,7 +1079,7 @@ footer {
     @include media-sp {
         padding-bottom: vw(120);
         .f_follow {
-            padding: vw(50) 0 vw(150);
+            padding: vw(50) 0 vw(50);
             .sec-title {
                 padding-bottom: 0;
                 margin-bottom: vw(34);
@@ -1370,6 +1370,10 @@ common
         position: absolute;
         top: 0;
         z-index: 0;
+        @include media-sp {
+            right: 0;
+            left: 0;
+        }
     }
     &-register {
         margin: auto;
