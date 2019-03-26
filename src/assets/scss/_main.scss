@@ -33,6 +33,11 @@ body {
             background-size: vw(92) auto;
         }
     }
+    @include media($BP-SP,$BP-SP) {
+        #main {
+            margin-top: vw(55);
+        }
+    }
 }
 
 .fixed-nav {
@@ -744,7 +749,8 @@ header {
             }
         }
         .nv-lang {
-            top: 0; bottom: 0;
+            top: 0; 
+            bottom: 0;
             left: vw(30);
             height: vw(40);
             img {
@@ -769,8 +775,9 @@ header {
     @include media($BP-SP,$BP-SP) {
         height: vw(55);
         .nv-lang {
-            &:after {
-                top: 0.5em !important;
+            height: vw(30);
+            img {
+                height: vw(30);
             }
         }
         .nv-switch {
