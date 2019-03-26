@@ -244,6 +244,7 @@ $gutter: px(15);
     &_item {
         picture {
             display: inline-block;
+            width: 100%;
             img {
                 width: 100%;
             }
@@ -880,9 +881,6 @@ $gutter: px(15);
     @include media($BP-SP, 1100px) {
         .news-article_body {
             > div:nth-of-type(odd) .event-item {
-                &_image {
-                    left: px(500);
-                }
                 &_title {
                     left: 0;
                 }
@@ -890,6 +888,47 @@ $gutter: px(15);
                     .desc {
                         width: px(420);
                     }
+                }
+            }
+        }
+    }
+    @include media($BP-PC, 1366px) {
+
+        .news-article_body > div:nth-of-type(odd) {
+            .event-item_image {
+                left: px(490);
+                width: 50%;
+            }
+            .event-item_info {
+                .desc,
+                .schedule {
+                    max-width: 50%;
+                }
+            }
+        } 
+
+        .news-article_body >div:nth-of-type(even) {
+            .event-item_image {
+                left: px(-10);
+                width: 50%;
+
+                .catch {
+                    right: initial;
+                }
+            } 
+
+            .event-item_title {
+                padding-left: px(500);
+            }
+
+            .event-item_info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: px(500);
+                .desc,
+                .schedule {
+                    max-width: 80%;
                 }
             }
         }
