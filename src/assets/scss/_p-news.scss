@@ -46,9 +46,7 @@
     }
 }
 
-.news-index,
 .news-others {
-
     .news-list {
         margin: auto;
         display: flex;
@@ -74,30 +72,43 @@
     }
 }
 
+$gutter: px(15);
+
 .news-index {
-    @include media-pc {
+    @include media-sp {
+        padding-top: vw(90);
+        background: url("../images/cmn/lower-bg.png") center 0 repeat-x $color-background;
+        background-size: vw(92) auto;
+    }
+    .news-list {
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
 
-        .news-list {
-            width: 96%;
+        @include media-pc {
+            width: calc(100% - 2*#{$gutter});
             max-width: px(840);
+        }
 
-            &_item {
-                width: px(240);
-                padding-bottom: px(60);
+        @include media-sp {
+            padding-bottom: vw(74);
+            width: vw(630);
+            justify-content: space-between;
+        }
 
-                &:nth-of-type(3n + 2) {
-                    margin: 0 px(60);
-                }
-                img {
-                    @include transition(opacity 200ms);
-                }
-                .date {
-                    font-size: px(14);
-                }
-                .desc {
-                    font-size: px(17);
-                }
-                a {
+        &_item {
+            @include media-pc {
+                width: 33.33%;
+                padding: 0 $gutter px(60);
+            }
+            @include media-sp {
+                width: vw(285);
+                padding-bottom: 2em;
+            }
+            a {
+                text-decoration: none;
+                @include media-pc {
+                    display: block;
                     &:hover {
                         text-decoration: underline;
                         img {
@@ -106,39 +117,42 @@
                     }
                 }
             }
-        }
-    }
-    @include media($BP-SP, 900px) {
-        .news-list {
-            &_item {
-                width: 30%;
-                &:nth-of-type(3n + 2) {
-                    margin: 0 5%;
+
+            picture {
+                @include media-pc {
+                    display: block;
+                    position: relative;
+                    padding-top: 100%;
                 }
             }
-        }
-    }
-
-    @include media-sp {
-        padding-top: vw(90);
-        background: url("../images/cmn/lower-bg.png") center 0 repeat-x $color-background;
-        background-size: vw(92) auto;
-
-        .news-list {
-            padding-bottom: vw(74);
-            width: vw(630);
-            justify-content: space-between;
-
-            &_item {
-                width: vw(285);
-                padding-bottom: 2em;
-                img {
+            img {
+                width: 100%;
+                @include media-pc {
+                    @include transition(opacity 200ms);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                @include media-sp {
                     width: 100%;
                 }
-                .date {
+            }
+            .date {
+                margin: 1rem 0 0.5rem;
+                @include media-pc {
+                    font-size: px(14);
+                }
+                @include media-sp {
                     font-size: vw(24);
                 }
-                .desc {
+            }
+            .desc {
+                font-weight: 400;
+                line-height: 1.4;
+                @include media-pc {
+                    font-size: px(17);
+                }
+                @include media-sp {
                     font-size: vw(28);
                 }
             }
