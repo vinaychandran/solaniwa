@@ -69,6 +69,8 @@ body {
         }
     }
 
+    
+
     @include media-pc {
         right: 0;
         top: px(160);
@@ -139,6 +141,19 @@ body {
                 }
             }
         }
+    }
+
+    @include media($BP-SP,$BP-SP) {
+        padding: px(10) px(0) !important;
+        a {
+            p {
+                margin-bottom: vw(8) !important;
+                img {
+                    width: vw(32) !important;
+                }
+            }
+        }
+        
     }
 
     // 6個
@@ -565,6 +580,7 @@ header {
             }
         }
     }
+
     @include media($BP-SP, 1180px) {
         .logo {
             left: px(20);
@@ -744,6 +760,32 @@ header {
             .nv-switch {
                 p {
                     background-color: white;
+                }
+            }
+        }
+    }
+
+    //For ipad view 
+    @include media($BP-SP,$BP-SP) {
+        height: vw(55);
+        .nv-lang {
+            &:after {
+                top: 0.5em !important;
+            }
+        }
+        .nv-switch {
+            top: 0;
+            right: 1vw;
+            p {
+                width: vw(30);
+                &:nth-of-type(1) {
+                    top: vw(15);
+                }
+                &:nth-of-type(2) {
+                    top: vw(25);
+                }
+                &:nth-of-type(3) {
+                    top: vw(35);
                 }
             }
         }
