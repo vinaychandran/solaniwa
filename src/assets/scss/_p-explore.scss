@@ -226,6 +226,31 @@
             }
         }
     }
+
+    //For ipad view
+    @include media($BP-SP,$BP-SP){
+        padding-top: px(40) !important;
+        padding-bottom: px(40) !important;
+        &-lead {
+            margin-bottom: px(40) !important;
+            font-size: px(14) !important;
+        }
+
+        &-item {
+            width: 100%;
+            dl {
+                padding: px(20) px(40) !important;
+                dt {
+                    font-size: px(24) !important;
+                }
+                dd {
+                    margin-top: px(15) !important;
+                    padding-top: px(15) !important;
+                    font-size: px(14);
+                }
+            }
+        }
+    }
 }
 @at-root html[lang='ja'] .explore {
     &-lead {
@@ -340,6 +365,15 @@
             }
             &_label {
                 font-size: vw(28);
+            }
+        }
+    }
+
+    //For ipad view 
+    @include media($BP-SP,$BP-SP) {
+        .explore-item {
+            &_label {
+                font-size: px(24) !important;
             }
         }
     }
