@@ -1269,6 +1269,22 @@ footer {
             display: none;
         }
     }
+
+    //For ipad view
+    @include media($BP-SP,$BP-SP) {
+        padding-bottom: px(75);
+        .f_follow {
+            padding: px(30) 0;
+            &-sns {
+                a {
+                    padding: px(20) 0;
+                }
+            }
+        }
+        .f_notice {
+            font-size: px(24);
+        }
+    }
 }
 
 @at-root html[lang='en'] footer {
