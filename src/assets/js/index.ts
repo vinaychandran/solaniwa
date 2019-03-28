@@ -104,7 +104,7 @@ $(()=>{
     else if (/#guide/.test(location.hash)) {
         $welcome.hide();
         setTimeout(()=>{
-            scrollTo('section.guide', -40);
+            scrollTo('section.guide', -550);
         }, 300);
     }
     else if (lang == 'ja' && referrer.indexOf(location.host) != -1) {
