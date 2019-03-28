@@ -1814,6 +1814,20 @@ common
             }
         }
     }
+
+    //For ipad view
+    @include media($BP-SP,$BP-SP) {
+        &-register {
+            dl {
+                dt {
+                    font-size: px(26);
+                }
+                dd {
+                    font-size: px(24);
+                }
+            }
+        }
+    }
 }
 
 .modal-window {
