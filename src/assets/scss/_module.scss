@@ -148,6 +148,10 @@ a.btn {
             width: vw(28);
         }
     }
+    //for tablet view 
+    @include media($BP-SP,$BP-SP) {
+        font-size: px(24);
+    }
 }
 
 .sec-header {
@@ -211,6 +215,21 @@ a.btn {
                 &:before {
                     width: vw(16);
                     height: vw(16);
+                }
+            }
+        }
+    }
+
+    @include media($BP-SP,$BP-SP){
+        &_title {
+            h2 {
+                font-size: vw(20);
+                padding: vw(15) 0;
+            }
+            .back {
+                &:before {
+                    width: vw(8);
+                    height: vw(8);
                 }
             }
         }
