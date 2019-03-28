@@ -74,6 +74,16 @@
             }
         }
     }
+
+    @include media($BP-SP, $BP-SP) {
+        &-summary {
+            .closure {
+                dd {
+                    font-size: vw(20);
+                }
+            }
+        }
+    }
 }
 
 
@@ -235,11 +245,6 @@
             }
         }
     }
-    @include media($BP-SP, 1200px) {
-        &-list {
-
-        }
-    }
     @include media-sp {
         &-list {
             width: vw(710);
@@ -327,6 +332,34 @@
                 margin-top: vw(50);
             }
         }
+    }
+
+    @include media($BP-SP, $BP-SP) {
+        padding: vw(50) 0 0;
+
+        .sec-title {
+            margin-bottom: vw(40);
+        }
+
+        .fee-list .fee-item {
+            padding-bottom: vw(50);
+            .fee-table {
+                &.-family {
+                    td div {
+                        padding: 0 vw(90);
+                    }
+                }
+    
+                caption {
+                    font-size: vw(22);
+                }
+     
+                th, td {
+                    font-size: vw(20);
+                    height: vw(90);
+                }
+            }
+        } 
     }
 }
 .option {
@@ -469,6 +502,28 @@
             }
         }
     }
+    @include media($BP-SP, $BP-SP) {
+        .sec-title {
+            margin-bottom: vw(35);
+        }
+
+        &-btn_block {
+            margin: vw(60) 0 vw(70);
+        }
+
+        &-table {
+            dt, dd {
+                padding: vw(20) vw(46);
+            }
+            dt {
+                font-size: vw(24);
+            }
+            dd {
+                padding-left: vw(80);
+                font-size: vw(18);
+            }
+        }
+    }
 }
 .attention {
     background: $color-background;
@@ -500,6 +555,16 @@
             max-width: vw(650);
             li {
                 font-size: vw(24);
+            }
+        }
+    }
+
+    @include media($BP-SP, $BP-SP) {
+        padding: vw(60) 0;
+        ul li {
+            font-size: vw(20);
+            &:nth-of-type(n + 2) {
+                margin-top: 0.8em;
             }
         }
     }

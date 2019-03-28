@@ -234,17 +234,17 @@ explore
         }
     }
     @include media-sp {
-        padding-top: vw(120);
+        padding-top: vw(90);
         background-size: vw(92) auto;
         &-message {
-            margin: vw(26) 0 vw(72);
+            margin: vw(26) 0 vw(56);
             p {
                 &:nth-of-type(1) {
                     margin-bottom: vw(30);
-                    font-size: vw(40);
+                    font-size: vw(30);
                 }
                 &:nth-of-type(2) {
-                    font-size: vw(80);
+                    font-size: vw(60);
                 }
             }
         }

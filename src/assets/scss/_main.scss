@@ -308,22 +308,6 @@ header {
             display: block;
             text-decoration: none;
             cursor: pointer;
-            &:first-child {
-                //padding-right: 1.2em;
-                /*&:before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    right: 0;
-                    top: 0.5em;
-                    width: 0.4em;
-                    height: 0.4em;
-                    border-top: solid 1px $color-main;
-                    border-left: solid 1px $color-main;
-                    z-index: 1;
-                    @include transform(rotate(-45deg) scaleY(-1));
-                }*/
-            }
             span, img {
                 display: inline-block;
                 vertical-align: middle;
@@ -638,7 +622,7 @@ header {
 
             .nv-head {
                 text-align: left;
-                padding: vw(35) vw(50) vw(110);
+                padding: vw(35) vw(50) vw(80);
                 img {
                     width: vw(250);
                 }
@@ -677,7 +661,7 @@ header {
                 > span {
                     vertical-align: middle;
                     color: white;
-                    font-size: vw(28);
+                    font-size: vw(23);
                 }
             }
             .sub-nv {
@@ -1167,7 +1151,7 @@ footer {
             }
         }
         .f_contact {
-            padding-bottom: vw(100);
+            padding-bottom: vw(70);
             h3 {
                 margin-bottom: vw(32);
             }
@@ -1756,7 +1740,7 @@ common
                 input {
                     &[type="email"] {
                         width: vw(400);
-                        height: vw(85);
+                        height: vw(60);
                         font-size: vw(16);
                         @include input-placeholder {
                             font-size: vw(18) !important;
@@ -1764,7 +1748,7 @@ common
                     }
                     &[type="submit"] {
                         width: vw(100);
-                        height: vw(85);
+                        height: vw(60);
                     }
                 }
             }
