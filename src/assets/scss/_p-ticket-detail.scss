@@ -435,6 +435,17 @@
             }
         }
     }
+
+    @include media($BP-SP,$BP-SP){
+        &__info-block {
+            &__header {
+                font-size: px(24);
+            }
+            &__intro {
+                font-size: px(14);
+            }
+        }
+    }
 }
 
 .ticket-others {
@@ -509,6 +520,23 @@
                     font-size: vw(28);
                 }
             }
+        }
+    }
+
+    @include media($BP-SP,$BP-SP) {
+        .ticket-list {
+            padding-bottom: px(20);
+            &_item {
+                .desc {
+                    font-size: px(18);
+                }
+            }
+        }
+
+        .btn {
+            padding: 20px 0;
+            width: 50%;
+            font-size: 18px;
         }
     }
 }
