@@ -63,10 +63,19 @@
             }
             .date {
                 margin: 1rem 0 0.5rem;
+
+                @include media($BP-SP, $BP-SP) {
+                    font-size: vw(18) !important;
+                    margin: 0.5rem 0 0.2rem;
+                }
             }
             .desc {
                 font-weight: 400;
                 line-height: 1.4;
+
+                @include media($BP-SP, $BP-SP) {
+                    font-size: vw(20) !important;
+                }
             }
         }
     }
@@ -145,6 +154,10 @@ $gutter: px(15);
                 @include media-sp {
                     font-size: vw(24);
                 }
+                @include media($BP-SP, $BP-SP) {
+                    font-size: vw(18);
+                    margin: 0.5rem 0 0.2rem;
+                }
             }
             .desc {
                 font-weight: 400;
@@ -154,6 +167,9 @@ $gutter: px(15);
                 }
                 @include media-sp {
                     font-size: vw(28);
+                }
+                @include media($BP-SP, $BP-SP) {
+                    font-size: vw(20);
                 }
             }
         }
@@ -385,6 +401,25 @@ $gutter: px(15);
             }
         }
     }
+    @include media($BP-SP, $BP-SP) {
+        &_header {
+            h2 {
+                padding: vw(40) 0;
+                font-size: vw(50);
+            }
+        }
+
+        &_text {
+            padding: vw(50) 0;
+            font-size: px(22);
+        }
+
+        &_item {
+            .desc {
+                padding: vw(40) 0 vw(60);
+            }
+        }
+    }
 }
 
 // en
@@ -394,7 +429,7 @@ $gutter: px(15);
             picture {
                 float: left;
                 width: 42%;
-            }
+            } 
             .desc {
                 float: right;
                 position: relative;
@@ -459,6 +494,22 @@ $gutter: px(15);
             }
         }
     }
+
+    @include media($BP-SP, $BP-SP) {
+        .faq-item {
+            dt {
+                font-size: vw(24);
+
+                span {
+                    font-size: vw(40);
+                }
+            }
+
+            dd {
+                font-size: vw(18);
+            }
+        }
+    }
 }
 
 // beginner
@@ -469,9 +520,6 @@ $gutter: px(15);
         &-header {
             margin: auto;
             line-height: 1.6;
-            &_lead {
-
-            }
             &_notice {
                 margin: auto;
                 background: #f8eee3;
@@ -648,6 +696,33 @@ $gutter: px(15);
                     dd {
                         text-align: left;
                         font-size: vw(21);
+                    }
+                }
+            }
+        }
+    }
+
+    @include media($BP-SP, $BP-SP) {
+        .beginner {
+            &-header {
+                margin-bottom: vw(70);
+            }
+
+            &-body {
+                margin-bottom: vw(60);
+
+                .image {
+                    margin-bottom: vw(30);
+                }
+
+                .info dl {
+                    margin-bottom: vw(30);
+
+                    dt {
+                        font-size: vw(30);
+                    }
+                    dd {
+                        font-size: vw(22);
                     }
                 }
             }
