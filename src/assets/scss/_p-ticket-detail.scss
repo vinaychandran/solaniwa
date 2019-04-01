@@ -257,7 +257,7 @@
 
     @include media-pc {
         margin-top: px(60);
-        //margin-bottom: px(150);
+        margin-bottom: px(150);
         max-width: px(1000);
         display: flex;
         &__info-block {
@@ -281,9 +281,7 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 align-items: flex-start;
-
             }
-
         }
 
         &__process-block {
@@ -312,7 +310,7 @@
     }
 
     @include media-sp {
-
+        margin-bottom: vw(150);
         &__process-block {
             margin-top: px(20);
 
@@ -472,7 +470,6 @@
     }
     @include media-pc {
         background: url("../images/news/cloud-bg.png") center 0 no-repeat $color-background2;
-        padding-top: px(150);
         padding-bottom: px(80);
         .sec-title {
             margin-bottom: px(72);
@@ -498,7 +495,6 @@
     @include media-sp {
         background: url("../images/news/cloud-bg-sp.png") center 0 no-repeat $color-background2;
         background-size: 100% auto;
-        padding-top: vw(150);
         padding-bottom: vw(100);
         .sec-title {
             margin-bottom: vw(52);
