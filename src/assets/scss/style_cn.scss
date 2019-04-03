@@ -32,12 +32,21 @@
 .p-explore {
     @import "p-explore";
 }
-// tickets
+//tickets
 .p-tickets {
     @import "p-tickets";
+    //point to new additional style for ticket page 
+    @import "p-tickets-new";
 }
-
+// gallery
+.p-gallery {
+    @import "p-gallery";
+}
 // term
 .p-term {
     @import "p-term";
+}
+//ticket detail
+.p-ticket-detail {
+    @import "p-ticket-detail";
 }
