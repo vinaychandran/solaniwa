@@ -344,9 +344,13 @@
 
         &__item {
             &__discount {
+                width: 20%;
                 padding: px(8);
                 border-top-right-radius: unset;
                 border-bottom-right-radius: unset;
+                &--text {
+                    font-size: px(20);
+                }
             }
             &__image {
                 padding-right: unset;
@@ -481,6 +485,12 @@
     }
 
     @include media($BP-SP, $BP-SP) {
+        &__item {
+            &__discount {
+                padding: px(12);
+            }
+        }
+
         &__info-block {
             &__header {
                 font-size: px(24);
