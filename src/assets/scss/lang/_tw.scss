@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500');
+
+@mixin font-gothic() {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+@mixin font-serif() {
+
+}
+
+body {
+    @include font-gothic;
+    font-weight: 300;
+}
