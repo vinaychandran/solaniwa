@@ -15,8 +15,9 @@ module.exports = {
     tickets: './src/assets/js/tickets.ts',
     style: './src/assets/scss/style.scss',
     style_en: './src/assets/scss/style_en.scss',
+    style_cn: './src/assets/scss/style_cn.scss',
     style_kr: './src/assets/scss/style_kr.scss',
-    style_cn: './src/assets/scss/style_cn.scss'
+    style_tw: './src/assets/scss/style_tw.scss'
   },
   output: {
     path: `${__dirname}/dist`,
