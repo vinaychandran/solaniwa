@@ -391,6 +391,10 @@ header {
                 margin-top: 0.5em;
             }
         }
+
+        img {
+            object-fit: cover;
+        }
     }
 
     @include media-pc {
@@ -539,6 +543,7 @@ header {
                 padding-right: px(30);
             }
             img {
+                width: px(30);
                 height: px(20);
             }
             &:after {
@@ -738,6 +743,7 @@ header {
             left: vw(30);
             height: vw(40);
             img {
+                width: vw(60);
                 height: vw(40);
             }
         }
@@ -770,7 +776,8 @@ header {
         .nv-lang {
             height: vw(30);
             img {
-                height: vw(30);
+                width: px(45);
+                height: px(30);
             }
         }
         .nv-switch {
